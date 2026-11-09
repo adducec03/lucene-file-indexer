@@ -23,10 +23,15 @@ public final class Analyzers {
     private Analyzers() {}
 
     public static Analyzer perField() throws IOException{
+        // crea la mappa degli analyzer singoli per campo
         Map<String,Analyzer> perFieldAnalyzers = new HashMap<>();
+        // elenco delle stopwords in italiano e inglese
         CharArraySet stopWords = new CharArraySet(ItalianAnalyzer.getDefaultStopSet(), true);
         stopWords.addAll(EnglishAnalyzer.getDefaultStopSet());
 
+        // analyzer custom per il campo nome
+        // tokenizer standard con minuscolo e delimitatori
+        // non si eliminano stopwords
         Analyzer nameAnalyzer = CustomAnalyzer.builder()
                     .withTokenizer(StandardTokenizerFactory.class)
                     .addTokenFilter(LowerCaseFilterFactory.class)
@@ -37,6 +42,7 @@ public final class Analyzers {
         perFieldAnalyzers.put(FIELD_NAME, nameAnalyzer);
         perFieldAnalyzers.put(FIELD_CONTENT, new StandardAnalyzer(stopWords));
         
+        // analyze finale da usare (wrapper degli analyzer per-fields)
         Analyzer perFieldAnalyzer = new PerFieldAnalyzerWrapper(new StandardAnalyzer(), perFieldAnalyzers);
         return perFieldAnalyzer;
 
