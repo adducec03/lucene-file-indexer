@@ -1,0 +1,123 @@
+Phi
+
+Phi (  FY, FEE; uppercase Φ, lowercase φ or ϕ; Ancient Greek: ϕεῖ pheî [pʰéî̯]; Modern Greek: φι fi [fi]) is the twenty-first letter of the Greek alphabet.
+In Archaic and Classical Greek (c. 9th to 4th century BC), it represented an aspirated voiceless bilabial plosive ([pʰ]), which was the origin of its usual romanization as ⟨ph⟩. During the later part of Classical Antiquity, in Koine Greek (c. 4th century BC to 4th century AD), its pronunciation shifted to a voiceless bilabial fricative ([ɸ]), and by the Byzantine Greek period (c. 4th century AD to 15th century AD) it developed its modern pronunciation as a voiceless labiodental fricative ([f]).
+The romanization of the Modern Greek phoneme is therefore usually ⟨f⟩.
+It may be that phi originated as the letter qoppa (Ϙ, ϙ), and initially represented the sound /kʷʰ/ before shifting to Classical Greek [pʰ]. In traditional Greek numerals, phi has a value of 500 (φʹ) or 500,000 (͵φ). The Cyrillic letter Ef (Ф, ф) descends from phi.
+Like other Greek letters, lowercase phi (encoded as the Unicode character U+03C6 φ GREEK SMALL LETTER PHI) is used as a mathematical or scientific symbol. Some uses require the old-fashioned 'closed' glyph, which is separately encoded as the Unicode character U+03D5 ϕ GREEK PHI SYMBOL.
+
+
+== Use as a symbol ==
+
+
+=== In lowercase ===
+The lowercase letter φ (or its variant, ϕ or ɸ) is often used to represent the following:
+
+The letter phi is commonly used in physics to represent wave functions in quantum mechanics, such as in the Schrödinger equation and bra–ket notation: ⟨ϕ|ψ⟩.
+The golden ratio 1+52≈  1.618033988749894848204586834... in mathematics, art, and architecture. (Its reciprocal, 1/φ, is 5−12 and is equal to φ − 1.)
+Euler's totient function φ(n) in number theory; also called Euler's phi function.
+The cyclotomic polynomial functions Φn(x) of algebra.
+The number of electrical phases in a power system in electrical engineering, for example 1ϕ for single phase, 3ϕ for three phase.
+In algebra, group or ring homomorphisms
+In probability theory,  φ(x)=(2π)−12e−x22 is the probability density function of the standard normal distribution.
+In probability theory, φX(t) = E[eitX] is the characteristic function of a random variable X.
+In statistics, the phi coefficient is a measure of association between two binary variables.
+An angle, typically the second angle mentioned, after θ (theta). It can denote:
+The argument of a complex number.
+The phase of a wave in signal processing.
+In spherical coordinates, mathematicians usually refer to ϕ as the polar angle (from the z-axis). The convention in physics is to use ϕ as the azimuthal angle (from the x-axis).
+One of the dihedral angles in the backbones of proteins in a Ramachandran plot
+Internal or effective angle of friction.
+In cartography and navigation, ɸ denotes latitude; likewise, in geodesy it denotes geodetic latitude.
+In ship stability, ɸ represents the angle of list.
+In aircraft flight mechanics as the symbol for bank angle (sometimes represented with the letter theta, which is also used for pitch angle).
+The work function of a surface, in solid-state physics.
+A shorthand representation for an aromatic functional group in organic chemistry.
+The fugacity coefficient in thermodynamics.
+The ratio of free energy destabilizations of protein mutants in phi value analysis.
+In combustion engineering, fuel–air equivalence ratio. The ratio between the actual fuel-air ratio to the stoichiometric fuel-air ratio.
+In granulometry, sedimentology, and soil engineering, φ is a logarithmic unit of sediment grain size, defined such that a change of 1 φ in grain size corresponds to a factor of 2 in grain diameter.
+A sentence in first-order logic.
+The Veblen function in set theory.
+Porosity in geology and hydrology.
+Strength (or resistance) reduction factor in structural engineering, used to account for statistical variabilities in materials and construction methods.
+The symbol for a voiceless bilabial fricative in the International Phonetic Alphabet (using the form ɸ).
+In philosophy, φ is often used as shorthand for a generic act. (Also in uppercase.)
+In perceptual psychology, the phi phenomenon is the apparent motion caused by the successive viewing of stationary objects, such as the frames of a motion picture.
+In linguistics, φ-features denote features such as case, number and gender in which adjectives and pronouns agree with nouns.
+In lexical-functional grammar, the function that maps elements from the c-structure to the f-structure.
+In ecology, site survival probability, or the probability that a species will continue to occupy a site if it was there the previous year.
+The logo of La France Insoumise, a leftist French political party.
+An abbreviation for the word bacteriophage
+Mϕ is used as an abbreviation for the word macrophage
+
+
+=== In uppercase ===
+The uppercase Φ is used as a symbol for:
+
+The cumulative distribution function (cdf) of standard normal distribution in statistics.
+The magnetic flux and electric flux in physics, with subscripts distinguishing the two.
+Quantum yield, the number of times a specific event occurs per photon absorbed by a system.
+In philosophy, Φ is often used as shorthand for a generic act. (Also in lowercase.)
+A common symbol for the parametrization of a surface in vector calculus.
+In Lacanian algebra, Φ stands for the imaginary phallus and also represents phallic signification; −Φ stands in for castration.
+The diameter symbol in engineering, ⌀, is often erroneously referred to as "phi", and the diameter symbol is sometimes erroneously typeset as Φ. This symbol is used to indicate the diameter of a circular section; for example, "⌀14" means the diameter of the circle is 14 units.
+The null sign, ∅, which denotes the empty set in mathematics is sometimes also erroneously mistaken for phi.
+A clock signal in electronics is often called Phi or uses the symbol.
+In emulsion and suspension science, Φ often denotes the volume fraction of the dispersed phase.
+Archaically used in chemistry for phenyl group.
+Integrated information theory (IIT), a mathematical model for consciousness
+
+
+== Unicode ==
+In Unicode, there are multiple forms of the phi letter:
+
+In ordinary Greek text, the character U+03C6 φ is used exclusively, though this character has considerable glyphic variation, sometimes represented with a glyph more like the representative glyph shown for U+03C6 (φ, the "loopy" or "open" form), and less often with a glyph more like the representative glyph shown for U+03D5 (ϕ, the "stroked" or "closed" form).
+Because Unicode represents a character in an abstract way, the choice between glyphs is purely a matter of font design. While some Greek typefaces, most notably those in the Porson family (used widely in editions of classical Greek texts), have a "stroked" glyph in this position (), most other typefaces have "loopy" glyphs. This also applies to the "Didot" (or "apla") typefaces employed in most Greek book printing (), as well as the "Neohellenic" typeface often used for ancient texts ().
+It is necessary to have the stroked glyph available for some mathematical uses, and U+03D5 GREEK PHI SYMBOL is designed for this function. Prior to Unicode version 3.0 (1998), the glyph assignments in the Unicode code charts were the reverse, and thus older fonts may still show a loopy form φ at U+03D5.
+For use as a phonetic symbol in IPA, Unicode has a separate code point U+0278, LATIN SMALL LETTER PHI, because only the stroked glyph is considered correct in this use. It typically appears in a form adapted to a Latin typographic environment, with a more upright shape than normal Greek letters and with serifs at the top and bottom.
+In LaTeX, the math symbols are \Phi (Φ), \phi (ϕ), and \varphi (φ).
+The Unicode standard includes the following variants of phi and phi-like characters:
+
+U+0278 ɸ LATIN SMALL LETTER PHI
+U+03A6 Φ GREEK CAPITAL LETTER PHI (&Phi;)
+U+03C6 φ GREEK SMALL LETTER PHI (&phi;)
+U+03D5 ϕ GREEK PHI SYMBOL (&phiv;, &straightphi;, &varphi;)
+U+1D60 ᵠ MODIFIER LETTER SMALL GREEK PHI
+U+1D69 ᵩ GREEK SUBSCRIPT SMALL LETTER PHI
+U+1DB2 ᶲ MODIFIER LETTER SMALL PHI
+U+2C77 ⱷ LATIN SMALL LETTER TAILLESS PHI
+U+2CAA Ⲫ COPTIC CAPITAL LETTER FI
+U+2CAB ⲫ COPTIC SMALL LETTER FI
+U+1D6BD 𝚽 MATHEMATICAL BOLD CAPITAL PHI
+U+1D6D7 𝛗 MATHEMATICAL BOLD SMALL PHI
+U+1D6DF 𝛟 MATHEMATICAL BOLD PHI SYMBOL
+U+1D6F7 𝛷 MATHEMATICAL ITALIC CAPITAL PHI
+U+1D711 𝜑 MATHEMATICAL ITALIC SMALL PHI
+U+1D719 𝜙 MATHEMATICAL ITALIC PHI SYMBOL
+U+1D731 𝜱 MATHEMATICAL BOLD ITALIC CAPITAL PHI
+U+1D74B 𝝋 MATHEMATICAL BOLD ITALIC SMALL PHI
+U+1D753 𝝓 MATHEMATICAL BOLD ITALIC PHI SYMBOL
+U+1D76B 𝝫 MATHEMATICAL SANS-SERIF BOLD CAPITAL PHI
+U+1D785 𝞅 MATHEMATICAL SANS-SERIF BOLD SMALL PHI
+U+1D78D 𝞍 MATHEMATICAL SANS-SERIF BOLD PHI SYMBOL
+U+1D7A5 𝞥 MATHEMATICAL SANS-SERIF BOLD ITALIC CAPITAL PHI
+U+1D7BF 𝞿 MATHEMATICAL SANS-SERIF BOLD ITALIC SMALL PHI
+U+1D7C7 𝟇 MATHEMATICAL SANS-SERIF BOLD ITALIC PHI SYMBOL
+
+
+== See also ==
+F, f: Ef (Latin)
+Ф, ф: Ef (Cyrillic)
+Psi and phi type figurine
+Փ (Armenian)
+
+
+== References ==
+
+
+== External links ==
+ The dictionary definition of Φ at Wiktionary
+ The dictionary definition of φ at Wiktionary
+ The dictionary definition of phi at Wiktionary
+ Media related to Phi (letter) at Wikimedia Commons

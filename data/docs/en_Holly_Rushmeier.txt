@@ -1,0 +1,36 @@
+Holly Rushmeier
+
+Holly Rushmeier is an American computer scientist and is the John C. Malone Professor of Computer Science at Yale University. She is known for her contributions to the field of computer graphics.
+
+
+== Biography ==
+Rushmeier has received three degrees in mechanical engineering from Cornell University: the B.S. in 1977, the M.S. in 1986, and the Ph.D. in 1988. Before returning to graduate school in 1983, she worked in Seattle as an engineer at Boeing Commercial Airplanes and Washington Natural Gas.
+While at Cornell, Rushmeier collaborated with Kenneth Torrance and Donald P. Greenberg. After obtaining her Ph.D., Rushmeier joined the mechanical engineering faculty as an assistant professor at Georgia Tech, where she taught courses on heat transfer and numerical methods and conducted research on computer graphics image synthesis. She left in 1991 to join the National Institute of Standards and Technology, where she focused on scientific data visualization. She continued to investigate problems in data visualization as a staff member at the IBM Thomas J. Watson Research Center from 1996 to 2004. She then assumed her current position as professor of computer science at Yale University, where she served as chair of the department from 2011 to 2014 and again starting in 2023. With Julie Dorsey, she leads the computer graphics laboratory at Yale.
+
+
+== Work ==
+Rushmeier is particularly interested in scanning and modeling shape and appearance, as well as the applications of computer graphics in cultural heritage. At IBM, she worked on the project to create a 3D model of Michelangelo's Florence Pietà, as well as the Eternal Egypt collaboration between IBM and the government of Egypt to build a digital showcase of the country's cultural artifacts.
+Rushmeier is also noted for her work on global illumination, material capture, and the display of high-dynamic-range images. Her contributions to the field of computer graphics include the development of methods for solving for illumination in the presence of participating media (i.e. environments such as fog and murky water that affect the light passing through them) and the extension of the radiosity method to handle specular BRDFs.
+She has served in numerous editorial and technical capacities, including editor-in-chief of ACM Transactions on Graphics from 1996 to 1999, editor of IEEE Transactions on Visualization and Computer Graphics from 1996 to 1998, and co-editor-in-chief of Computer Graphics Forum from 2010 to 2014. She was chair of the papers committee for ACM SIGGRAPH in 1996 and co-chair of the IEEE Visualization papers committee in 1998, 2004, and 2005. She is an ACM Fellow, a 2011 Fellow of the Eurographics Association, the recipient of the 2013 ACM SIGGRAPH Computer Graphics Achievement Award, and the recipient of the 2021 Eurographics Gold Medal.
+In 2021, Rushmeier collaborated with Theodore Kim and Julie Dorsey in order to find ways to diversify the field of Computer Graphics with regard to the racial bias that has been present in the field since the beginning. In particular, their work focused on the skin colors and hair types most present in Computer Graphics as opposed to those seen in the real world, and culminated in a talk entitled “Countering Racial Bias in Computer Graphics Requires Structural Change” that was given at SIGGRAPH.
+In 2022, Rushmeier joined a research team involving computer scientists, archaeologists, and historians. The projects aim is to research the ancient city of Dura-Europos. The project received a $350,000 grant from the National Endowment for Humanities in order to develop a digital archive of materials related to Dura-Europos. Rushmeier is involved with creating a virtual cloud to host this data and create a user interface that allows researchers to access data and add new information.
+
+
+== Selected publications ==
+Dorsey, Julie; Rushmeier, Holly; Sillion, François (2007). Digital Modeling of Material Appearance. San Francisco, CA: Morgan Kaufmann Publishers Inc. ISBN 9780122211812.
+Bernardini, Fausto; Rushmeier, Holly; Martin, Ioana M.; Mittleman, Joshua; Taubin, Gabriel (2002). "Building a Digital Model of Michelangelo's Florentine Pietà" (PDF). IEEE Computer Graphics and Applications. 22: 59–67. doi:10.1109/38.974519.
+Bernardini, Fausto; Mittleman, Joshua; Rushmeier, Holly; Silva, Cláudio; Taubin, Gabriel (1999). "The Ball-Pivoting Algorithm for Surface Reconstruction" (PDF). IEEE Transactions on Visualization and Computer Graphics. 5 (4): 349–359. doi:10.1109/2945.817351. S2CID 11096669. Archived from the original (PDF) on 2017-09-11. Retrieved 2014-11-13.
+Larson, Gregory Ward; Rushmeier, Holly; Piatko, Christine (1997). "A Visibility Matching Tone Reproduction Operator for High Dynamic Range Scenes" (PDF). IEEE Transactions on Visualization and Computer Graphics. 3 (4): 291–306. doi:10.1109/2945.646233.
+Chen, Shenchang Eric; Rushmeier, Holly E.; Miller, Gavin; Turner, Douglass (1991). "A progressive multi-pass method for global illumination". ACM SIGGRAPH Computer Graphics. 25 (4): 165–174. doi:10.1145/127719.122737.
+Rushmeier, Holly E.; Torrance, Kenneth E. (1987). "The zonal method for calculating light intensities in the presence of a participating medium". Proceedings of the 14th annual conference on Computer graphics and interactive techniques - SIGGRAPH '87 (PDF). Vol. 21. pp. 293–302. doi:10.1145/37401.37436. ISBN 978-0897912273. S2CID 9713881.
+Meyer, Gary W.; Rushmeier, Holly E.; Cohen, Michael F.; Greenberg, Donald P.; Torrance, Kenneth E. (1986). "An Experimental Evaluation of Computer Graphics Imagery" (PDF). ACM Transactions on Graphics. 5: 30–50. doi:10.1145/7529.7920. S2CID 8585704.
+
+
+== References ==
+
+
+== External links ==
+Rushmeier's home page at the Yale Computer Graphics Laboratory
+Rushmeier's biography on the Eurographics website
+Rushmeier's profile in the Connecticut Academy of Science and Engineering
+Rushmeier's profile at ACM

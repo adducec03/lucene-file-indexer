@@ -1,0 +1,154 @@
+Waste input-output model
+
+The Waste Input-Output (WIO) model is an innovative extension of the environmentally extended input-output (EEIO) model. It enhances the traditional Input-Output (IO) model by incorporating physical waste flows generated and treated alongside monetary flows of products and services. 
+In a WIO model, each waste flow is traced from its generation to its treatment, facilitated by an allocation matrix. 
+Additionally, the model accounts for the transformation of waste during treatment into secondary waste and residues, as well as recycling and final disposal processes. 
+By including the end-of-life (EoL) stage of products, the WIO model enables a comprehensive consideration of the entire product life cycle, encompassing production, use, and disposal stages within the IO analysis framework. As such, it serves as a valuable tool for life cycle assessment (LCA).
+
+
+== Background ==
+With growing concerns about environmental issues, the EEIO model evolved from the conventional IO model appended by integrating environmental factors such as resources, emissions, and waste. The standard EEIO model, which includes the economic input-output life-cycle assessment (EIO-LCA) model, can be formally expressed as follows
+
+Here A represents the square matrix of input coefficients, F denotes releases (such as emissions or waste) per unit of output or the intervention matrix, y stands for the vector of final demand (or functional unit), I is the identity matrix, and E represents the resulting releases (For further details, refer to the input-output model). A model in which F represents the generation of waste per unit of output is known as a Waste Extended IO (WEIO) model. In this model, waste generation is included as a satellite account.  
+However, this formulation, while well-suited for handling emissions or resource use, encounters challenges when dealing with waste. It overlooks the crucial point that waste typically undergoes treatment before recycling or final disposal, leading to a form less harmful to the environment. Additionally, the treatment of emissions results in residues that require proper handling for recycling or final disposal (for instance, the pollution abatement process of sulfur dioxide involves its conversion into gypsum or sulfuric acid). Leontief's pioneering pollution abatement IO model did not address this aspect, whereas Duchin later incorporated it in a simplified illustrative case of wastewater treatment.  
+In waste management, it is common for various treatment methods to be applicable to a single type of waste. For instance, organic waste might undergo landfilling, incineration, gasification, or composting. Conversely, a single treatment process may be suitable for various types of waste; for example, solid waste of any type can typically be disposed of in a landfill. Formally, this implies that there is no one-to-one correspondence between treatment methods and types of waste.  
+A theoretical drawback of the Leontief-Duchin EEIO model is that it considers only cases where this one-to-one correspondence between treatment methods and types of waste applies, which makes the model difficult to apply to real waste management issues. The WIO model addresses this weakness by introducing a general mapping between treatment methods and types of waste, establishing a highly adaptable link between waste and treatment. This results in a model that is applicable to a wide range of real waste management issues. 
+
+
+== The Methodology ==
+We describe below the major features of the WIO model in its relationship to the Leontief-Duchin EEIO model, starting with notations. 
+Let there be nP producing sectors (each producing a single primary product), nT waste treatment sectors, and nw waste categories. Now, let's define the matrices and variables:
+
+ZP: an nP×nP matrix representing the flow of products among producing sectros.
+WP+: an nW×nP matrix representing the generation of wastes from producing sectors. Typical examples include animal waste from livestock, slag from steel mills, sludge from paper mills and the chemical industry, and meal scrap from manufacturing processes.
+WP−: an nW×nP matrix representing the use (recycling) of wastes by producing sectors. Typical examples include the use of animal waste in fertilizer production and iron scrap in steel production based on an electric arc furnace.
+WP: an nW×nP matrix representing the net flow of wastes: WP=WP+−WP−.
+ZT: an nW×nT matrix representing the flow of products in waste treatment sectors.
+WT: an nW×nT matrix representing the net generation of (secondary) waste in waste treatment sectors: WT=WT+−WT− (WT+ and WT− are defined similar to WP+ and WP−). Typical examples of WT+ include ashes generated from incineration processes, sludge produced during wastewater treatment, and residues derived from automobile shredding facilities.
+yP: an nP×1 vector representing the final demand for products.
+wY: an nW×1 vector representing the generation of waste from final demand sectors, such as the generation of kitchen waste and end-of-life consumer appliances.
+xP: an nP×1 vector representing the quantity of nP products produced.
+w: an nW×1 vector representing the quantity of nw waste for treatment.
+Variables with Z or x pertain to conventional components found in an IO table and are measured in monetary units. Conversely, variables with W or w typically do not appear explicitly in an IO table and are measured in physical units.
+
+
+=== The balance of goods and waste ===
+Using the notations introduced above, we can represent the supply and demand balance between products and waste for treatment by the following system of equations: 
+
+Here, ιP dednotes a vector of ones (nP×1) used for summing the rows of ZP, and similar definitions apply to other ι terms. The first line pertains to the standard balance of goods and services with the left-hand side referring to the demand and the right-hand-side supply. Similarly, the second line refers to the balance of waste, where the left-hand side signifies the generation of waste for treatment, and the right-hand side denotes the waste designated for treatment. Increased recycling reduces the amount of waste for treatment w.
+
+
+=== The IO model with waste and waste treatment ===
+We now define the input coefficient matrices A and waste generation coefficients G as follows
+AP=ZPx̂P−1,AT=ZTx̂T−1,GP=WPx̂P−1,GT=WTx̂T−1.
+Here, v̂ refers to a diagonal matrix where the (i,i) element is the i-th element of a vector v.
+
+Using A and G as derived above, the balance  (1) can be represented as:
+This equation (2) represents the Duchin-Leontief environmental IO model, an extension of the original Leontief model of pollution abatement to account for the generation of secondary waste. This system of equations is generally unsolvable due to the presence of xT on the left-hand side and w on the right-hand side, resulting in asymmetry. This asymmetry poses a challenge for solving the equation. However, the Duchin-Leontief environmental IO model addresses this issue by introducing a simplifying assumption:
+
+This assumption (3) implies that a single treatment sector exclusively treats each waste. For instance, waste plastics are either landfilled or incinerated but not both simultaneously. While this assumption simplifies the model and enhances computational feasibility, it may not fully capture the complexities of real-world waste management scenarios. In reality, various treatment methods can be applied to a given waste; for example, organic waste might be landfilled, incinerated, or composted. Therefore, while the assumption facilitates computational tractability, it might oversimplify the actual waste management processes.
+
+
+=== The WIO model ===
+Nakamura and Kondo addressed the above problem by introducing the allocation matrix S of order nT×nw that assigns waste to treatment processes:
+
+Here, the element of Skl of S represents the proportion of waste l treated by treatment k. Since waste must be treated in some manner (even if illegally dumped, which can be considered a form of treatment), we have:
+ιT'S=ιw'.
+Here, ′ stands for the transpose operator. 
+Note that the allocation matrix S is essential for deriving xT from w. 
+The simplifying condition (3) corresponds to the special case where nT=nw and S is a unit matrix.  
+The table below gives an example of S for seven waste types and three treatment processes. Note that S represents the allocation of waste for treatment, that is, the portion of waste that is not recycled.   
+
+The application of the allocation matrix S transforms equation (2) into the following form:
+
+Note that, different from (2), the variable xT occurs on both sides of the equation. This system of equations is thus solvable (provided it exists), with the solution given by:
+(xPxT)=(I−AP−AT−SGPI−SGT)−1(yPSwy).
+The WIO counterpart of the standard EEIO model of emissions, represented by equation (0), can be formulated as follows:
+
+Here, FP represents emissions per output from production sectors, and FT denotes emissions from waste treatment sectors. 
+Upon comparison of equation (6) with equation (0), it becomes clear that the former expands upon the latter by incorporating factors related to waste and waste treatment.
+Finally, the amount of waste for treatment induced by the final demand sector can be given by:
+
+
+=== The Supply and Use Extension (WIO-SUT) ===
+In the WIO model (5), waste flows are categorized based solely on treatment method, without considering the waste type. Manfred Lenzen addressed this limitation by allowing both waste by type and waste by treatment method to be presented together in a single representation within a supply-and-use framework.
+This extension of the WIO framework, given below, results in a symmetric WIO model that does not require the conversion of waste flows into treatment flows. 
+(APAT000SGPGT0)(xPxTw)+(yP0wy)=(xPxTw)
+
+It is worth noting that despite the seemingly different forms of the two models, the Leontief inverse matrices of WIO and WIO-SUT are equivalent.
+
+
+=== The WIO Cost and Price Model ===
+Let's denote by pP, pT, vP, and vT the vector of product prices, waste treatment prices, value-added ratios of products, and value-added ratios of waste treatments, respectively. 
+
+
+==== The case without waste recycling ====
+In the absence of recycling, the cost counterpart of equation (5) becomes:
+(pPpT)=(pPpT)(APATSGPSGT)+(vPvT)
+
+which can be solved for pP and pT as:
+
+
+==== The case with waste recycling ====
+When there is a recycling of waste, the simple representation given by equation (8) must be extended to include the rate of recycling r and the price of waste pW:
+
+Here, pW is the nw×1 vector of waste prices, r̂ is the diagonal matrix of the nw× vector of the average waste recycling rates, GP+=WP+xP̂−1, and GP−=WP−xP̂−1 (GT+ and GT− are defined in a similar fashion). 
+Rebitzer and Nakamura used (9) to assess the life-cycle cost of washing machines under alternative End-of-Life scenarios. 
+More recently, Liao et al. applied (9) to assess the economic effects of recycling copper waste domestically in Taiwan, amid the country's consideration of establishing a copper refinery to meet increasing demand. 
+
+
+=== A caution about possible changes in the input-output coeffcieints of treatment processes when the composition of waste changes ===
+The input-output relationships of waste treatment processes are often closely linked to the chemical properties of the treated waste, particularly in incineration processes. 
+The amount of recoverable heat, and thus the potential heat supply for external uses, including power generation, depends on the heat value of the waste. 
+This heat value is strongly influenced by the waste's composition. 
+Therefore, any change in the composition of waste can significantly impact AT and GT.  
+To address this aspect of waste treatment, especially in incineration, Nakamura and Kondo recommended using engineering information about the relevant treatment processes. 
+They suggest solving the entire model iteratively, which consists of the WIO model and a systems engineering model that incorporates the engineering information.  
+Alternatively, Tisserant et al proposed addressing this issue by distinguishing each waste by its treatment processes. They suggest transforming the rectangular waste flow matrix (nw×nT) not into an nT×nT matrix as done by Nakamura and Kondo, but into an nTnW×nTnW matrix. The details of each column element were obtained based on the literature.  
+
+
+== WIO tables and applications ==
+
+
+=== Waste footprint studies ===
+
+
+==== The MOE-WIO table for Japan ====
+The WIO table compiled by the Japanese Ministry of the Environment (MOE) for the year 2011 stands as the only publicly accessible WIO table developed by a governmental body thus far.  This MOE-WIO table distinguishes 80 production sectors, 10 waste treatment sectors, 99 waste categories, and encompasses 7 greenhouse gases (GHGs). The MOE-WIO table is available here. 
+
+Equation (7) can be used to assess the waste footprint of products or the amount of waste embodied in a product in its supply chain. Applied to the MOE-WIO, it was found that public construction significantly contributes to reducing construction waste, which mainly originates from building construction and civil engineering sectors. Additionally, public construction is the primary user (recycler) of slag and glass scrap. Regarding waste plastics, findings indicate that the majority of plastic waste originates not from direct household discharge but from various production sectors such as medical services, commerce, construction, personal services, food production, passenger motor vehicles, and real estate.
+
+
+=== Other studies ===
+Many researchers have independently created their own WIO datasets and utilized them for various applications, encompassing different geographical scales and process complexities. Here, we provide a brief overview of a selection of them.  
+
+
+==== End-of-Life electrical and electronic appliances ====
+Kondo and Nakamura assessed the environmental and economic impacts of various life-cycle strategies for electrical appliances using the WIO-table they developed for Japan for the year 1995. 
+This dataset encompassed 80 industrial sectors, 5 treatment processes, and 36 types of waste. 
+The assessment was based on Equation (6). 
+The strategies examined included disposal to a landfill, conventional recycling, intensive recycling employing advanced sorting technology, extension of product life, and extension of product life with functional upgrading. 
+Their analysis revealed that intensive recycling outperformed landfilling and simple shredding in reducing final waste disposal and other impacts, including carbon emissions. 
+Furthermore, they found that extending the product life significantly decreased environmental impact without negatively affecting economic activity and employment, provided that the reduction in spending on new purchases was balanced by increased expenditure on repair and maintenance.
+
+
+==== General and hazardous industrial waste ====
+Using detailed data on industrial waste, including 196 types of general industrial waste and 157 types of hazardous industrial waste, Liao et al. analyzed the final demand footprint of industrial waste in Taiwan across various final demand categories. Their analysis revealed significant variations in waste footprints among different final demand categories. For example, over 90% of the generation of "Waste acidic etchants" and "Copper and copper compounds" was attributed to exports. Conversely, items like "Waste lees, wine meal, and alcohol mash" and "Pulp and paper sludge" were predominantly associated with household activities 
+
+
+==== Global waste flows ====
+Tisserant et al developed a WIO model of the global economy by constructing a harmonized multiregional solid waste account that covered 48 world regions, 163 production sectors, 11 types of solid waste, and 12 waste treatment processes for the year 2007. Russia was found to be the largest generator of waste, followed by China, the US, the larger Western European economies, and Japan.  
+
+
+==== Decision Analytic Extension Based on Linear Programming (LP) ====
+Kondo and Nakamura applied  linear programming (LP) methodology to extend the WIO model, resulting in the development of a decision analytic extension known as the WIO-LP model. The application of LP to the IO model has a well-established history. This model was applied to explore alternative treatment processes for end-of-life home electric and electronic appliances, aiming to identify the optimal combination of treatment processes to achieve specific objectives, such as minimization of carbon emissions or landfill waste. Lin applied this methodology to the regional Input-Output (IO) table for Tokyo, augmented to incorporate wastewater flows and treatment processes, and identified trade-off relationships between water quality and carbon emissions. A similar method was also employed to assess the environmental impacts of alternative treatment processes for waste plastics in China.
+
+
+== See also ==
+
+
+== References ==
+
+
+== External links ==
+WIO table compiled by the Japanese Ministry of the Environment

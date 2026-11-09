@@ -1,0 +1,61 @@
+List of visual novel engines
+
+This is a list of visual novel engines.
+
+
+== Artemis ==
+Artemis, also known as Artemis Engine, is a cross-platform, but closed-source visual novel engine that can work on Windows, IOS, Android, PlayStation 4, and Nintendo Switch. Its scripting uses Lua scripts and has a file structure similar to KiriKiri.
+
+
+== Digital Novel Markup Language ==
+
+Digital Novel Markup Language (DNML) is one of the first scripting language game engines for creating visual novels, also known as interactive fiction games. DNML was developed using C++ by a Japanese programmer known by their Internet name, Karin. The initial release was in 1998. The programming structure is similar to HTML, which made it easy to produce dōjin games. DNML was succeeded by software like KiriKiri, NScripter, and Ren'Py.
+There have been various attempts to create a more modern DNML interpreter. However the only known successful project is DNML Midori, a full reimplantation of DNML that has several features of its own. While it is free to use, it is not open source. As of 2021, it was last updated in 2019 and development seems to be concluded.
+
+
+== KiriKiri ==
+KiriKiri (吉里吉里) is a scripting engine by Japanese developer "w.dee", initially released in 1998. It is almost exclusively used with the KAG (KiriKiri Adventure Game System) framework as a visual novel engine. Usually, the package of the two components is regarded as the whole engine, and referenced with major version numbers. Thus, the current version is called KiriKiri2/KAG3. It is available under the GNU General Public License, though commercial licenses can be acquired if somebody wishes to expand the software without disclosing the changes.
+KiriKiri is often used as a more modern and expandable replacement of the older NScripter engine. It has been used in both dōjin and commercial visual novels, the most well known of which are TYPE-MOON's Fate/stay night and Fate/hollow ataraxia. Another notable visual novel that is known to be implemented using this engine is 1999 Christmas Eve (1999クリスマスイブ). The Nekopara game series, available on Steam, also uses a modified version of Kirikiri.
+For KiriKiri2 and Kirikiri Z's implementation of KAG there is a module called 鱧天 (Hamotem). which provides a myriad of plugins and a ready made template to build games on. As TyranoBuilder is to TyranoScript, there are several programs which create a graphical editor on top of the KAG script. The most well known of these is NVLMaker, which also has a cloud platform.
+Due to a lack of updates since October 2010, from 2013 onward the code has been forked and continued as Kirikiri Z (吉里吉里Z).
+
+
+== Narrat ==
+Narrat is a free and open source narrative engine designed for role-playing games that can also be used in the development of visual novels. Games made in Narrat can be run on web browsers or as desktop applications. Narrat was inspired by games like Disco Elysium in its visual layout and presence of RPG mechanics, as well as dice-based tabletop role-playing game style skill checks. It uses a simple script language that allows users to write large visual novels that can contain more advanced RPG mechanics. It has a system for customising UI based on CSS.
+
+
+== NScripter ==
+
+NScripter is a visual novel engine written by Naoki Takahashi. Due to its simplicity and its liberal license (while it is not open-source software, royalty-free commercial use is permitted), it quickly became popular in Japan, and was used for a number of high-profile commercial and dōjin titles, such as HaniHani and Tsukihime. NScripter is closed-source and only available for Windows, but some third party open source reimplementations exist, most mature being ONScripter.
+
+
+== NVList ==
+NVList is an open source visual novel engine that runs on Windows, Mac OS, Linux, Android as well as online (through an applet). It is coded in the Java language, even though the scripts are written in Lua. It is being updated to this day on GitHub. It has all the functionality required for a Visual Novel, and more. It has support for resolution scaling and switching, along with pixel and vertex shaders.
+
+
+== Project Mammut ==
+Project Mammut is a HTML5 based game engine that runs in a web browser that is designed for ease of use, and accessibility. It builds games into HTML5 webpages that can run stand alone in browser, hosted online on websites such as itch.io. It has its own scripting language and branching narrative editor that is based off Twine.
+
+
+== Ren'Py ==
+
+The Ren'Py Visual Novel Engine is a free software engine. Ren'Py is a portmanteau of ren'ai (恋愛), the Japanese word for 'love', a common element of games made using Ren'Py; and Python, the programming language that Ren'Py runs on. The easy to learn script language allows anyone to efficiently write large visual novels, while its Python scripting is enough for complex simulation games. Ren'Py has proved attractive to western hobbyists; over 4,000 games use the Ren'Py engine, nearly all in English. Visual novels, kinetic novels, role-playing games, simulation games, and many other games can be made with Ren'Py.
+
+
+== Suika2 ==
+Suika2 is a free and open source visual novel engine. It is lightweight, compact, and portable by design. Games created with Suika2 can run on Desktop, Mobile and Web Platforms. Having Japanese and International language options, it is one of the few Japanese visual novel engines supporting multiple languages out of the box. Its simple command based syntax allows for easy creation of visual novels, while its GUI system provides the framework for a robust visual experience.
+
+
+== TyranoBuilder ==
+TyranoBuilder is a commercial visual novel engine. Projects created in this engine can be compiled for use on Windows, Mac, Android, iOS, and browser-based web apps. TyranoBuilder's GUI allows for Drag and Drop functionality of components to build Visual Novels targeted towards beginners.
+Geek & Sundry said it uses "a simple drag-and-drop system and the interface makes it easy to see how the scene will look as you change elements on the fly." The GUI is similar to GameMaker, usually bypassing any need for scripting. TyranoBuilder acts as an interface for TyranoScript, a web-focused engine created in Japanese language (a partial English version exists). TyranoBuilder and TyranoScript use a syntax similar to the scripting language of KiriKirki, although less flexible.
+Asobu, an independent game development community and shared workspace, hosted a TyranoBuilder Meetup in Japan in January 2020. A small group of developers (including the 'Tyrano Game Festival 2018' 2nd-place winner, Takumi Kato) were in attendance, and the event coordinator said there will be future events.
+
+
+== References ==
+
+
+== External links ==
+
+Official website of KiriKiri (in Japanese)
+krkrz on GitHub

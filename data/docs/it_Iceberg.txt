@@ -1,0 +1,94 @@
+Iceberg
+
+Un iceberg (termine inglese, AFI: [ˈaɪsbɜːɡ]; pronuncia italianizzata /ˈaizberɡ/ o /ˈaizbɛrɡ/) è un grande corpo di ghiaccio d'acqua dolce, formato dalla rottura di un ghiacciaio o di una piattaforma di ghiaccio, che galleggia liberamente nel mare o nell'oceano.
+Pezzi più piccoli di ghiaccio galleggiante di derivazione glaciale sono chiamati "growlers" o "bergy bits". Gran parte di un iceberg si trova sotto la superficie, il che ha portato all'espressione "punta dell'iceberg" per illustrare una piccola parte di un problema più grande e invisibile. Gli iceberg sono pericolosi per la navigazione: il naufragio del Titanic, causato da un iceberg al largo di Terranova nel 1912, portò alla formazione dell'International Ice Patrol nel 1914.
+
+
+== Etimologia ==
+Il nome iceberg deriva dalla parola olandese ijsberg che significa "montagna (berg) di ghiaccio (ijs)", passato attraverso l'inglese iceberg; il termine è affine al danese isbjerg, al tedesco Eisberg, al basso sassone Iesbarg e allo svedese e norvegese isberg.
+In passato alcuni puristi della lingua italiana hanno provato ad italianizzarne il nome chiamandolo in vari modi, ad esempio isbergo (adattamento proposto dal linguista Bruno Migliorini), ghiaccione, borgognone o borbottone (perlopiù come traduzione dell'inglese growler).
+
+
+== Descrizione ==
+
+L'iceberg galleggia facilmente grazie alla bassa densità del ghiaccio puro (920 kg/m³), inferiore all'acqua di mare (1025 kg/m³); circa il 90% del volume di un iceberg rimane sommerso.
+È difficile immaginare le dimensioni della parte subacquea dalla sola osservazione della parte emersa: questo ha dato origine all'espressione punta dell'iceberg per indicare una questione di grande rilievo di cui però è nota solo una piccola parte. Gli iceberg hanno dimensioni che vanno normalmente da 1 a 75 m sopra il livello del mare e pesano da 100 000 a 200 000 tonnellate.
+Il più grande iceberg mai registrato nell'Atlantico settentrionale sporgeva di 168 m sopra il livello del mare, quanto un edificio di 55 piani. Nonostante le loro dimensioni, gli iceberg dell'isola di Terranova si muovono in media di 17 km al giorno. Essi hanno origine dai ghiacciai occidentali della Groenlandia e possono raggiungere temperature interne dai −15 ai −20 °C.
+Nell'Antartico, il più grande iceberg mai registrato è stato il B-15, staccatosi dalla Barriera di Ross nel 2000, era lungo 295 km e largo 37 km, con una superficie di 11 000 km².
+Quando un iceberg si scioglie, produce un suono spumeggiante denominato Bergie Seltzer: esso è dovuto alla liberazione delle bolle di aria compressa rimaste intrappolate negli strati di ghiaccio dell'iceberg.
+
+
+== Classificazione ==
+
+
+=== Dimensioni ===
+
+La nomenclatura degli iceberg in base alle loro dimensioni non è universalmente accettata ma la loro classificazione segue di solito criteri simili. Quella riportata nella tabella sottostante è la classificazione utilizzata dalla International Ice Patrol:
+
+
+=== Forma ===
+
+Oltre che in base alla dimensione, c'è anche la classificazione in base alla forma: i due tipi principali sono quella tabulare e quella non tabulare. Gli iceberg tabulari hanno fianchi ripidi e superficie piatta, a forma di altopiano, con un rapporto lunghezza/altezza minore di 5. Questa tipologia di iceberg può essere molto grande come nel caso dell'Isola di ghiaccio Pobeda.
+Gli iceberg non tabulari possono avere le seguenti forme:
+
+a cupola: l'iceberg ha la sommità arrotondata;
+a pinnacolo: l'iceberg presenta una o più cuspidi;
+a zeppa: l'iceberg ha un fianco ripido da un lato e un fianco inclinato dal lato opposto;
+a bacino di carenaggio: l'iceberg ha subito una erosione formando una fessura a forma di U oppure un canale, in prossimità se non al livello del mare;
+a blocco: l'iceberg ha fianchi ripidi e superficie piatta; si differenzia da un iceberg tabulare perché la sua forma è più simile a un blocco che a una tavola.
+
+
+== Monitoraggio ==
+
+Prima del 1914, nonostante i fatali affondamenti delle navi dovuti agli iceberg, non esistevano sistemi di monitoraggio degli iceberg che mettessero in guardia le navi sul pericolo di possibili collisioni. L'avvento della costruzione di navi in acciaio portò i progettisti a dichiarare le loro navi "inaffondabili", ma nell'aprile del 1912 l'affondamento del Titanic, che causò la morte di circa 1 500 persone tra passeggeri ed equipaggio, screditò questa affermazione e diede una forte spinta all'istituzione di organismi di sorveglianza degli iceberg. La marina americana pattuglió le acque monitorando i flussi di ghiaccio, fino a quando nella Conferenza Internazionale sulla Sicurezza in Mare del novembre 1913, tenutasi a Londra, venne decisa la nascita di un ente di osservazione permanente degli iceberg: nel giro di tre mesi sarebbe nata la International Ice Patrol (IIP) con il compito di raccogliere dati meteorologici e oceanografici nell'Atlantico settentrionale, misurandone le correnti, i flussi di ghiaccio, la temperatura e i livelli di salinità. Nel XX secolo molti altri enti scientifici sono stati istituiti per studiare e monitorare gli iceberg.
+
+
+=== Monitoraggio moderno ===
+Le concentrazioni e le distribuzioni delle dimensioni degli iceberg sono monitorate in tutto il mondo dal National Ice Center (NIC) degli Stati Uniti, istituito nel 1995, che produce analisi e previsioni sulle condizioni del ghiaccio nell'Artide, nell'Antartide, nei Grandi Laghi e nella baia di Chesapeake. Oltre il 95% dei dati utilizzati nell'analisi del ghiaccio marino derivano da sensori remoti installati su satelliti che orbitano sui poli e che sorvegliano queste aree remote della Terra.
+Il NIC è anche l'ente che assegna i nomi agli iceberg antartici: a ciascun iceberg che supera i 18 km lungo uno dei suoi assi viene dato un nome composto da una lettera che denota il punto di origine e da un numero progressivo. Le lettere utilizzate sono:
+
+A - longitudine 0° - 90° W (Mare di Bellingshausen, Mare di Weddell);
+B - longitudine 90° W - 180° (Mare di Amundsen, Mare di Ross a est);
+C - longitudine 90° E - 180° (Mare di Ross a ovest, Terra di Wilkes);
+D - longitudine 0° - 90° E (Piattaforma di ghiaccio Amery, Mare di Weddell a est).
+L'iceberg B-15, staccatosi dalla Barriera di Ross nel 2000 e con un'area iniziale di 11 000 km², è stato quello più grande mai registrato. Si spaccò nel novembre del 2002: il pezzo più grande, il B-15A, con un'area di 3.000 km², continuava ad essere, nel dicembre del 2004, l'iceberg più grande sulla Terra. A fine ottobre 2005, il B-15A si divise in nove parti in seguito a ripetute collisioni con la costa. Oltre ad essere stato un pericolo diretto per la navigazione, il B-15A minacciò di creare ulteriori iceberg, scontrandosi con alcune piattaforme di ghiaccio.
+
+
+== Scioglimento degli iceberg ==
+
+È falso che lo scioglimento degli iceberg crei un incremento del livello dei mari: infatti sciogliendosi un iceberg l'acqua che ne risulta è il 90% del volume di partenza, cioè occupa meno volume dell'iceberg originario (per la spinta di Archimede tale volume di ghiaccio immerso si traduceva come aumento di volume dell'acqua marina). Contando che la punta di un iceberg è il 10% della parte immersa si ottiene che lo scioglimento di un iceberg in mare produca acqua per un volume pari alla sola parte immersa. L'innalzamento del livello dei mari è invece determinato dallo scioglimento del ghiaccio che riposa sulla terraferma, come quello delle calotte in Groenlandia o in Antartide.
+
+
+== Note ==
+
+
+== Voci correlate ==
+Banchisa
+Calotta artica
+Calotta di ghiaccio
+Cappa di ghiaccio
+Circolo polare
+Ghiacciaio
+Ghiaccio
+Piattaforma di ghiaccio
+Rompighiaccio
+RMS Titanic
+
+
+== Altri progetti ==
+
+ Wikiquote contiene citazioni di o su iceberg
+ Wikizionario contiene il lemma di dizionario «iceberg»
+ Wikimedia Commons contiene immagini o altri file su iceberg
+
+
+== Collegamenti esterni ==
+
+iceberg, su Treccani.it – Enciclopedie on line, Istituto dell'Enciclopedia Italiana. 
+iceberg, su sapere.it, De Agostini. 
+(EN) Peter Wadhams, iceberg, su Enciclopedia Britannica, Encyclopædia Britannica, Inc. 
+(EN, FR) Iceberg, su Enciclopedia canadese. 
+Galleria fotografica di Iceberg, su ecoscope.com. URL consultato il 30 marzo 2005 (archiviato dall'url originale il 2 marzo 2009).
+(EN)  Iceberg Finder Service per la costa orientale del Canada
+(EN) Iceberg dell'Artico e dell'Antartico, su solcomhouse.com. URL consultato il 21 agosto 2009 (archiviato dall'url originale il 26 agosto 2009).
+(EN) Sorvolando la Iceberg Alley (Il Viale degli Iceberg), su thecircumference.org. URL consultato il 21 agosto 2009 (archiviato dall'url originale l'8 ottobre 2008).

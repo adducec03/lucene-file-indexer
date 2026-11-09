@@ -1,0 +1,117 @@
+Stazione meteorologica
+
+In meteorologia la stazione meteorologica è un insieme di strumenti di misura che permettono di controllare/monitorare le condizioni fisiche dell'atmosfera in un dato luogo, per un tempo indefinito, relativamente ai suoi parametri fondamentali, a fini meteorologici e climatici. Può essere allestita in ogni punto della superficie terrestre che sia pianura, collina, montagna o in mare aperto su boe galleggianti o navi. I parametri atmosferici in quota lontano dalla superficie terrestre sono invece rilevati tramite palloni sonda, aerei e satelliti meteorologici.
+
+
+== Descrizione ==
+
+Una stazione meteorologica è composta principalmente dal:
+
+termometro (a minima e massima) per misurare la temperatura;
+barometro per misurare la pressione dell'aria;
+igrometro per misurare l'umidità atmosferica;
+anemometro per misurare la velocità del vento;
+banderuola per misurare la direzione del vento;
+pluviometro per misurare la quantità di pioggia caduta.
+Altre stazioni meteo posseggono ulteriormente strumenti più particolari, tra cui:
+
+solarimetro o più precisamente il piranometro per la misura dell'intensità della radiazione solare entrante;
+sensore per raggi ultravioletti;
+sensore di bagnatura fogliare;
+sensore di umidità del terreno, tramite sonda;
+sensore di temperatura del terreno;
+disdrometro per categorizzare il tipo di precipitazione atmosferica;
+trasmissometro per stimare la visibilità, presente soprattutto negli aeroporti.
+Mentre nelle vecchie stazioni meteorologiche i parametri meteo-climatici erano semplicemente rilevati dagli strumenti e letti periodicamente dagli operatori addetti, nelle moderne stazioni meteorologiche tutti i parametri vengono registrati automaticamente in memoria, i dati vengono periodicamente scaricati dall'operatore e graficati nel tempo tramite opportuni software oppure la stazione è direttamente connessa in Rete e i dati costantemente inviati ad un server e da questo ad un elaboratore finale che li grafica a favore dell'utente finale.
+Stazioni meteorologiche famose sono quelle del Capanna Regina Margherita sulla Punta Gnifetti del Monte Rosa a 4.554 m s.l.m, la più alta d'Europa, quella del Colle Sud dell'Everest a quasi 8.000 m di quota s.l.m., la più alta al mondo e quelle di Vostok, Amundsen-Scott e Dome Fuji in Antartide, le più fredde al mondo con il record di -89.2° di Vostok. In Italia le stazioni meteo ufficiali, sparse un po' su tutto il territorio, sono gestite dal Servizio meteorologico dell'Aeronautica Militare, sebbene esistano innumerevoli stazioni a fini di studio da parte di istituti di ricerca e stazioni amatoriali di associazioni meteorologiche e privati presenti un po' in tutti i comuni.
+
+
+== Classificazione ==
+
+
+=== Stazioni presidiate e stazioni automatiche ===
+
+Le stazioni meteorologiche presidiate prevedono l'impiego di personale per poter completare le informazioni da integrare ai dati rilevati: il personale generalmente effettua osservazioni su visibilità, tipo di copertura nuvolosa e variazione del tempo rispetto alla rilevazione precedente.
+Le stazioni meteorologiche automatiche o caricate dall'uomo, le più moderne delle quali dotate di sistema DCP (Data Collection Platform) rilevano automaticamente tutti i dati e i parametri meteorologici e, grazie ad un sistema trasmittente, inviano i messaggi SYNOP alla rete GTS dell'Organizzazione meteorologica mondiale e al Meteosat che poi li reindirizza ai centri deputati alla loro ricezione.
+Il 1º settembre del 1936 è stata convenzionalmente stabilita la classificazione delle stazioni meteorologiche in base alla loro operatività, venendo suddivise in stazioni di prima, di seconda e di terza classe.
+
+
+==== Stazioni meteorologiche di prima classe ====
+Le stazioni meteorologiche di prima classe sono le stazioni che effettuano osservazioni sinottiche orarie o triorarie 24 ore su 24; tra esse possono essere inclusi anche i principali osservatori meteorologici che effettuano 6 osservazioni sinottiche triorarie tra le ore 3 e le ore 18 GMT. Le osservazioni sinottiche vengono poi codificate nei messaggi SYNOP.
+
+
+==== Stazioni meteorologiche di seconda classe ====
+Le stazioni meteorologiche di seconda classe sono le stazioni complementari e ausiliarie che effettuano 6 osservazioni sinottiche triorarie tra le ore 3 e le ore 18 GMT oppure 5 osservazioni sinottiche triorarie tra le ore 6 e le ore 18 GMT. Le osservazioni sinottiche effettuate vengono poi codificate nei messaggi SYNOP.
+
+
+==== Stazioni meteorologiche di terza classe ====
+Le stazioni meteorologiche di terza classe sono le stazioni ausiliarie che effettuano 5 o meno osservazioni sinottiche al giorno e le stazioni sussidiarie che effettuano soltanto osservazioni aeronautiche. Le osservazioni sinottiche vengono poi codificate nei messaggi SYNOP, mentre le osservazioni aeronautiche vengono codificate nei messaggi METAR.
+
+
+=== Stazione a norma OMM ===
+
+Per permettere che una stazione meteo rilevi dati definiti "corretti", ovvero statisticamente coerenti, omogenei e consistenti con quelli delle altre stazioni meteorologiche per consentirne l'eventuale uso ai fini di indagini climatiche, occorre seguire precise norme di posizionamento della stessa, alcune delle quali convenzionali:
+
+i sensori di temperatura e umidità devono essere all'interno di un apposito schermo solare passivo o ventilato e rialzato ad un'altezza di ~ 180–200 cm da terra; in assenza di schermo solare il termometro rileverebbe non la temperatura reale dell'aria, ma quella del termometro stesso riscaldato dalla radiazione solare incidente per assorbimento diretto;
+la stazione dev'essere installata su tappeto erboso naturale tagliato di frequente o tappeto sintetico di colore verde;
+i sensori del vento devono essere posti ad un'altezza di 10 m e ad una distanza pari a 10 volte l'altezza dell'ostacolo più alto (per evitare turbolenze).
+In linea teorica non esiste un modello di stazione meteorologica perfetto per la rilevazione dei dati meteo esente cioè da errori o incertezze nella misurazione; esiste però un modello preso a riferimento in quanto considerato optimum nel senso che minimizza gli inevitabili errori di misurazione: tale modello di riferimento è rappresentato dalla capannina meteorologica regolata a sua volta dalle norme di posizionamento di cui sopra. Sotto questo punto di vista l'uso di uno schermo per la radiazione solare diretta tenta di riprodurre l'effetto dello schermo della medesima radiazione da parte delle pareti in legno bianche della capannina meteorologica.
+
+
+=== Codici di identificazione ===
+In base alle direttive dell'Organizzazione meteorologica mondiale, ogni stazione meteorologica ufficiale si è vista assegnare un codice WMO (World Meteorological Organization) di identificativo numerico.
+Inoltre, ogni stazione è identificabile anche attraverso il codice ICAO (International Civil Aviation Organization), assegnato alle medesime dal suddetto ente, secondo parametri variabili da paese a paese. In Italia, il codice ICAO prevede l'identificazione delle stazioni meteo ufficiali attraverso una sigla di 4 lettere maiuscole, dove le prime due ("LI") risultano essere comuni a tutte le stazioni meteorologiche situate nel territorio italiano.
+
+
+== Utilizzo dei dati ==
+
+
+=== Meteorologia ===
+
+I dati delle varie stazioni meteorologiche sparse sul globo (terraferma, oceano, navi, boe, aerei), oltre a descrivere lo stato attuale atmosferico di una località, vengono utilizzati a fini meteorologici, assieme ai dati provenienti dai satelliti meteorologici e dai radiosondaggi, per l'inizializzazione dei modelli meteorologici ed ottenere così le previsioni meteorologiche, tramite il ricorso ai supercalcolatori.
+
+
+=== Climatologia ===
+In ambito climatico i dati sono invece utilizzati per la caratterizzazione statistica del clima su un dato territorio attraverso l'analisi delle serie storiche e più in particolare quindi per lo studio, in fase di detection, di eventuali mutamenti climatici a scala regionale, continentale, emisferica o globale.
+L'Organizzazione meteorologica mondiale ha stabilito di calcolare, per ogni stazione meteorologica ufficiale, i valori medi climatologici relativi alle precipitazioni e alle temperature massime e minime in base ai dati medi ricavabili dalle osservazioni effettuate nel trentennio di riferimento climatico 1961-1990. Tale parametro costituisce, pertanto il riferimento medio a cui vengono comparati i dati delle temperature rilevati quotidianamente e i bilanci mensili ed annuali, sia a livello termico che pluviometrico.
+Considerando l'andamento della temperatura media globale della Terra, risulta pur vero che, all'interno del trentennio climatico di riferimento, il ventennio 1961-1980 si è caratterizzato per valori medi inferiori, sia in confronto ai decenni precedenti che a quello susseguente e all'attuale: ciò sta aprendo una discussione tra gli studiosi del settore, circa una possibile modifica ed estensione del periodo temporale di riferimento medio climatico.
+Secondo alcuni i dati sul recente riscaldamento globale sarebbero corrotti da bias dovuto alla non completa e omogenea distribuzione delle stazioni meteorologiche sul globo nonché alla modifica dell'ambiente circostante (da rurale ad urbano) in cui queste stazioni si trovano subendo così il cosiddetto effetto isola di calore e per questo andrebbero corretti.
+
+
+=== Reti ===
+Sono state create diverse reti di stazioni meteorologiche terrestri per la raccolta e condivisione delle misurazioni. Alcune di queste coprono tutto il globo, mentre altre sono di natura regionale.
+
+
+==== Globali ====
+Global Climate Observing System
+Citizen Weather Observer Program (CWOP)
+Weather Underground Personal Weather Stations
+
+
+=== Agrometeorologia ===
+
+Le stazioni meteorologiche hanno un largo utilizzo in agricoltura (agrometeorologia). In generale esse vengono utilizzate per monitorare quei parametri ambientali che hanno un effetto diretto sulla crescita e lo sviluppo delle piante ed anche dei suoi frutti. Il primo parametro di interesse è la temperatura dell’aria: è noto infatti come le piante hanno un proprio intervallo ottimale di temperatura all’interno del quale la crescita e la maturazione dei frutti avviene in modo ideale. Altro parametro importante è la intensità e la distribuzione delle piogge: quest’informazione consente di stabilire i periodi dell’anno in cui grazie alla maggior concentrazione di eventi piovosi, la umidità del suolo è maggiore e questo consente di meglio pianificare i periodi migliori in cui far crescere le piante e far maturare i frutti. Attraverso l’utilizzo delle moderne stazioni meteorologiche, e soprattutto grazie ai sensori di umidità del suolo, è possibile monitorare “in continuo” la umidità del suolo al fine di automatizzare gli interventi irrigui. 
+Questa tecnologia appare essere molto utile soprattutto perché tutto ciò consente di perseguire il risparmio idrico. Altro parametro importante ai fini agricoli da monitorare attraverso le stazioni meteorologiche è la radiazione solare: questa viene misurata attraverso degli appositi sensori. Una parte di questa (PAR, radiazione foto sinteticamente attiva) è quella che attiva la clorofilla delle piante per il corretto svolgimento della fotosintesi clorofilliana. Alto capitolo importante nell’utilizzo delle moderne stazioni meteorologiche in ambito agricolo è il controllo delle malattie. Così come le piante, anche gli insetti e funghi (che hanno un impatto negativo sulle produzioni agricole) posseggono degli optimum di crescita.
+Un esempio è rappresentato dalla cosiddetta “regola dei tre dieci”. I 3 dieci rappresentano le 3 condizioni che determinano l’inizio dello sviluppo della Plasmopara viticola: questa è una tipica malattia della vite il cui ciclo è fortemente condizionato dalle condizioni climatiche, ed è oggi una delle più diffuse e pericolose malattie della vite in molte regioni europee ed italiane (peronospora della vite). Due delle 3 condizioni sono 2 parametri climatici: temperatura dell’aria e piovosità. Appare quindi evidente che un costante monitoraggio di questi due parametri e la sua corretta elaborazione (attraverso di appositi software) consente di preventivare eventuali interventi che prevedono l'uso di prodotti fitosanitari. Per diverse malattie delle piante (indotte da funghi e insetti di vario genere), le case costruttrici di stazioni meteorologiche mettono oggi a disposizione diversi software che consentono di aiutare gli operatori nel controllo delle malattie (sistema di supporto alle decisioni).
+
+
+== Note ==
+
+
+== Voci correlate ==
+Meteorologia
+Climatologia
+Datalogger
+
+
+== Altri progetti ==
+
+ Wikizionario contiene il lemma di dizionario «stazione meteorologica»
+ Wikimedia Commons contiene immagini o altri file sulla stazione meteorologica
+
+
+== Collegamenti esterni ==
+
+(EN) weather station, su Enciclopedia Britannica, Encyclopædia Britannica, Inc. 
+(EN) Opere riguardanti Stazione meteorologica, su Open Library, Internet Archive. 
+Aeronautica Militare - Servizio meteorologico, su meteoam.it.

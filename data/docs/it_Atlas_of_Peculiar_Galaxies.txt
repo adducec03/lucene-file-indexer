@@ -1,0 +1,245 @@
+Atlas of Peculiar Galaxies
+
+L'Atlas of Peculiar Galaxies (Atlante delle galassie peculiari) è un catalogo astronomico di galassie peculiari compilato da Halton Arp. L'atlante è stato originariamente pubblicato nel 1966 dal California Institute of Technology e contiene 338 galassie in totale.
+
+
+== Introduzione ==
+Lo scopo principale del catalogo era quello di presentare fotograficamente esempi dei diversi tipi di strutture insolite che si trovano nelle galassie nelle nostre vicinanze. Arp si rendeva conto che la ragione per la quale le galassie si plasmavano in forme ellittiche e a spirale non era ancora ben compresa. Percepiva le galassie peculiari come una sorta di piccoli "esperimenti" che gli astronomi potevano usare per capire i processi fisici che formavano le galassie ellittiche e a spirale.
+Con questo catalogo gli astronomi avevano una sintesi delle galassie peculiari che potevano studiare nel dettaglio. L'atlante non contiene una completa panoramica delle galassie peculiari del cielo, ma fornisce solamente degli esempi di ciascun fenomeno osservato nelle galassie vicine.
+Siccome al tempo della sua pubblicazione, i processi che causavano le differenti forme erano ancora poco noti, le galassie nel catalogo sono ordinate in base alla loro apparenza:
+
+Gli oggetti da 1 a 101 sono singole galassie a spirale peculiari o galassie a spirale che in apparenza hanno compagne più piccole.
+Gli oggetti da 102 a 145 sono galassie ellittiche o simili a ellittiche.
+Gli oggetti da 146 a 268 sono singole galassie, o gruppi di galassie che non hanno né forma ellittica né a spirale.
+Gli oggetti da 269 a 327 sono galassie doppie.
+Gli oggetti da 332 a 338 sono quelle che non rientravano in nessuno dei gruppi precedenti.
+La maggior parte delle galassie del catalogo sono maggiormente note con altre designazioni, solo alcune sono più note con il numero assegnatole da Arp, come ad esempio Arp 220.
+Oggi i processi fisici che hanno portato alla formazione delle galassie nel catalogo sono ben compresi. Un gran numero di quegli oggetti sono Galassie interagenti, come ad esempio M51 (Arp 85), Arp 220 e le Galassie Antenne. Un piccolo numero sono semplici galassie nane che non hanno sufficiente massa per permettere la formazione di strutture coesive. Un altro esiguo numero di galassie sono radiogalassie. Questi oggetti contengono nuclei galattici attivi che producono potenti getti di gas chiamati getti relativistici. Nell'atlante sono contenute M87 (Arp 152) e Centaurus A (Arp 153).
+
+
+== Galassie Arp degne di nota ==
+
+
+== Elenco di tutte le galassie nel catalogo ==
+
+
+=== Galassie a spirale ===
+
+
+==== Galassie a bassa luminosità ====
+
+Queste sono per la maggior parte galassie nane o galassie a spirale poco definite (classificate Sm) che hanno una bassa luminosità superficiale. Sono galassie piuttosto ordinarie ad eccezione di NGC 2857 (Arp 1) che è una galassia a spirale tipo Sc
+
+
+==== Galassie con bracci spezzati ====
+Questa categoria include galassie a spirale i cui bracci risultano divisi in due parti separate.
+
+
+==== Galassie con segmenti staccati ====
+
+Questa categoria contiene galassie a spirale con bracci che sembrano essere segmentati. Alcuni segmenti potrebbero essere spezzati solo in apparenza a causa dell'oscuramento della luce stellare operato dalla polvere interstellare. Altri bracci potrebbero apparire spezzati a causa della presenza di brillanti ammassi stellari o catene discontinue di ammassi stellari.
+
+
+==== Galassie con 3 bracci ====
+Solitamente le galassie a spirale contengono 2 bracci di spirale chiaramente definiti oppure contengono solamente confuse strutture filamentose a spirale. Galassie con 3 bracci ben definiti sono rare.
+
+
+==== Galassie a spirale a singolo braccio ====
+
+Anche le galassie a spirale con un solo braccio sono rare, il singolo braccio potrebbe essersi formato a causa dell'interazione con un'altra galassia.
+
+
+==== Galassie a spirale con un braccio più luminoso ====
+
+In queste galassie i bracci di spirale hanno un aspetto asimmetrico. Un braccio può apparire considerevolmente più luminoso dell'altro. La maggior parte di queste galassie sono in effetti galassie asimmetriche (come M101 e NGC 6946), nel caso di NGC 6365, però, si tratta di due galassie interagenti nel quale una delle due galassie è vista di taglio e per combinazione si trova proprio dove è posizionato
+il braccio dell'altra galassia, che è vista di faccia.
+
+
+==== Galassie a spirale a forma di 'S' allungata ====
+La forma di queste galassie assomiglia ad una S allungata (o al segno dell'integrale usato in matematica). Alcune di queste galassie (come IC 167) sono semplicemente ordinarie galassie a spirale viste da un angolo insolito. Altre, come UGC 10770, sono galassie interagenti con code mareali che appaiono simili a bracci di spirali.
+
+
+==== Galassie a spirale con compagne a bassa luminosità ====
+Molte di queste galassie probabilmente stanno interagendo con le galassie a bassa luminosità presenti nel campo visivo. Tuttavia in alcuni casi può essere abbastanza difficoltoso determinare con certezza se la galassia compagna è fisicamente legata o se piuttosto la compagna è solo una fonte luminosa sullo sfondo o in primo piano.
+
+
+==== Galassia a spirale con piccole compagne ad alta luminosità ====
+
+Anche in questo caso, molte di queste galassie sono probabilmente interagenti, sebbene alcune delle compagne potrebbero essere fonti luminose lontane dalla galassia o perfino ammassi stellari nella stessa galassia.
+
+
+==== Galassie a spirale con grandi compagne luminose ====
+
+Le galassie di questo gruppo sono quasi sempre chiaramente interagenti. Il più famoso di questi oggetti è la galassia vortice (M51; Arp 85), che è formato da una grande galassia a spirale (NGC 5194) che interagisce una ellittica più piccola (NGC 5195). L'interazione ha distorto la forma di entrambe le galassie; la struttura a spirale della galassia più grande si è intensificata e un ponte di stelle e gas si è formato tra le due galassie. Molte delle altre galassie in questo gruppo sono connesse da un ponte.
+
+
+==== Galassie a spirale con compagne ellittiche ====
+Come le galassie a spirale con compagne luminose, la maggior parte di questi oggetti sono chiaramente sistemi interagenti. In molte immagini sono visibili code mareali e ponti.
+
+
+=== Ellittiche e galassie simili ad ellittiche ===
+
+
+==== Galassie ellittiche connesse a galassie a spirale ====
+
+Questi oggetti sono molto simili alle galassie a spirale con compagne ellittiche. Tutte queste galassie mostrano code e ponti mareali formatesi da interazioni gravitazionali.
+
+
+==== Galassie ellittiche che respingono bracci di spirale ====
+In base alla descrizione di Arp di questi oggetti sembra che in origine lui pensasse che le galassie ellittiche di questo gruppo stavano spingendo via i bracci delle compagne a spirale. Tuttavia i bracci in questione potrebbero semplicemente apparire distorti a causa delle interazioni gravitazionali. Alcuni di questi bracci "respinti" sono dal lato opposto della galassia a spirale rispetto alla compagna ellittica. Simulazioni hanno dimostrato che tali strutture possono avere come causa esclusiva le interazioni gravitazionali, senza necessitare di una forza repulsiva.
+
+
+==== Galassie ellittiche vicine che perturbano galassie a spirale ====
+
+Questa è un'altra categoria in cui la maggioranza degli oggetti sono galassie interagenti. Come si può intuire dal nome della categoria, le galassie a spirale appaiono perturbate.
+
+
+==== Galassie con frammenti nelle vicinanze ====
+
+
+==== Materiali provenienti da galassie ellittiche ====
+Arp pensava che le galassie ellittiche di questo gruppo stessero espellendo materiale dai loro nuclei. Molte di queste immagini potrebbero essere interpretate in questa maniera. Tuttavia questi oggetti sono in realtà una miscela di altri fenomeni. Per esempio NGC 2914 (Arp 137) è semplicemente una galassia a spirale con deboli bracci e NGC 4015 (Arp 138) è una coppia di galassie interagenti di cui una è una galassia a spirale vista di taglio
+Alcuni oggetti, come NGC 2444 and NGC 2445 (Arp 143), sono sistemi che contengono galassie ad anello, che sono create quando una galassia passa attraverso il disco di un'altra e crea un effetto onda, che causa dapprima la caduta dei gas verso l'interno e in seguito la loro propagazione verso l'esterno a formare l'anello.
+
+
+=== Galassie amorfe ===
+Arp descriveva questa categoria come "galassie che non hanno forma ellittica né a spirale", sebbene non le abbia mai definite "amorfe".
+Molte di queste galassie sono interagenti o galassie rimanenti dalla fusione di due galassie più piccole. Le interazioni producono vari tipi di strutture mareali, come code e ponti che possono sopravvivere anche dopo che i nuclei e i dischi delle galassie progenitrici si sono fusi. Sebbene le code mareali siano descritte con termini differenti basati sulla loro apparenza, come "contro-code", "filamenti", "loop", sono tutte manifestazioni dello stesso fenomeno.
+
+
+==== Galassie con anello associato ====
+
+Come descritto sopra queste galassie possono formarsi quando una galassia compagna passa attraverso un'altra. Le interazioni producono un effetto onda che all'inizio porta materiali verso il centro e in seguito verso l'esterno, formando l'anello.
+
+
+==== Galassie con getti ====
+
+Queste galassie sembrano espellere materiale dai loro nuclei. In alcuni casi, come IC 803 (Arp 149) and NGC 7609 (Arp 150), i "getti" sono semplicemente parte della struttura prodotta dall'interazione delle galassie. In altre, come in Arp 151 e M87 (Arp 152), i getti sono proprio gas ionizzato espulso dall'ambiente intorno a un buco nero supermassiccio nel nucleo della galassia attiva. Questi getti, a volte chiamati getti relativistici o radiogetti, sono potenti fonti di radiazione di sincrotrone, soprattutto nelle lunghezze d'onda radio.
+
+
+==== Galassie perturbate con assorbimento interno ====
+
+Le galassie in questa categoria presentano scure linee di polvere che oscurano parte del disco galattico. La totalità di queste galassie sono il prodotto della fusione di due galassie. NGC 520 (Arp 157) è uno degli esempi migliori di stato intermedio di fusione, in cui le due galassie progenitrici si sono unite, ma i loro nuclei non ancora.
+Centaurus A (Arp 153) e NGC 1316 (Arp 154) sono entrambe galassie ellittiche complete con un'insolita linea di polveri; la loro cinematica e le loro strutture indicano che hanno subito un evento di fusione in tempi relativamente recenti.
+NGC 4747 (Arp 159) potrebbe essere semplicemente una galassia a spirale vista di taglio con importanti linee di polveri scure.
+
+
+==== Galassie con filamenti diffusi ====
+I filamenti di questi oggetti potrebbero essere code mareali dovuti alle interazioni galattiche. Molte di queste galassie sono il residuo della fusione di due galassie a spirale in una galassia ellittica. Tuttavia NGC 3414 (Arp 162) sembra essere un'insolita galassia SO con un disco molto piccolo rispetto al bulge. NGC 4670 (Arp 163) è una galassia nana blu compatta con un'intensa attività di formazione stellare; è chiaramente troppo piccola per essere il residuo della fusione di due galassie a spirale come le altre in questo gruppo, sebbene possa comunque essere il risultato di altre interazioni di entità molto minore.
+
+
+==== Galassie con diffuse contro-code ====
+Le contro-code sono strutture mareali causate dalle interazioni gravitazionali tra due galassie. M32 (Arp 168), una galassia nana che interagisce con la galassia di Andromeda, è inclusa in questa categoria sebbene la diffusa contro-coda sia poco visibile nelle fotografie di Arp.
+
+
+==== Galassie con strette contro-code ====
+Questa è un'altra categoria che contiene galassie con code mareali prodotte dalle interazioni gravitazionali. Queste code sono più strette e meglio definite rispetto agli oggetti 167-172.
+
+
+==== Galassie con filamenti stretti ====
+
+Questa categoria comprende una mistura di differenti tipi di oggetti. Alcune di queste galassie sono state coinvolte in interazioni gravitazionali e i filamenti ne sono il risultato. Tuttavia altri oggetti sono semplici galassie a spirale con deboli bracci interpretati da Arp come "filamenti".
+
+
+==== Galassie con materiale espulso dal nucleo ====
+Le espulsioni di molti questi oggetti sono strutture mareali create dalle interazioni gravitazionali. In alcuni casi, come NGC 5544 e NGC 5545 (Arp 199), i materiali "espulsi" sono in realtà una galassia a spirale vista di taglio che solo prospetticamente appare uscire dal nucleo dell'altra galassia.
+Quasi tutti gli oggetti in questa categoria sono interagenti o hanno avuto interazioni in un recente passato. NGC 3712 (Arp 203) è un'eccezione.
+
+
+==== Galassie con irregolarità, assorbimento e definizione ====
+
+Le galassie in questa categoria hanno strutture irregolari, notevoli linee di polveri (assorbimento) o un aspetto granulare (definizione). In questo gruppo sono contenuti un misto di galassie interagenti distorte dalla gravità, galassie nani irregolari vicine e galassie a spirale con un'insolita abbondanza di gas.
+
+
+==== Galassie con loop adiacenti ====
+
+Questi loop sono un altro tipo di struttura che si forma a causa delle interazioni gravitazionali tra galassie. Alcune di queste sono galassie che hanno quasi terminato il processo di fusione e i loop sono semplici residui. Tra gli oggetti di questo gruppo c'è Arp 220, una delle galassie ultra-brillanti all'infrarosso maggiormente studiate del cielo.
+
+
+==== Galassie con bracci amorfi ====
+
+Molte di queste galassie sono un residuo della fusione di galassie. I "bracci amorfi" sono detriti mareali rimasti dopo la collisione.
+
+
+==== Galassie con anelli concentrici ====
+Queste sono galassie con strutture simili a "conchiglie". Alcune di queste sono il risultato di fusioni recenti. In altri casi la struttura potrebbe essere il disco esterno di una galassia S0. In altri casi più complicati la galassia con gli anelli è una galassia SO che interagisce con un'altra galassia.
+
+
+==== Galassie con aspetto di scissione ====
+
+Sebbene la descrizione di questa categoria suggerisce che le galassie si stiano separando, la maggior parte di queste si sta invece fondendo. Molti di questi oggetti hanno code e ponti molto pronunciati causati dalle interazioni gravitazionali.
+La maggior parte delle galassie in questo gruppo sono nelle prime fasi della loro fusione, hanno ancora nuclei e dischi distinti, sebbene questi ultimi distorti. Le più degne di nota sono le galassie Antenne (NGC 4038 e NGC 4039, Arp 244) e le Galassie Topo (NGC 4676, Arp 242).
+Comunque non tutti gli oggetti di questo gruppo sono interagenti, una piccola parte sono semplicemente galassie nane con struttura irregolare.
+
+
+==== Galassie con pezzi irregolari ====
+
+Questi oggetti sembrano serie di pezzi irregolari senza una struttura coerente. Molti di questi oggetti sono semplici galassie nane. Alcune sono galassie interagenti, altre piccoli gruppi di galassie. In entrambi i casi le galassie costituenti sono galassie irregolari. La sovrapposizione di due o più di queste galassie irregolari può facilmente essere confusa per una grande galassia irregolare, ragione per cui nel catalogo di Arp, e anche in altri cataloghi, sono spesso classificate come singoli oggetti.
+
+
+=== Galassie doppie e multiple ===
+Originariamente Arp chiamava questi oggetti "galassie doppie", ma molte di queste sono gruppi più numerosi.
+Alcune sono galassie interagenti, mentre altri sono gruppi di galassie. La differenza è che le interagenti appaiono distorte, mentre i gruppi sono solamente legati gravitazionalmente tra loro, ma non necessariamente abbastanza vicini da indurre cambiamenti sostanziosi nella struttura.
+
+
+==== Galassie con bracci connessi ====
+
+Questo gruppo comprende tutte coppie di galassie interagenti ad eccezione di NGC 5679 (Arp 274), che potrebbe essere un gruppo di tre galassie interagenti.
+I bracci connessi della descrizione sono ponti mareali causati dalle interazioni gravitazionali, queste strutture si formano durante le prime fasi della fusione.
+
+
+==== Galassie interagenti ====
+La differenza tra queste galassie e quelle del gruppo "galassie amorfe" sta nel fatto che gli oggetti componenti sono ancora distinguibili tra di loro.
+
+
+==== Galassie con caduta verso l'interno ====
+
+Questa categoria contiene una strana miscela di oggetti. Due sono galassie viste di taglio con compagne più piccole nelle vicinanze. In due casi sono oggetti connessi da ponti. Gli ultimi due potrebbero interagire tra loro a lunga distanza.
+
+
+==== Galassie con effetto vento ====
+Sebbene incluse nella categoria delle galassie doppie, molti di questi oggetti sono galassie singole. L'"effetto vento" si riferisce al loro aspetto, non alla reale misurazione della velocità dei gas.
+In qualche caso il loro aspetto può essere il risultato di interazioni. In altri casi, come NGC 3981 (Arp 289), la debole ed estesa emissione può essere il risultato della natura intrinseca della galassia..
+
+
+==== Galassie doppie o multiple con lunghi filamenti ====
+
+I lunghi filamenti in questi sistemi sono probabilmente code mareali o ponti prodotti dall'interazione gravitazionale delle galassie.
+
+
+==== Oggetti non classificati ====
+
+Arp non ha fornito una sottoclassificazione per gli oggetti dal 298 al 310 del suo atlante. Sono per la maggior parte coppie di galassie interagenti.
+
+
+==== Gruppi di galassie ====
+
+
+==== Catene di galassie ====
+
+
+=== Varie ===
+
+
+== Note ==
+
+
+== Voci correlate ==
+Index Catalogue (IC)
+Catalogo di Messier (M)
+New General Catalogue (NGC)
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file su Atlas of Peculiar Galaxies
+
+
+== Collegamenti esterni ==
+(EN) Atlas of Peculiar Galaxies courtesy of the NASA/IPAC Extragalactic Database.
+(EN) Amateur observations of the galaxies, su arpgalaxies.com. URL consultato il 9 luglio 2017 (archiviato dall'url originale il 9 luglio 2017).
+(EN) Earthlings - Astronomy web site Paul and Liz Downing
+(EN) Grasslands Observatory Arp Galaxies, su 3towers.com. URL consultato il 1º settembre 2000 (archiviato dall'url originale il 1º settembre 2000).
+(EN) Hubble Images Peculiar coppia di galassie Arp 87, su starrymirror.com. URL consultato il 17 aprile 2013 (archiviato dall'url originale il 9 febbraio 2012).
+(EN) NASA/IPAC Extragalactic Database Electronic Copy of the 'Atlas of Peculiar Galaxies, su nedwww.ipac.caltech.edu.
+(EN) NASA/IPAC Extragalactic Database General information retrieval on individual Arp objects.

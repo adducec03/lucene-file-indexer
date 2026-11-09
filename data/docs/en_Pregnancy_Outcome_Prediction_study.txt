@@ -1,0 +1,64 @@
+Pregnancy Outcome Prediction study
+
+The Pregnancy Outcome Prediction (POP) Study is a prospective cohort study of 4,512 women who have never given birth, recruited at the Rosie Hospital (Cambridge, UK) between January 2008 and July 2012.
+
+
+== Staff and funding ==
+The Principal Investigator is Gordon Smith of the Department of Obstetrics and Gynaecology (University of Cambridge, UK). Lab work using the biobank of samples is led by Stephen Charnock-Jones of the same department. The POP study is supported by the Women's Health and Paediatrics theme of the National Institute for Health Research (NIHR) Cambridge Biomedical Research Centre (BRC), which is based at the Cambridge Biomedical Campus (UK). Other funding sources for the projects related to the POP study are the Medical Research Council (UK), the NIHR, the Wellcome Trust, the British Heart Foundation, and the Stillbirth and Neonatal Death Society (now known as Sands), as well as Industry supported studies.
+
+
+== Background ==
+In 2007, Cambridge (UK) received funding from NIHR to establish a comprehensive Biomedical Research Centre (BRC). The Cambridge BRC Women's Health and Paediatrics theme focuses on tackling the origins, treatment and prevention of many of the health issues that affect women during their reproductive years. The bulk of the Cambridge BRC funding for the first five years of the theme supported the POP study.
+Over recent years, we have witnessed a great improvement in population-based screening methods for fetal abnormalities as a result of technological developments in ultrasound, biochemical screening and molecular genetics. However, the methods for screening the low risk population for other complications of pregnancy such as fetal growth restriction (FGR), pre-eclampsia and stillbirth have remained largely unchanged for the past 20–30 years. The UK National Institute for Clinical Excellence (NICE) has highlighted a number of research priorities in their guidelines for pregnancy care. These include a focus on improving the screening of apparently healthy pregnant women and identify those at high risk of complications. This area is the main focus of the POP study.
+
+
+== Design and aims ==
+Nulliparous women with a viable singleton pregnancy were recruited to the POP study when attending their dating ultrasound scan at The Rosie Hospital (Cambridge, UK). The only clinical exclusion criterion was multiple pregnancy. Participants had serial ultrasound scans and blood obtained at recruitment, 20, 28 and 36 weeks of gestation. DNA samples and height/weight measurements of the partners were also collected. After delivery, biopsies of the placenta, placental membranes, umbilical cord, and a sample of cord blood were collected. Thorough design of the POP study and careful sample collection allowed the creation of an extensive, optimally phenotyped biobank of complicated and healthy pregnancies, including approximately 230,000 blood and tissue samples stored in -80 °C freezers, 24,000 formalin fixed placental biopsies, and 4,000 paternal DNA samples.
+The types of samples collected during the POP study reflect, first of all, the focus on the role of the placenta and its altered development and function in several major complications of pregnancy. Second, they reflect the interest in circulating biomarkers since, despite years of intensive research, screening for these conditions is still largely based upon clinical grounds rather than ultrasonic and/or biochemical assessment of placental function. Therefore the projects based on the samples from the POP study have the following aims:
+
+understanding the mechanisms leading to placentally-related complications, such as pre-eclampsia, FGR and stillbirth;
+studying the association between pregnancy complications and the presence of infectious agents in the placenta;
+evaluating the performance of known biomarkers and serial ultrasonography in assessing maternal and fetal well-being;
+discovering novel, placentally-derived circulating biomarkers which reflect the underlying pathology and are highly sensitive and specific in predicting the associated disease.
+
+
+== Key findings ==
+Multiple projects based on this data have been published and many are currently on-going. The key findings obtained so far studying the samples from the POP study are (see paragraph "Research papers" for a complete list of publications):
+
+Universal use of ultrasound to screen nulliparous women in the third trimester roughly triples the detection of small for gestational age (SGA) infants; moreover, combining ultrasound measurements of the estimated weight and of the growth velocity of a fetus identified a subset of small babies at increased risk of neonatal morbidity.
+Maternal serum level of Delta-like homolog 1 (DLK1), protein involved in the regulation of maternal metabolic state and fetal growth in mice, differentiates constitutionally small and pathologically small (or fetal growth restricted) human fetuses.
+Fetuses of mothers who developed gestational diabetes mellitus (GDM) grow faster already before the time GDM was diagnosed (women are typically screened at 28 weeks of gestation), suggesting that screening for GDM should be performed earlier (at 24 weeks).
+A predictive model using blinded ultrasound estimated fetal weight (EFW) at 36 weeks, maternal age, height, BMI and weight gain correctly identifies women at increased risk of emergency C-section: in this study 48% of screen-positive women delivered by C-section.
+Third-trimester screening of nulliparous women by universal ultrasound fetal biometry increases the detection rate of large for gestational age (LGA) infants and, combined with ultrasound measurements of fetal growth velocity, identifies those at increased risk of adverse neonatal outcome.
+A clinically useful screening test for pre-eclampsia and FGR combines placentally-derived proteins measured in the maternal serum (i.e. the ratio of soluble fms-like tyrosine kinase 1 (sFLT1) to placental growth factor (PlGF)) and ultrasonic estimation of fetal weight.
+The placenta exhibits a unique sex-dependent difference in polyamine metabolism, which is associated with placental-specific escape from X-chromosome inactivation by the enzyme spermine synthase (SMS); moreover, maternal serum levels of polyamine metabolites differ by fetal sex and strongly differentially associate with the great obstetrical syndromes, namely higher maternal serum levels of N1,N12-diacetylspermine (DiAcSpm) increases the risk of pre-eclampsia but decreases the risk of FGR.
+A novel biomarker for pre-eclampsia, 4-hydroxyglutamate, improves current first-trimester prediction of the preterm disease.
+Universal late-pregnancy ultrasound in nulliparous women could identify around 14,826 otherwise undiagnosed breech presentations across England annually and could, therefore, reduce emergency cesarean section and fetal mortality in breech presentation; moreover, it would be cost effective if fetal presentation could be assessed for less than £19.80 per woman.
+The human placenta does not have a microbiome and placental bacterial infection is not a common cause of adverse pregnancy outcome; however, the placenta is a potential site of perinatal acquisition of S. agalactiae (group B Streptococcus), a major cause of neonatal sepsis.
+A maternal serum metabolite ratio predicts FGR at term and approximately doubles the discrimination capacity between cases and controls as compared to the sFLT1:PlGF ratio.
+The presence of inherited, chromosomally integrated human herpesvirus 6 (HHV-6) DNA in the feto-placental unit is associated with an 2-3 fold increased risk of the mother to develop pre-eclampsia; moreover, this study did not identify any other viral associations with pre-eclampsia and FGR.
+To externally validate the POP study findings, some of the above projects also involved collaboration with investigators from the Born in Bradford study. Moreover, additional collaborations included the Cambridge University School of Biological Sciences (in particular, the Centre for Trophoblast Research, a major international centre for placental research including >20 research groups), the Cancer Research UK (CRUK) Cambridge Institut and the Wellcome Sanger Institute. These studies also benefited from collaborations with industrial partners such as GE Healthcare and Roche.
+
+
+== Follow-up work ==
+
+
+=== POPS2 ===
+The Pregnancy Outcome Prediction study 2 (POPS2) is a prospective cohort study funded by the Wellcome Trust. Recruitment to the study started in January 2020. The first POP study generated a simple screening test which is strongly predictive for pre-eclampsia and FGR at term. The test combines maternal risk factors, ultrasound measurements and levels of placentally-derived proteins in maternal serum (sFlt-1:PlGF ratio). The goal of POPS2 is to collect similar data and samples from approximately 4,500 unselected nulliparous women to address the following aims:
+
+to assess whether the test generated by the POP study works in an independent cohort;
+to nest a randomised controlled trial (RCT) of screening and intervention within the cohort in order to evaluate whether pregnancy outcome can be improved by inducing labour early (from 37 weeks) in women who screen positive;
+to collect more blood samples in order to develop and validate new predictive tests to detect a bigger proportion of pregnancy complications and to identify them earlier in pregnancy.
+
+
+=== POPStar ===
+Pregnancy Outcome Prediction Study: transgenerational and adults review (POPStar) is a follow-up study of the original POP study, conducted by the Department of Obstetrics and Gynaecology in collaboration with the Department of Paediatrics (both University of Cambridge). The study is funded by the National Institute for Health Research (NIHR) Cambridge Biomedical Research Centre (BRC) and the children's charity, Action Medical Research.
+POPStar looks at the long-term health and development of the children and the mothers of the POP study cohort. POPStar started in June 2020, when the children were between 8 and 12 year old. The study is based on the link between routinely-collected data (e.g. from the UK National Health Service and the Department for Education) and the results from POP study in order to determine which pregnancy parameters could predict a high risk of health or developmental problems. Using the existing and follow-up data collected during the POP and POPStar studies, the research team aims to make connections between conditions during pregnancy and current maternal and children health.
+
+
+== References ==
+
+
+== External links ==
+Department of Obstetrics and Gynaecology website
+ResearchGate page providing an updated list of published papers

@@ -1,0 +1,85 @@
+Laser (natante)
+
+Il Laser è un natante da diporto o da regata, dotato di un'unica vela e di una deriva a baionetta, l'albero è composto da due pezzi uniti (parte bassa e parte alta, diversi per ogni classe di laser), senza sartiame, incastrato in una scassa. La preflessione dell'albero è regolata dal vang; è stato introdotto un nuovo circuito (Power Kit) che rinvia la base e il cunningham in una torretta a prua della deriva. Viene utilizzato anche nelle competizioni olimpiche, ed è una disciplina che richiede una grande preparazione atletica e nautica.
+Inoltre, secondo le regole di classe, è obbligatorio per le donne posizionare un rombo rosso sulla vela.
+
+
+== Storia ==
+
+Il progetto della prima barca della classe Laser risale al 1971, da parte del progettista Bruce Kirby. Era nata come imbarcazione da spiaggiare, ma è poi divenuta un diffuso monotipo da competizione a livello mondiale.
+Caratteristica di questa classe è che le specifiche tecniche prevedono rigorosamente che le imbarcazioni siano del tutto uguali tra loro. Cioè le regole della classe non permettono modifiche, neppure entro certi limiti. Pertanto risultano assolutamente identiche, in tutte le imbarcazioni di questa classe, il peso, le dimensioni, le vele e le attrezzature.
+Le regole della classe vengono tuttavia sottoposte a revisione, per fornire maggiori spiegazioni nei punti che si sono rivelati di difficile interpretazione o per motivi di sicurezza, e dal 1º dicembre 2006 è in vigore la versione denominata 2007 Class Rules.
+Infine, dal 1º gennaio 2020 la classe cambia nome in ILCA Class (in cui ILCA sta per International Laser Class Association), allo scopo di superare il monopolio dei cantieri che la costruiscono e così rimanere classe olimpica.
+
+
+== Sottoclassi ==
+Utilizzano lo stesso scafo dei normali laser, armato con una vela di dimensioni ridotte e cambiando la parte bassa dell'albero. Si conserva la semplicità costruttiva e strutturale del laser standard, ma si presentano meno impegnativi da condurre:
+
+
+=== Laser Radial ===
+
+Monotipo (one design) a deriva mobile il cui scafo è identico al Laser standard mentre ciò che varia sono la parte inferiore dell'albero e le dimensioni della vela 5,7m² (15 % di superficie in meno).
+È una deriva singola ed è fornita di un albero infilato in un "bicchiere" ricavato all'interno della coperta ed è armata di una sola vela, la randa. Le altre regolazioni sono la scotta della randa, il Cunningham, il Vang, la base randa e l'archetto a poppa dove è fissato il punto di scotta.
+A partire dalle olimpiadi di Pechino 2008, è diventata classe olimpica femminile in sostituzione dell'Europa, mentre il laser standard è già da diverso tempo classe olimpica maschile. Senza limiti di età.
+
+
+=== Laser 4.7 ===
+
+Monotipo (one design) a deriva mobile il cui scafo è identico al Laser standard mentre ciò che varia sono la parte inferiore dell'albero e le dimensioni della vela di 4,7 m². Solitamente è propedeutica al passaggio su laser radial, laser standard o barche di altra categoria. La vela del Laser 4.7 è facilmente riconoscibile dalle ridotte dimensioni rispetto alle altre e dalla scritta "4.7" situata sotto il numero velico e la nazionalità.
+
+
+== Principi di conduzione del Laser ==
+
+Esistono varie tecniche che permettono una conduzione del laser più che discreta e spesso, nonostante le differenze in tali conduzioni, le velocità ottenibili possono essere assolutamente simili. La conduzione deve variare a seconda delle condizioni meteo-marine: intensità del vento, direzione della barca rispetto a esso, presenza di onda o meno. Si dovrebbe tenere conto anche della corrente sotto il livello dell'acqua, ma è solitamente una considerazione di cui si occupano i laseristi più esperti.
+
+
+=== Bolina ===
+La conduzione in bolina va vista sotto alcuni punti di vista precedentemente elencati, onda e vento. Se si ha poco vento, solitamente il timoniere rimane seduto all'interno della barca, usando minimamente il proprio peso e cercando di fare meno movimenti possibili, ma allo stesso tempo dolci e armoniosi in modo da non perturbare l'andamento della barca. Con poco vento è infatti facile commettere qualche errore, anche minimo, che faccia rallentare eccessivamente la barca (come un colpo di timone eccessivo, ad esempio). Se il mare è piatto, la barca va idealmente tenuta piatta anch'essa. Con onda è pratica comune tenerla invece un po' inclinata (parliamo di 10° al massimo) al fine di avere più sensibilità sul timone (in modo tale da capire meglio quello che la barca ci "chiede"). Alcuni associano alle onde un movimento col timone, fatto tanto più velocemente quanto più è veloce la barca a passare lungo l'onda. La formula usata solitamente è "orzare salendo sull'onda, poggiare scendendo", il tutto fatto con variazioni millimetriche del timone.
+Se il vento sale, il timoniere comincerà a stendersi alle cinghie. I movimenti di timone con o senza onda saranno uguali, ma in questo caso e anche con vento forte il timoniere dovrà sedersi nella barca sempre più indietro, al crescere della forza del vento. In questo modo non si avrà la prua in acqua, rischiando di "infilarla" nelle onde se la barca va molto veloce. Usando la scotta della randa si cercherà di tenere la barca dritta, mollandola appena la barca subisce l'effetto di una raffica e recuperandola in seguito. L'effetto ottimale, se tali azioni sono compiute correttamente, è una barca veloce, che rimane piatta,  dando l'impressione di non risentire dei cambiamenti di vento o dell'azione delle onde. Se la barca rimane piatta, allora tutta la forza del vento si tramuterà in velocità. In caso contrario, se la barca si inclinerà a ogni colpo di vento, parte di quella forza farà fermare la barca e la farà andare di lato anziché in avanti. Fondamentale è l'utilizzo del vang (molto potente), che consente di ovviare all'assenza della regolazione del carrello della randa.
+
+
+=== Traverso e lasco ===
+Il traverso e il lasco si hanno quando la barca è a 90 e circa 135° rispetto al vento. Le conduzioni sono simili,  tranne per il fatto che di lasco, specialmente con vento più intenso dove si sta già stesi, il cunningham (che tira la vela lungo l'albero) si usa molto di più che di lasco per depotenziare la vela quanto basta. Se si usasse il vang più del cunningham, si avrebbe sì la vela depotenziata, ma la barca tenderebbe molto a inclinarsi, poiché il vang ha l'effetto della scotta sulla vela, ma solo nella parte alta di questa. Allo scopo è utile porre una coppia di filetti a 30 cm dalla penna della vela e osservare il loro movimento, per capire se il vang è tirato quanto basta, ma in generale starà al timoniere decidere se tirarlo ulteriormente o mollarlo (ciò è consigliato con vento forte, poiché la barca conserverà comunque una certa velocità, ma sarà più facile da tenere piatta anche sotto una raffica). Di lasco il vang si tira meno e il cunningham si usa solo per togliere le pieghe sulla vela anche con vento non eccessivamente forte.
+Di lasco e di traverso è importante la posizione in barca. Se il vento è debole ci si siede avanti, in modo da avere tutto lo scafo in acqua, così che faccia un "effetto grip" e faccia andare la barca avanti. Con vento forte, quando la barca scivola (plana) sull'acqua e lo scafo comincia a essere un freno, allora ci si siede indietro e ci si stende in modo da far letteralmente volare la barca sull'acqua. Con vento particolarmente forte si deve andare indietro col peso quanto più possibile e a maggior ragione con onda,  per evitare che la barca ci si infili.
+Se arriva una raffica, si poggia e si lasca un po' la scotta, stendendosi ulteriormente. Quando questa finisce, si orza recuperando la scotta. Si dimostra spesso utile con aria leggera inclinare la barca leggermente sottovento, soprattutto con onda in lasco, in modo da offrire a queste una parte più ampia dello scafo.
+
+
+=== Poppa ===
+La poppa è spesso fonte di preoccupazione per un neofita, poiché è l'andatura più instabile. Quando il vento è debole, la barca si porta inclinata sopravvento finché il bordo (bottazzo) non è in acqua. Lo scopo è alzare la vela affinché prenda il vento più fresco. Il peso si porta avanti e i movimenti sono ridotti al minimo. La vela va tenuta cazzata finché non è al limite della strambata. I filetti mostreranno che il vento andrà al contrario sulla vela, provocando una differenza di pressione e un conseguente "risucchio" davanti alla barca che le permette di andare avanti. Se il vento non scorre sulla vela non si va al massimo della velocità quindi è bene controllare sempre la vela, sia per vedere se è cazzata quanto serve, sia (in caso affermativo) per controllare che non strambi (abbatta) accidentalmente, cosa molto frequente se non si sta attenti. Se ciò stesse per avvenire, si molla un po' la scotta e si orza quando serve, poi si regola di nuovo la vela.
+Se il vento sale, la barca va tenuta sempre meno inclinata e la deriva va portata fuori di circa una spanna o 15 cm, che diventano anche 20 nel caso in cui l'equilibrio e il controllo della barca siano ottimali. Con vento molto forte, fare molta attenzione a non lascare la randa eccessivamente, in quanto a randa tutta lascata il centro velico di spinta diviene molto esterno e può innescare un forte rollio, che a breve si trasforma in scuffia. Più la barca accelera, più il peso dovrà essere portato indietro e con onda si cercherà tramite una rotta a zig-zag di prendere le onde più grandi. Si stima che una barca che procede correttamente sulle onde possa fare fino al triplo della velocità (o passo) che avrebbe senza onde.
+
+
+=== Manovre ===
+Le manovre fondamentali sono due: virata e strambata (detta anche abbattuta). La tecnica usata in entrambi i casi con vento medio leggero è la manovra con rollio. Il rollio ha lo scopo di dare un impulso con la vela alla barca che le permette di accelerare (è l'unica azione di "pompaggio" permessa dalla regola 42). La tecnica di entrambe è abbastanza complessa ad alti livelli ma una spiegazione riassunta e semplice può essere questa:
+Virata:
+
+si comincia a orzare
+quando la vela è al centro dello scafo ci si sporge in fuori per sbandare la barca
+si cambia posizione afferrando il bordo opposto con la mano che tiene il timone (tenendo ancora il timone) e ci si sposta dall'altra parte.
+ci si stende, si molla la scotta e si riporta la barca dritta con la scotta e il timone ancora nelle mani.
+si può effettuare il cambio di mano con scotta e timone durante il passaggio da un bordo all'altro o appena seduti.
+si fanno gli aggiustamenti di rotta e si procede.
+Strambata o abbattuta:
+
+si cazza la vela sbandando la barca sottovento.
+ci si risiede sopravvento sbandando la barca verso di noi.
+ci si sposta dall'altra parte mentre la barca è ancora inclinata verso di noi e ci si risiede dall'altra parte.
+una volta seduti si effettua il cambio di mano.
+si fanno gli aggiustamenti di rotta e si procede.
+Il rollio è una tecnica che si usa con venti leggeri fino a venti medi sui 12 nodi. Se il vento aumenta, il rollio verrà usato sempre meno, fino ad arrivare a una esecuzione della manovre dove la barca non si inclina.
+
+
+== Note ==
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file su Laser
+
+
+== Collegamenti esterni ==
+https://ilcaitalia.com/
+Sito ufficiale, su laserinternational.org. 
+AssolaserAssociazione Italiana dei timonieri di Laser, su assolaser.org. URL consultato il 16 novembre 2007 (archiviato dall'url originale il 18 maggio 2016).
+Associazione Italiana Classi Laser, su italialaser.org.
+(EN) International Laser Class Association, su laserinternational.org.

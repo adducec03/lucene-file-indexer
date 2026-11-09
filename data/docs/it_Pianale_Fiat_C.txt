@@ -1,0 +1,51 @@
+Pianale Fiat C
+
+Il Fiat Pianale C è un tipo di piattaforma che funge come base per le autovetture sviluppate dal Gruppo Fiat. La prima applicazione avvenne nel 1995 con la Fiat Bravo e Brava mentre una nuova generazione è stata impiegata dal 2001 per la Fiat Stilo e le vetture derivate da quest'ultima. Nel 2010 la Fiat Group Automobiles (tramite la divisione Alfa Romeo) realizza un pianale completamente nuovo che va a sostituire quello del 1995. Tale pianale, che raccoglie anche l'eredità di quello dell'Alfa Romeo 147, debutta con il modello Alfa Romeo Giulietta e viene denominato Compact.
+
+
+== Storia ==
+Il Pianale C è stato sviluppato nei primi anni novanta per le vetture di classe media prodotte dal gruppo Fiat. Derivato in gran parte dalla precedente piattaforma Tipo 2 che ha costruito il telaio di base per numerose vetture a cominciare dalla Fiat Tipo, passando per la  Fiat Tempra, la Lancia Dedra, la Lancia Delta seconda serie e l'Alfa Romeo 155, il Pianale C permette di montare il motore anteriormente in posizione trasversale, la trazione è disponibile sulle ruote motrici anteriori.
+
+
+=== Prima generazione: C1 ===
+
+La prima serie è nota sotto la denominazione C1 dove l'1 indica appunto la prima generazione di questa piattaforma. Lo schema di sospensioni è configurato all'avantreno con ruote indipendenti, braccio trasversale a montante telescopico (MacPherson), al retrotreno ruote indipendenti, bracci longitudinali, molla elicoidale e barra stabilizzatrice. Il primo impiego è avvenuto nel 1995 con le vetture Bravo e Brava.
+Pochissime erano le differenze con il precedente pianale "Tipo 2" da cui riprendeva pavimento centrale posteriore, nonché i puntoni anteriori, lo schema delle sospensioni anteriori e posteriori, tanto che viene considerato praticamente come uno stretto derivato del primo e conosciuto anche come "Tipo 2 rev 2".
+Una versione completamente rivista nei lamierati fu proposta nel 1998 con il debutto della Fiat Multipla denominato C1 Sandwich caratterizzato da una struttura del pavimento allargata e più simile ad una struttura scatolata. Riprendeva sostanzialmente le sospensioni (rinforzate) della Brava.
+In caso di urto frontale il motore invece di arretrare nell'abitacolo provocando seri danni ai passeggeri anteriori (3 nel caso della Multipla) si dispone al di sotto dei sedili anteriori.
+Le principali motorizzazioni montate sono state dei 4 cilindri sia benzina che diesel con cilindrate comprese dai 1.2 del piccolo FIRE fino al 1.9 JTD common rail ma su alcune vetture come la Marea è stato possibile abbinare una trasmissione manuale a 6 rapporti e motorizzazioni 5 cilindri sia benzina che turbodiesel (il 2.0 20 valvole e il 2.4 JTD). In Brasile, grazie ad una leggera modifica all'avantreno, ha trovato alloggio anche un motore 2.4 (sempre 5 cilindri) e un 2.0 Turbo con 20 valvole.
+Il pianale venne rivisto sulla Lancia Lybra sia per il passo allungato, sia per l'adozione di una sospensione posteriore differente (di tipo BLG, "Bracci Longitudinali Guidati") e per alcuni rinforzi alla struttura anteriore (interventi ripresi anche dalla seconda serie della Marea del 1999) venendo denominato Tipo 2 rev 3.
+Da esso derivò con modifiche più pesanti anche il pianale delle Alfa Romeo 156, 147 e GT su cui però vennero adottate sospensioni più prestazionali (anteriori a quadrilatero alto e posteriori "tri-link" ispirate a quelle della Lancia Delta HF Integrale, simili alle MacPherson), oltre che per una revisione della struttura anteriore per migliorare l'assorbimento degli urti.
+Utilizzo:
+
+Fiat Bravo
+Fiat Brava
+Fiat Marea
+Fiat Marea Weekend
+Fiat Marengo
+Fiat Multipla (versione C1 Sandwich)
+Alfa Romeo 147
+Alfa Romeo 156 
+Alfa Romeo GT
+Lancia Lybra 
+
+
+=== Seconda generazione: C2 ===
+La seconda generazione (C2) debutta nel 2001 con la Fiat Stilo. I primi sviluppi della piattaforma completamente inedita rispetto al C1 iniziano almeno tre anni prima per dar vita ad una struttura altamente flessibile che potesse adattarsi a numerose tipologie di vetture, dalle medie compatte alle station wagon fino alle medie di classe premium come la terza serie di Lancia Delta lanciata nel 2008. Lo schema di sospensioni adotta i MacPherson all'avantreno e il ponte torcente al retrotreno per garantire la massima affidabilità e un buon comfort abbinato ad un bagagliaio di dimensioni notevoli (il ponte torcente risulta una soluzione molto compatta) e costi di produzione ridotti rispetto alle strutture più complesse.
+
+Il C2, oltre ad essere molto più rigido, sopportava gli standard previsti nei crash test Euro NCAP ottenendo dalle 4 fino alle 5 stelle sulle ultime vetture. Il motore è disposto in posizione trasversale e la trazione è anteriore. Questo pianale è abbinato a trasmissioni del tipo manuale a 5 e 6 rapporti e automatiche del tipo robotizzate Dualogic oppure robotizzate Selespeed.
+Le motorizzazioni abbinate a questo telaio sono state principalmente costituite dai motori 1.9 Multijet, a seguire i 1.4 FIRE e T-Jet, i 1.6 e 1.8 16V prodotti dall'FMA di Pratola Serra, il 2.4 5 cilindri 20 valvole e i più recenti 1.8 T-Jet a iniezione diretta e i diesel 1.6 e 2.0 Multijet. Nel 2008, per la prima volta è stato possibile omologare il motore 1.9 Twin Stage bi-turbodiesel da 190 cavalli e 400 N·m di coppia massima senza apportare ulteriori modifiche alla struttura in quanto il telaio sopporta senza problemi l'enorme coppia del Multijet. Il C2 venne assemblato presso lo stabilimento Fiat di Cassino.
+Utilizzo:
+
+Fiat Stilo
+Fiat Stilo Multiwagon
+Fiat Bravo (2007)
+Lancia Delta (2008)
+
+
+== Note ==
+
+
+== Voci correlate ==
+Pianale Alfa Romeo/GM Premium
+Pianale FGA Compact

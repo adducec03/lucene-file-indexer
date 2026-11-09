@@ -1,0 +1,105 @@
+Tetrafluoruro di uranio
+
+Il tetrafluoruro di uranio o fluoruro di uranio(IV) è il composto binario tra fluoro e uranio con formula UF4. È un solido cristallino verde. UF4 è tipicamente un intermedio nella produzione di esafluoruro di uranio (UF6) o di uranio metallico a partire da ossidi di uranio (U3O8 e UO2). Nell'industria della raffinazione dell'uranio è noto come sale verde.
+
+
+== Struttura e proprietà ==
+Il tetrafluoruro di uranio cristallizza nel sistema monoclino, gruppo spaziale  C2/c con costanti di reticolo a = 1273 pm, b = 1075 pm, c = 843 pm, β = 126° e dodici unità di formula per ogni cella elementare.
+
+
+== Sintesi ==
+
+
+=== Processo teorico ===
+Il tetrafluoruro di uranio si prepara trattando UO2 con HF:
+
+UO2 + 4HF → UF4 + 2H2O
+o per reazione tra UF6 e idrogeno:
+
+UF6 + H2 → UF4 + 2HF
+Tetrafluoruro di uranio molto puro si può ottenere passando diclorodifluorometano anidro su UO3 scaldato a i 400 °C.
+
+UO3 + 2CCl2F2 → UF4 + Cl2 + COCl2 + CO2
+
+
+=== Produzione industriale ===
+La produzione industriale parte dallo yellowcake, esegue quindi la fluorizzazione dell'uranio in tetrafluoruro di uranio (UF4), mediante vari processi fisico-chimici che impiegano acido nitrico, ammoniaca, idrogeno e acido fluoridrico.
+
+
+==== Raffinazione ====
+
+
+===== Dissoluzione =====
+
+I fusti e i contenitori di yellowcake vengono svuotati in un silo, che si apre in un serbatoio di dissoluzione alimentato da acido nitrico, per ottenere un prodotto liquido contenente il nitrato di uranile avente la formula chimica UO2(NO3)2, il nitrato di sodio (NaNO3) e varie impurità. Il diuranato di sodio - uno dei più importanti costituenti dello yellowcake con uranati di magnesio, di ammonio, ecc. - viene attaccato dall'acido nitrico secondo la reazione:
+
+Na2U2O7 + 6HNO3  →  2(UO2(NO3)2 + 2NaNO3 + 3H2O
+Questo trattamento è seguito da una filtrazione.
+
+
+===== Purificazione =====
+La soluzione acquosa di nitrato di uranile viene purificata in una colonna di purificazione per estrazione liquido-liquido con una soluzione organica di tributilfosfato (TBP) diluito nel dodecano e/o nel cherosene. Poiché la fase acquosa e la fase organica sono immiscibili, il TBP lega il nitrato di uranile sotto forma di un complesso alla superficie di separazione tra le due fasi:
+
+UO22+(aq) + 2NO3-(aq)+ 2TBP(org) → (UO2(NO3)2 . 2TBP)(org)
+Le impurità rimangono nella fase acquosa dell'acido nitrico. Questo passaggio consente quindi di ottenere un nitrato di uranile ad elevata purezza detto "purezza nucleare" (> 99,95%). La purificazione è un processo idrometallurgico convenzionale. La purezza dell'uranio destinato al combustibile nucleare è molto superiore a quella ottenuta nella metallurgia classica.
+
+
+===== Riestrazione =====
+La fase di riestrazione consiste nel rifar passare il nitrato di uranile purificato nella fase acquosa. Si verifica nella colonna alimentata questa volta con acqua demineralizzata. Il solvente organico recuperato durante la riestrazione viene quindi riciclato.
+
+
+==== Conversione ====
+
+
+===== Precipitazione =====
+La dissoluzione dell'ammoniaca (NH3) gassosa nella soluzione purificata produce idrossido di ammonio (NH4OH). Questo reagisce con il nitrato di uranile per formare un precipitato di diuranato di ammonio (NH4)2U2O7 (DUA) secondo la seguente reazione:
+
+2UO2(NO3)2 + 6 NH4OH → (NH4)2U2O7 + 4 NH4NO3
+
+
+===== Denitrazione =====
+
+Dopo filtrazione ed essiccamento, il diuranato di ammonio viene calcinato (o denitrato) in triossido di uranio UO3 in un forno ad una temperatura molto elevata (circa 400 °C).
+
+(NH4)2U2O7  →  2UO3 + 2NH3 + H2O
+Nel quadro del progetto Comurhex II, l'impianto di Malvési implementerà un processo di denitrazione termica denominato Isoflash per sostituire le fasi di precipitazione e calcinazione del diuranato di ammonio.
+
+
+===== Riduzione e fluorizzazione =====
+
+In uno stesso forno a forma di "L", il triossido di uranio è ridotto dall'idrogeno in diossido di uranio (UO2), intorno a 650-800 °C, poi fluorizzato in tetrafluoruro di uranio (UF4) da acido fluoridrico (HF), fra 350 e 600 °C.
+
+riduzione mediante l'idrogeno del triossido di uranio in diossido di uranio:
+UO3 + H2  →  UO2 + H2O
+fluorizzazione in tetrafluoruro di uranio per passaggio del diossido di uranio nell'acido fluoridrico (HF) gassoso:
+UO2 + 4HF  →  UF4 + 2H2O
+Il tetrafluoruro di uranio (UF4) ottenuto può essere eventualmente ridotto con calcio per ottenere l'uranio puro nella sua forma metallica.
+
+
+== Reattività ==
+UF4 è meno stabile degli ossidi di uranio e reagisce lentamente con l'umidità a temperatura ambiente, formando UO2 e HF che sono corrosivi.
+
+
+== Tossicità / Indicazioni di sicurezza ==
+Come tutti i sali di uranio, UF4 è tossico ed è dannoso per inalazione, ingestione e contatto cutaneo.
+
+
+== Note ==
+
+
+== Bibliografia ==
+H. S. Booth, W. Krasny-Ergen, R. E. Heath, Uranium Tetrafluoride, in J. Am. Chem. Soc., vol. 68, n. 10, 1946,  pp. 1969–1970, DOI:10.1021/ja01214a028.
+(EN) G. Brauer, Handbook of Preparative Inorganic Chemistry, vol. 1, 2ª ed., Academic Press, 1963.
+E. H. P. Cordfunke e W. Ouweltjes, Standard enthalpies of formation of uranium compounds VII. UF3 and UF4 (by solution calorimetry), in J. Chem. Thermodyn., vol. 13, n. 2, 1981,  pp. 193–197, DOI:10.1016/S0021-9614(81)80025-0.
+A. C. Larson, R. B. Roof Jnr, D. T. Cromer, The Crystal Structure of UF4, in Acta Crystallogr., vol. 17, 1964,  pp. 555–558, DOI:10.1107/S0365110X64001293.
+(EN) M. Peehs, T. Walter, S. Walter, Uranium, Uranium Alloys, and Uranium Compounds, in Ullmann's Encyclopedia of Industrial Chemistry, Wiley-VCH, 2002, DOI:10.1002/14356007.a27_281.
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file su Tetrafluoruro di uranio
+
+
+== Collegamenti esterni ==
+
+(EN) uranium tetrafluoride, su Enciclopedia Britannica, Encyclopædia Britannica, Inc.

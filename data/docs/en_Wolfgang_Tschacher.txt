@@ -1,0 +1,43 @@
+Wolfgang Tschacher
+
+Wolfgang Tschacher (born 1956 in Hohengehren, Germany) is a Swiss psychologist and 
+
+university lecturer. He is professor at the University of Bern, Switzerland. He has conducted theoretical and empirical research in the fields of psychotherapy and psychopathology, especially from a systems-theoretical perspective that includes self-organization and complexity theory. He is active in the development of time series methods for the modeling of psychotherapeutic processes and generally social systems.
+A focus of this research is the theory of embodiment (or, 4E cognition), nonverbal synchrony of social interaction, and generally the relationship between mind and body.
+
+
+== Biography ==
+After completing studies in psychology, which contained a Psychiatry internship at the Veterans Administration Hospital (Montrose, NY) and courses in philosophy at the University of Tübingen, he received his PhD in psychology in 1990. He worked as family therapist and post-doc scientist in Tübingen. In 1992, he moved to Bern (Switzerland) where he assumed the position of head of research at the University Hospital of Social Psychiatry, directed by Prof. Luc Ciompi. Tschacher founded, in 2002, the department of Psychotherapy at the Universitäre Psychiatrische Dienste Bern (UPD).
+Wolfgang Tschacher was among the founders of the Society for Mind-Matter Research, where he currently acts on the board of directors. From 2007 to 2010 he was president of the European Chapter of the Society for Psychotherapy Research (SPR). He is also a founding member of the ethics committee of the Canton of Bern. In 2018, he held a fellowship at the Freiburg Institute of Advanced Studies (FRIAS) at the University of Freiburg, Germany. He is father to three sons and lives in Bern.
+
+
+== Research ==
+In a team with Günter Schiepek, Ewald Johannes Brunner and Jean-Pierre Dauwalder, Tschacher initiated the series of "Herbstakademie" (Autumn Academy) conferences since 1990. These conferences are centered on the application of synergetics, systems theory, and embodiment to psychology and the social sciences. Until 2019, 20 Herbstakademie conferences have been held in cooperation with Hermann Haken, covering themes such as "Embodied Cognition" (2000, in Ascona) with keynotes by Andy Clark, Thomas Metzinger and Esther Thelen, "Embodied Cognition and Embodied Communication" (2009, in Bern) with keynotes by Karl Friston and Karl Grammer, or "Embodied Aesthetics" (2017) at the University of Heidelberg with keynotes by Thomas Fuchs, Vittorio Gallese, and Winfried Menninghaus. Since the 1990s, Tschacher pioneered empirical work in systemic psychotherapy, for instance in the context of the Heidelberg Systemic Research Conferences
+In his habilitation work «Prozessgestalten» (1997) Tschacher had already addressed the application of dynamical systems and complexity theory to various fields of psychology. He thereby merged the current discussion in psychology with the tradition of Gestalt theory, putting at the center pattern-formation processes and temporal dynamics. This general approach was further elaborated by his cooperation with Hermann Haken subsumed in the book «The Process of Psychotherapy» (2019). In this work, therapy process was modeled as a synergy of stochastic and deterministic forces, which create and modify the stability of clients' and therapists' states. In terms of systems theory, this can be described by stochastic and deterministic forces acting on dynamical attractors. Based on theoretical and mathematical considerations, Tschacher and Haken proposed a "minimal model" of psychotherapeutic interaction, which has implications for effective interventions. According to their "Archimedean function", therapists should be slow, mindful, and resilient in order to be effective. The cooperation with Haken also yielded philosophical results in a complexity-science formulation of intentionality
+Starting in 2008, Wolfgang Tschacher joined the Projekt «eMotion – Mapping Museum Experience» that was initiated by the art researcher Martin Tröndle. The eMotion project, supported by the Swiss National Fund, aimed at observing aesthetic perception in the fine arts museum where the locomotion and physiological arousal of visitors was visualized by a "psychogeographical" method. Also in collaboration with Martin Tröndle, Tschacher is involved in the research project «Experimental Concert Research» funded since 2019 by the Volkswagenstiftung, which extends the art-psychological empirical approach to aesthetic experiences and physiological synchrony in the classical concert.
+In the fields of psychotherapy and psychiatry, Tschacher is concerned with implications of the embodiment approach, as for example in collaborations with Karl Friston in applications of predictive coding in schizophrenia research, with Sander Koole and Fabian Ramseyer in research on nonverbal synchrony in social interaction and therapy. Numerous publications have shown that individuals tend to synchronize their body movement and physiology during interaction, which is a type of pattern formation that generally occurs outside the interactors' awareness. As a spin-off to this work, algorithms have been developed that allow computing signatures of synchrony based on time series, such as Surrogate Synchrony (SUSY) and Surrogate Concordance (SUCO). weblink The FRIAS project «Embodied communication and its basis in nonverbal synchrony» was influenced by Tschacher's embodiment and synchrony approach. This work was also disseminated to a wider audience interested in psychotherapy, business communication, and dance and movement therapy. As member of a group of experts, Tschacher presented his embodiment approach in a major television science broadcast
+With his research group in Bern, Tschacher developed a questionnaire for the comprehensive assessment of mindfulness, the «CHIME».
+
+
+== Publications ==
+W. Tschacher, F. Ramseyer, S. L. Koole: Sharing the now in the social present: Duration of nonverbal synchrony is linked with personality. In: Journal of Personality. 86, 2018, p. 129–138.
+W. Tschacher, F. Giersch, K. Friston: Embodiment and schizophrenia: A review of implications and applications. In: Schizophrenia Bulletin. 43, 2017, p. 745–753.
+S. L. Koole, W. Tschacher: Synchrony in psychotherapy: A review and an integrative framework for the therapeutic alliance. In: Frontiers in Psychology. 7, 2016, 862.
+W. Tschacher, U. Junghan, M. Pfammatter: Towards a taxonomy of common factors in psychotherapy – Results of an expert survey. In: Clinical Psychology & Psychotherapy. 21, 2014, S. 82–96.
+W. Tschacher, G. M. Rees, F. Ramseyer: Nonverbal synchrony and affect in dyadic interactions. In: Frontiers in Psychology. 5, 2014, 1323.
+C. Bergomi, W. Tschacher, Z. Kupper: Measuring mindfulness: First steps towards a comprehensive mindfulness scale. In: Mindfulness. 4, 2013, p. 18–32.
+W. Tschacher, S. Greenwood, V. Kirchberg, S. Wintzerith, K. van den Berg, M. Tröndle: Physiological correlates of aesthetic perception of artworks in a museum. In: Psychology of Aesthetics, Creativity and the Arts. 6, 2012, p. 96–103.
+F. Ramseyer, W. Tschacher: Nonverbal synchrony in psychotherapy: Coordinated body-movement reflects relationship quality and outcome. In: Journal of Consulting and Clinical Psychology. 79, 2011, p. 284–295.
+W. Tschacher, C. Bergomi (eds.): The implications of embodiment: Cognition and communication. Imprint Academic, Exeter 2011.
+W. Tschacher, J.-P. Dauwalder (eds.): The Dynamical Systems Approach to Cognition. World Scientific, Singapore 2003.
+W. Tschacher: Prozessgestalten. Die Anwendung der Selbstorganisationstheorie und der Theorie dynamischer Systeme auf Probleme der Psychologie. Hogrefe, Göttingen 1997.
+W. Tschacher, G. Schiepek, E. J. Brunner (eds.): Self-Organization and Clinical Psychology. Empirical Approaches to Synergetics in Psychology. Springer, Berlin 1992.
+
+
+== References ==
+
+
+== External links ==
+Homepage at University of Bern and conference information (Herbstakademie) https://www.exp.unibe.ch
+Homepage Embodiment and computation of synchrony https://www.embodiment.ch
+Homepage Society for Mind-Matter Research https://www.mindmatter.de/index.html

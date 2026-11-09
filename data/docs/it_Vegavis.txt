@@ -1,0 +1,50 @@
+Vegavis
+
+Vegavis (il cui nome significa "uccello dell'isola Vega") è un genere estinto di uccello vissuto nel Cretaceo superiore, circa 68-66 milioni di anni fa (Maastrichtiano), in quella che oggi è l'Antartide. La specie tipo è Vegavis iaai, nominata nel 2005 sulla base di fossili provenienti dalla Formazione López de Bertodano. Due specie aggiuntive, Vegavis geitononesos e Vegavis notopothousa, sono state nominate nel 2026 sulla base di materiale aggiuntivo proveniente dalla stessa formazione. Vegavis rappresenta potenzialmente uno dei primi uccelli conosciuti del gruppo corona. La posizione tassonomica definitiva di Vegavis è stata oggetto di dibattito tra i paleontologi per oltre due decenni, fin dalla sua descrizione iniziale come membro degli Anseriformes all'interno di Galloanserae.
+
+
+== Scoperta e denominazione ==
+
+Il nome del genere Vegavis, è la combinazione del nome dell'isola Vega (sede del ritrovamento) e della parola latina avis (uccello), indicando così l'"uccello dell'isola Vega". Il nome della specie, V. iaai, è l'acronimo dell'Instituto Antartico Argentino (IAA), responsabile della spedizione scientifica argentina nell'Antartide. L'esemplare olotipico di Vegavis è conservato nel Museo de La Plata, Argentina. L'esemplare, catalogato come MLP 93-I-3-1, venne ritrovato a Cape Lamb nei depositi dell'Isola Vega, Antartide, nel 1993, ma fu descritto come una nuova specie solo nel 2005. Inizialmente, l'esemplare venne identificato come un presbiornitide indeterminato. Per ottenere un quadro più chiaro della struttura ossea, i paleontologi hanno impiegato le scansioni CT, per non correre il pericolo di danneggiare il fossile incastonato in una concrezione.
+Un secondo esemplare, MACN-PV 19,748, è stato ritrovato accanto al campione olotipico. Questo fossile meglio conservato si presenta in tre dimensioni; Grazie all'uso delle scansioni TC è stata individuata la siringe intatta di questo campione. La siringe ha un terzo segmento asimmetrico, suggerendo che Vegavis avesse due sorgenti sonore nel collo e una grande struttura di risonanza di tessuti molli. Ciò indica che Vegavis era in grado di emettere il tipico richiamo di anatre, oche e altri basali neognathi. Sono stati segnalati anche altri potenziali esemplari, tra cui un tarsometatarso distale (AMNH FARB 30913) provvisoriamente identificato come cf. Vegavis, un femore isolato (SDSM 78247) indicato come Vegavis sp., e un sinsacro (MN 7832-V) indicato come cfr. V.iaai.
+
+Due decenni dopo la denominazione formale di Vegavis, un cranio quasi completo (AMNH FARB 30899) scoperto da Eric M. Roberts nel 2011 dal membro Sandwich Bluff della Formazione López de Bertodano sull'isola Vega è stato ufficialmente descritto nel 2025. Gli autori hanno sostenuto che la morfologia di questo cranio supportasse il posizionamento di Vegavis all'interno del gruppo corona Aves, in particolare come membro degli Anseriformes, e fornisce nuove informazioni sulla sua ecologia alimentare. Nel 2026, Irazoqui e colleghi hanno descritto questo esemplare come l'olotipo di una nuova specie di Vegavis, chiamata V. notopothousa. Il nome di questa specie combina le parole greche nótos che significa "sud" e póthos che si riferisce a "desiderio", alludendo alla scoperta dell'olotipo nell'emisfero australe ma ora ospitato nell'emisfero settentrionale. Gli autori hanno anche nominato V. geitononesos, una terza specie del genere, sulla base di un altro cranio e scheletro parziale (MLP-PV 15-I-7-52). Il nome di questa specie combina il greco geítōn che significa "vicino" e nêsos che significa "isola", facendo riferimento alla scoperta di questa specie sull'isola Marambio, mentre V. iaai è stato trovato sulla vicina isola Vega.
+
+
+== Tassonomia ==
+
+Vegavis venne inizialmente descritto come un membro del gruppo corona Anseriformes all'interno di Galloanserae, indicando che alcuni rappresentanti dei moderni gruppi di uccelli fossero già presenti e diversificati nel Mesozoico.
+Tuttavia, alcuni paleontologi hanno messo in dubbio le sue affinità con gli Anseriformes o i Galloanserae, classificandolo come un uccello del gruppo stelo all'interno degli Ornithurae, un uccello del gruppo corona al di fuori di Galloanserae, un taxon gemello dei Neornithes o alla base dei Neognathae con una posizione irrisolta. Al contrario, Vegavis è stato recuperato come taxon gemello degli Anatidae o degli Anseriformes all'interno di Galloanserae sulla base di altre analisi filogenetiche. In uno studio del 2025 che ha assegnato l'esemplare AMNH FARB 30899 a Vegavis, Torres et al. hanno supportato il suo posizionamento all'interno del gruppo corona degli Anseriformes, come taxon gemello di Conflicto e Anas, sulla base delle loro analisi filogenetiche riviste. Nello stesso anno, Crane et al. hanno recuperato Vegavis tra gli Anseriformes sulla base delle loro analisi filogenetiche, sebbene con un debole supporto, e hanno messo in dubbio se la morfologia della mandibola dell'esemplare AMNH FARB 30899 supporti il posizionamento di Vegavis tra i Galloanserae o addirittura in Neornithes. Nel 2026, Irazoqui et al. hanno suggerito che Vegavis può essere posizionato con sicurezza solo come un neognatho di affinità incerte.
+Agnolín et al. (2017) proposero la famiglia Vegaviidae come gruppo staminale di Anseriformes contenente Vegavis, Polarornis e diversi altri generi di aviari estinti, ma la monofilia di questo clade è stata messa in discussione da studi successivi. Il frammentario Polarornis potrebbe appartenere a questo clade, ma gli esemplari riportati sono mal conservati per risolvere le sue affinità tassonomiche. Worthy et al. (2017) hanno anche proposto l'ordine "Vegaviiformes" per includere Vegaviidae, ma questo è un clade in disuso che non è mai stato menzionato da altri ricercatori ad eccezione dei descrittori di Conflicto antarcticus.
+
+
+== Paleobiologia ==
+Vegavis era un uccello con un metabolismo elevato, che gli permetteva di vivere alle alte latitudini dell'Antartide. Presentava anche un certo grado di osteosclerosi, una condizione condivisa con Polarornis. Questi diversi gradi di osteosclerosi potrebbero essere correlati a variazioni nel comportamento di caccia subacquea.
+
+
+== Paleoecologia ==
+ 
+Il membro Sandwich Bluff (unità klb 1) della Formazione Lopez de Bertodano sull'isola Vega, la località tipo di 'V. iaai e V. notopothousa, è datato al Maastrichtiano medio, approssimativamente da 69,2 a 68,4 milioni di anni fa. In questa località sono stati scoperti fossili di dinosauri non-aviari indeterminati, inclusi i resti di hadrosauridi, elasmariani, parankylosauri e megaraptori.
+Il Molluscan Allomember superiore (unità klb 9) della Formazione Lopez de Bertodano sull'isola Seymour (o Marambio), la località tipo di V. geitononesos, è datata al Maastrichtiano superiore. Questa località conserva una fauna diversificata di rettili marini tra cui il grande mosasauro Kaikaifilu e i plesiosauri elasmosauridi Aristonectes, Marambionectes e Morturneria. Da questa unità sono state recuperate varie specie indeterminate di generi di pesci ossei e cartilaginei, di cui pochi hanno potuto essere identificati definitivamente a livello specifico, tra cui Antarctiberyx seymouri e Xampylodon diastemacron. Da questa unità sono noti anche gli altri uccelli neornitini, come Polarornis e Pujatopouli, insieme a charadriiformi e gaviiformi indeterminati.
+
+
+== Voci correlate ==
+Asteriornis
+Pujatopouli
+
+
+== Note ==
+
+
+== Bibliografia ==
+Clarke, J.A., Tambussi, C.P., Noriega, J.I., Erickson, G.M. and Ketcham, R.A. (2005). Definitive fossil evidence for the extant avian radiation in the Cretaceous. Nature, 433: 305-308. DOI:10.1038/nature03150 PDF fulltext Supporting information
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file su Vegavis iaai
+ Wikispecies contiene informazioni su Vegavis iaai
+
+
+== Collegamenti esterni ==
+'Dinosaurs Mingled with Cousins of Ducks and Chickens', da Live Science, su livescience.com.

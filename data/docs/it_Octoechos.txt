@@ -1,0 +1,88 @@
+Octoechos
+
+L'Octoechos (dal greco ὀκτώηχος oktṑēkhos, gli "8 suoni") è il quadro teorico in cui sono descritte le otto forme di modalità. Inizialmente applicate alla musica bizantina, questo quadro è stato utilizzato per la descrizione del canto piano e più particolarmente del canto gregoriano.
+Benché il canto piano sia chiaramente modale, la sua descrizione teorica è tuttora una questione aperta e dibattuta. È probabile che nel millennio in cui si è sviluppato il canto gregoriano, gli approcci modali hanno potuto evolvere, conducendo a pezzi di logica varia e a dei rimaneggiamenti per riformulare dei pezzi arcaici nel quadro dell'octoechos.
+In quanto quadro di spiegazione, l'octoechos fa parte della tradizione del canto gregoriano: vi è stato condotto nel corso della riforma carolingia del canto piano. Pertanto questo quadro teorico si oppone alle modalità più semplici, fondate su poche corde madri (do, mi e talvolta re) che caratterizzano gli strati più antichi di tutti i repertori del canto piano.
+
+
+== Gli otto modi ==
+Indipendentemente dalle controversie, l'octoechos permette di determinare la formula-tipo che deve accompagnare un dato pezzo.
+Molti pezzi gregoriani possono venire completati con delle formule tipo: salmodia che completa le antifone, versetti del Gloria completano gli introiti o responsori prolissi, ecc. Queste formule tipo di accompagnamento sono classificati in otto modi principali e ciascun pezzo riceve il "numero" della formula tipo che lo accompagna.
+La relazione tra pezzi e modi di accompagnamento si appoggia su una classificazione formale (e piuttosto artificiale) dei pezzi, secondo
+
+la nota finale del pezzo (re, mi, fa o sol), dopo che il pezzo è stato convenevolmente trasposto per finire sopra una di queste finali;
+il tenore dominante del pezzo, o quello della salmodia associata.
+
+
+=== Identificazione del tenore ===
+La finale dipende dal pezzo stesso, ma il tenore salmodico non vi è iscritto. Ciò che differenzia i modi pari da quelli dispari, per una stessa finale, è il carattere autentico o plagale del pezzo.
+
+I modi dispari sono i modi autentici. Essi pongono la nota finale del pezzo lontano nel grave, a un intervallo di quinta in rapporto al tenore salmodico teorico. Così la loro nota finale non viene normalmente utilizzata come tenore, ma mantiene un ruolo di nota d'appoggio. Il loro ambitus normale va dalla finale alla sua ottava superiore.
+I modi pari sono i modi plagali. Essi utilizzano la nota finale come tenore effettivo inferiore, oltre al tenore salmodico superiore alla terza (o alla quarta per i modi quarto e ottavo). Il tenore inferiore dispone di una propria nota d'appoggio, alla terza (per il tenore in mi) o alla quarta inferiore, sulla quale può porre le proprie cadenze. Il loro ambitus normale si estende dunque di una ottava a partire da questa nota d'appoggio inferiore.
+Questo tenore salmodico è normalmente situato alla terza oppure alla quinta dalla finale. I tre modi (terzo, quarto e ottavo) che salgono alla quarta e alla sesta, al posto della terza e della quinta degli altri modi, sono quelli della famiglia dell'esacordo, mentre le salmodie primitive fatte sul mi e sul si salgono rispettivamente al fa e al do.
+
+
+=== Gli otto modi ecclesiastici ===
+Nel celebre testo sul Canto gregoriano di Willi Apel leggiamo:
+«La base tonale del canto gregoriano è costituita da un sistema di otto tonalità, note come modi ecclesiastici. Ciascuno di questi modi è un segmento, dell'ampiezza di un'ottava, della scala diatonica (Do maggiore), con una delle sue note avente funzione di tono principale, o tonica, comparabile alla nota do nella scala di Do maggiore. L'estensione di ottava è detta ambitus, il suono principale, finalis. Vi sono quattro finales, nell'ordine, re, mi, fa e sol. A ciascuna di esse fanno riferimento due modi che differiscono per il loro ambitus l'uno inizia con la finale e si estende fino all'ottava sopra, mentre l'altro inizia una quarta sotto la finale e si estende fino alla quinta sopra. I modi del primo tipo si chiamano autentici, quelli del secondo, plagali».
+Esistono due possibili terminologie per riferirsi a essi:
+
+Una più antica che ricorre ai nomi greci: di protus, deuterus, tritus e tetrardus (primo, secondo, terzo e quarto) per le finali e aggiunge i termini "autentico" o "plagale" per specificare l'ambitus.
+La più comune, a partire dal X secolo fino a oggi, usa i numerali da uno a otto:
+Protus authenticus - Primus tonus - Modo I - finalis: re - ambitus: re-re'.
+Protus plagius - Secundus tonus - Modo II - finalis: re - ambitus: la-la'.
+Deuterus authenticus - Tertius tonus - Modo III - finalis: mi - ambitus: mi-mi'.
+Deuterus plagius - Quartus tonus - Modo IV - finalis: mi - ambitus: si-si'.
+Tritus authenticus - Quintus tonus - Modo V - finalis: fa - ambitus: fa-fa'.
+Tritus plagius - Sextus tonus - Modo VI - finalis: fa - ambitus: do-do'.
+Tetrardus authenticus - Septimus tonus - ModoVII - finalis: sol - ambitus: sol-sol'.
+Tetrardus plagius - Octavus tonus - Modo VIII - finalis: sol - ambitus: re-re'.
+Oltre alle descrizioni matematiche, basate sul corretto susseguirsi degli intervalli di ogni modo, troviamo interpretazioni che si possono riferire agli ambiti simbolici, teologici ed etici. Abbiamo, così, quelle che i musicologi definiscono Simbologia modale, Allegoria modale ed Etica modale.
+
+
+=== L'etica modale ===
+Si tratta di una interpretazione che vede le sue radici nel mondo greco. «Secondo i teorici greci, le melodie composte su ciascuna di queste armonie erano contraddistinte da un carattere (ethos) particolare, con effetti propri dell'armonia stessa sulla volontà e sulla psiche». Nella tarda antichità, alle porte dell'Alto Medioevo latino, anche Boezio recepisce questa lettura etica della modalità e descrive la forza del “canto” come capace di calmare l'ira e di intervenire «sia sulle condizioni del corpo, sia su quelle dell'animo».
+La tradizionale definizione, presente anche in vari testi di storia della musica: primus: gravis, secundus: tristis, tertius: mysticus, quartus: harmonicus, quintus: laetus, sextus: devotus, septimus: angelicus, octavus: perfectus, è frequentemente attribuita di Guido d'Arezzo. Nel Micrologus dell'aretino, al quale spesso ci si appella per fondare la paternità di questo elenco, non troviamo questo elenco  ma è ben chiaro come «la diversità degli otto toni musicali fosse perfettamente adattabile alla diversità degli stati d'animo». La  successione di diadi modo-ethos, invece, appare, così esposta, in un trattato didattico a noi più vicino, del XVIII secolo, scritto dall'abate Léonard Poisson e presentate come “qualità”: «Voici les qualités qu'ils leurs attribueès».
+Come lo studio J. Wolf e quello più recente di C. Campesato evidenziano, si trovano serie molto simili in vari trattati medievali e successivi: Guido d'Arezzo dove nel Prologus in antiphonarium; Ermanno il Contratto; John Cotton; Jacques de Liège; l'Ars Musice del Codex Basiliensis che riporta la rota: Octo modi musice matris; Adamo di Fulda, Jerzy Liban.
+
+
+=== La simbologia modale ===
+Gli otto modi ecclesiastici sono stati anche oggetto di letture simboliche. Questo approccio, tipico soprattutto dell'estetica medievale, può essere suddiviso in due sotto categorie: una legata alla simbologia iconografica e una alla simbologia delle dottrine teologiche collegate all'aritmologica e cosmologica.
+
+
+==== L'iconografia di Cluny ====
+Nell'iconografia plastica medievale collegata alla modalità, assistiamo a un caso, quasi unico, proprio nei capitelli antichi di Cluny. In questo centro culturale di significativa importanza per l'Alto Medioevo possiamo constatare un'attenzione particolare al simbolismo dei modi sia negli otto noti capitelli, sia in un crittogramma manoscritto rimasto [a lungo] inedito.
+Circa i capitelli possiamo notare una associazione modo-iconografia-descrizione (le descrizioni dal quinto all'ottavo modo sono mancanti) che si potrebbe riassumere così:
+
+Il Crittogramma modale, sempre di  Cluny ma oggi conservato alla Biblioteca Nazionale di Parigi, costituisce un ulteriore unicum. Si tratta di una rappresentazione dei modi che non ha una facile interpretazione e che potrebbe rimandare ad aspetti esoterici. Forse si tratta di una lettura simbolico-circolare che legge nei modi gregoriani un percorso dalla morte alla Risurrezione.
+Entrambe queste letture simbolico-iconografiche della modalità, secondo gli sudi della Meyer, sembrano rimandare a percorsi iniziatici-battesimali.
+
+
+==== Interpretazioni cosmologiche ====
+Come il greorianista Campesato evidenzia: «le teorie classiche che in Boezio vedono ciascun Pianeta rappresentare una “corda” vengono riprese e rielaborate al punto che teorici musicali del XV-XVI secolo, come il polacco Jerzy Liban o lo spagnolo Ramus de Pareia, propongono l'associazione di ciascun modo a un pianeta»:
+
+
+== Note ==
+
+
+== Bibliografia ==
+Luigi Augustoni e Johannes Berchmans Göschl, Introduzione all'interpretazione del canto gregoriano, 2 voll., Torre d'Orfeo, Roma 1998.
+Fulvio Rampi e Massimo Lattanzi, Manuale di canto gregoriano, Turris editrice, 1998 ISBN 9788879292368.
+Fulvio Rampi, Del Canto gregoriano. Dialoghi sul canto proprio della Chiesa, Rugginenti, Milano 2006.
+Alberto Turco, Il canto gregoriano. Corso fondamentale, Torre d'Orfeo, Roma, 1991.
+Alberto Turco, Il Canto gregoriano. Toni e Modi (Istituto di Paleografia Musicale. Studi e Testi 4), Torre d'Orfeo, Roma 1996.
+Eugène Cardine, Primo anno di canto gregoriano, Roma, 1970.
+Dom Daniel Saulnier, Les modes grégoriens, Solesmes, 1997.
+Claudio Campesato, Allegoria modale. L'interpretazione allegorica dell'octoechos come ermeneutica liturgico-musicale nella "Summa de officiis ecclesiasticis" di Guglielmo di Auxerre, LIT Verlag, Wien 2021. ISBN 9783643913920
+Giulio Cattin, La monodia nel Medioevo (Storia della Musica 2), EDT, Torino 1991.
+Willi Apel, Il canto gregoriano. Liturgia, storia, notazione, modalità e tecniche compositive, ed. M. Della Sciucca, Libreria Musicale Italiana, Lucca 1998.
+Godehard Joppich, «Ein Beitrag zum Verhältnis Text und Ton im Gregorianischen Choral», in: Cantate canticum novum. Gesammelte Studien anlässlich des 80. Geburtstages von Godehard Joppich, Vier Türme Verlag, Münster- schwarzach, 2012, 163-192.
+Fabriciano Martin Avedillo, Canto gregoriano. Estudio teorico y pratico, Fama, Toledo 1983.
+Franz Karl Prassl, «Il Canto gregoriano come testimonianza della comprensione pa-tristica della Sacra Scrittura», Vox antiqua 3 (2013) 41-61.
+Jacques Viret, La modalité grégorienne: un langage pour quel message?, A coeur joie, Lyon, 1987.
+Alla scuola del canto gregoriano. Studi in forma di manuale, ed. F. Rampi, Musidora, Cremona 2015.
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file sull'octoechos

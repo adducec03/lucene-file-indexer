@@ -1,0 +1,162 @@
+Macchina in corrente continua
+
+La macchina in corrente continua (brevemente macchina CC o macchina DC, dall'inglese Direct Current) è stata la prima macchina elettrica realizzata, ed è tuttora utilizzata ampiamente per piccole e grandi potenze, da generatore o da motore. Sono a corrente continua (o comunque alimentabili in corrente continua) numerosi motori di piccola potenza per usi domestici, come anche motori per trazione ferroviaria e marina della potenza di molte centinaia di kW.
+
+
+== Caratteristiche ==
+Tutte le macchine CC (a magneti permanenti e no) hanno un comportamento reversibile: possono comportarsi sia da motori che da generatori (dinamo) in relazione al rapporto esistente tra direzione di rotazione, direzione del campo magnetico induttore e direzione del campo magnetico indotto.
+Il rendimento massimo di tali macchine si ottiene con un carico compreso tra i ¾ e il carico massimo.
+
+
+== Storia ==
+La prima macchina elettromagnetica rotante conosciuta, è stata inventata da Michael Faraday nel 1821: consisteva in un filo conduttore tenuto fermo verticalmente alla sua estremità superiore in modo che l'estremità inferiore fosse immersa in un piatto contenente mercurio. Un magnete permanente circolare era sistemato al centro del piatto. Quando una corrente elettrica veniva fatta scorrere nel filo, questo ruotava attorno al magnete mostrando che la corrente generava un campo magnetico attorno al filo. Questo è un esperimento didattico utilizzabile in una lezione di fisica, anche se al posto del mercurio (tossico) conviene usare un altro liquido conduttore come acqua molto salata; in quest'ultimo caso bisognerà porre il magnete su di un galleggiante.
+
+
+== Modello dinamico ==
+
+
+=== Circuito magnetico ===
+Lo statore può essere costituito da un magnete permanente, o da un elettromagnete: in quest'ultimo caso viene magnetizzato da una corrente che percorre degli avvolgimenti statorici. Nel caso di statore costituito da un elettromagnete, per il circuito magnetico statore-rotore per flusso magnetico abbastanza basso, ovvero per cui non si manifesta saturazione del ferromagnetico, vale la legge di Hopkinson:
+
+Φs=Nsis2RH
+dove Φs è il flusso magnetico statorico, Ns è il numero di avvolgimenti statorici, is è la corrente statorica, e RH è la riluttanza di un traferro tra statore e rotore:
+
+RH=l(r+δ)αμδ=lαμ(1+rδ)
+con l ed r è indicato lo spessore ed il raggio del rotore, α l'angolo dell'espansione polare, δ e μ sono lo spessore e la permeabilità magnetica del traferro: più aumenta la dimensione della macchina e più il rapporto tra raggio e spessore cala, insieme con la riluttanza.
+
+
+=== Maglia elettrica principale del prim'ordine ===
+Una differenza tra la tensione elettrica di linea e quella della nostra macchina (sia da generatore che da motore) provoca lo scorrimento di una corrente elettrica nella maglia elettrica principale (rotore-spazzole) in base alla legge di Kirchhoff delle tensioni: 
+Rrir+Lri˙r=ΔV
+questa passa in parallelo attraverso le due semicorone cilindriche uguali che costituiscono il rotore, perciò la resistenza e l'autoinduttanza di rotore sono in realtà un quarto di quelle in serie che si avrebbero se la corrente nel rotore girasse in circolo:
+Rr=ρrπNrrr2Sr
+Lr=λrπNrrr2Sr
+in realtà andrebbero considerate anche le resistenze, induttanza delle spazzole e la capacità elettrica dei contatti striscianti, che però trascureremo.
+
+
+=== Forza elettromotrice rotorica ===
+Si può dimostrare che la forza elettromotrice del rotore è proporzionale al flusso statorico, infatti cominciando a numerare gli avvolgimenti da una delle due spazzole, se queste vengono disposte alla massima distanza dai canali di flusso, per la legge di Faraday:
+
+V0=2p∑i=1Nr2ΔΦsiΔt=2p2aNrω2π∑i=1Nr2Φsi−Φsi−1=
+=2p2aNrω2π(ΦsNr2−Φs0)=2p2aNrω2π(−Φs2−Φs2)=−kω,
+dove ω è la velocità angolare del rotore e la costante k vale: 
+k=2p2aNrΦs2π
+e dove p è il numero di coppie polari dello statore, ed a è il numero di avvolgimenti per cava, Nr è il numero di avvolgimenti rotorici, Φs è il flusso magnetico statorico. Nel caso lo statore sia un elettromagnete:
+k=2p2aNrNs2πis2RH
+dove Ns è il numero di avvolgimenti statorici, is è la corrente statorica, RH è la riluttanza di un traferro tra statore e rotore.
+
+
+=== Coppia rotorica ===
+Si può dimostrare che il momento meccanico del rotore è anch'esso proporzionale al flusso statorico imponendo un bilancio energetico al rotore che trascuri l'attrito radente delle spazzole e la saturazione magnetica:
+
+M0=V0irω=−kir
+
+
+=== Equazioni dinamiche ===
+Perciò le equazioni dinamiche del prim'ordine a coefficienti costanti che regolano la macchina sono, trascurando il flusso rotorico, e impostandole per un motore:
+
+{Rrir+Lri˙r=V−V0M0=−kirω˙=M−M0𝐈V0=−kω
+e dove V è la tensione di linea (alle spazzole), M è la coppia del carico, ΔM è la coppia netta, I il momento di inerzia del rotore (e di quello che gli è attaccato).
+Le equazioni si possono semplificare in due equazioni del prim'ordine a coefficienti costanti nelle due incognite ir e ω:
+
+{Rrir+Lri˙r=V+kωω˙=M𝐈+k𝐈ir
+
+
+=== Modello black box ===
+
+Effettuando la trasformata di Laplace nella variabile x:
+
+{ir=1Rr(1+xτe)(V−V0)M0=−kirω=1x𝐈(M−M0)V0=−kω
+che è poi eventualmente semplificabile, eliminando la variabile indipendente ir , come:
+
+{M0=−k/Rr1+xτe(V−V0)ω=1x𝐈(M−M0)V0=−kω
+dove τe è la costante di tempo elettrica del rotore: 
+τe=LrRr
+Il sistema è visualizzabile con un modello black box in cui nel funzionamento da motore le variabili di ingresso sono M e V e la variabile di uscita è ω, e nel funzionamento da generatore le variabili di ingresso sono M e ω e quella di uscita è V.
+
+
+== Connessione e controllo ==
+
+
+=== Connessione statorica ===
+Il circuito elettrico statorico può essere indipendente, alimentato a batteria o a magneti permanenti, oppure può essere connesso in parallelo o in serie al circuito.
+
+
+==== Bontà ====
+Eric Laithwaite nel 1965 ha formulato un fattore compreso tra 0 e 1 in grado di esprimere la bontà di una macchina elettrica a elettromagneti. Egli la impiegò nello sviluppo della levitazione magnetica.
+
+γ=ωRHRE=ωμσSHSElHlE
+dove:
+
+SH, SE sono le sezioni trasversali dei circuiti magnetico ed elettrico
+lH, lE sono le lunghezze dei circuiti magnetico ed elettrico
+Da questa si evince che i motori diventano migliori aumentando in dimensione:
+
+γ∝μα2ωρr(1+rδ)2
+
+
+== Macchina a magneti permanenti ==
+Sono i motori elettrici più classici e semplici da costruire, ma possono essere alimentati solo da correnti continue o pilotati da impianti elettronici.
+
+
+=== Macchina a spazzole ===
+
+La classica macchina in corrente continua ha una parte che gira detta rotore o armatura, e una parte che genera un campo magnetico fisso (nell'esempio i due magneti colorati) detta statore.
+Un interruttore rotante detto commutatore o collettore a spazzole inverte due volte ad ogni giro la direzione della corrente elettrica che percorre i due avvolgimenti generando un campo magnetico che entra ed esce dalle parti arrotondate dell'armatura. Nascono forze di attrazione e repulsione con i magneti permanenti fissi (indicati con N ed S nelle figure).
+La velocità di rotazione dipende da:
+
+Tensione applicata.
+Corrente assorbita dal rotore.
+Carico applicato.
+La coppia generata è proporzionale alla corrente ed il controllo più semplice agisce sulla tensione d'alimentazione, mentre nei sistemi più complessi si usa per la tensione un controllo in retroazione.
+La coppia è inversamente proporzionale alla frequenza meccanica; ciò è molto utile per la trazione in quanto il massimo spunto si ha con veicolo fermo, inoltre il sistema tende da solo alla autoregolazione sulla velocità.
+Inoltre da questo si può intuire la sua capacità di agire anche da freno, talvolta usato anche per il recupero dell'energia nei mezzi ibridi; nel caso più semplice collegando alle spazzole un resistore, l'energia meccanica trasmessa all'albero si dissipa in calore su questo resistore. 
+Riassumendo si può affermare che il motore CC ha tutte le funzioni necessarie per un mezzo mobile: oltre alla funzione di motore può recuperare l'energia funzionando da dinamo quando serve l'azione frenante o agire semplicemente da freno.
+Il suo limite principale è nella necessità del commutatore a spazzole: 
+
+Le spazzole sono in grafite, mentre nei piccoli servomotori e nei tipi utilizzati nei lettori CD/DVD o registratori a cassette sono in lega metallica bianca.La differenza è nella frequenza della loro sostituzione, infatti nelle macchine utensili come smerigliatrici o trapani, si utilizzano spazzole in grafite, perché è molto semplice e veloce sostituirle, le spazzole in metallo, sono usate su apparecchi dove risulta scomodo o non conveniente cambiarle, come nei motori d'avviamento dei mezzi di trasporto.
+Le spazzole pongono un limite alla massima velocità di rotazione: maggiore è la velocità e più forte è la pressione che bisogna esercitare su di esse per mantenere un buon contatto, comunque i motori universali usati negli aspirapolvere e negli elettroutensili portatili (trapani, mole, ect.) possono raggiungere i 3600-4500 rpm.
+Tra spazzole e collettore, nei momenti di commutazione, si hanno transitori di apertura degli avvolgimenti induttivi e quindi scintillio, attenuabile con l'anticipazione della commutazione dei vari avvolgimenti rotorici (le spazzole devono essere ruotate assialmente in anticipo rispetto alla rotazione dell'indotto), soluzione applicabile per motori che devono ruotare sempre in una sola direzione.
+Queste scintille comportano disturbi elettrici sia irradiati nell'ambiente circostante che trasmessi al generatore di tensione di macchina; questi disturbi, in determinati settori di impiego, possono causare problemi di compatibilità elettromagnetica; è possibile attenuarli tramite dei filtri.
+La presenza di avvolgimenti elettrici sul rotore ha anche due aspetti negativi:
+
+Se il motore è di grossa potenza si hanno dei problemi di smaltimento del calore (gli avvolgimenti si riscaldano per effetto Joule e il campo magnetico alternato nel nucleo del rotore genera  altre perdite, causate da isteresi magnetica e correnti parassite nel nucleo stesso, e quindi altro calore.
+Gli avvolgimenti appesantiscono il rotore (aumenta il momento d'inerzia): se il motore deve rispondere con rapidità e precisione (come avviene nelle automazioni industriali e nella robotica) il controllo diventa più complesso; per piccole potenze (da 1 a 200W) e servocontrolli a volte si usano particolari tipi di motori con rotore con avvolgimenti a forma di bicchiere e privo del nucleo di ferro, detti "ironless": hanno bassa inerzia e rendimento elettrico più elevato dei loro corrispondenti con rotore avvolto su nucleo di ferro.
+
+
+=== Macchina senza spazzole ===
+
+I problemi illustrati si potrebbero evitare scambiando il rotore con lo statore (cioè se gli avvolgimenti venissero messi sulla parte fissa e i magneti fossero montati sul rotore). Scomparirebbe il collettore a spazzole, e gli avvolgimenti elettrici potrebbero smaltire più facilmente il calore generato.
+È quello che si fa nei motori brushless (in inglese letteralmente: senza spazzole). Essi permettono inoltre di ridurre ulteriormente le dimensioni del rotore (e quindi le sue inerzie) usando materiali magnetici più efficienti come le leghe di samario-cobalto o meglio, Neodimio/Ferro/Boro. In questi motori il circuito di alimentazione deve essere più sofisticato, dato che le funzioni del collettore meccanico sono svolte tramite un controllo elettronico di potenza.
+
+
+== Macchina CC ad eccitazione indipendente ==
+
+Nei motori CC lo statore può essere realizzato non con magneti permanenti ma, similmente al rotore, con avvolgimenti su materiale ad alta permeabilità in cui viene fatta passare una corrente: questo circuito è detto di eccitazione. In questo modo si rende tale motore funzionante anche con le correnti alternate, infatti un motore in corrente continua tradizionale non può lavorare con correnti alternate in quanto il campo rotorico s'inverte di continuo, questo fa sì che le forze tra rotore e statore non lavorino in modo congiunto, mentre nel motore universale l'inversione avviene su entrambi, permettendo un funzionamento analogo con entrambe le alimentazioni.
+
+
+== Motore passo-passo ==
+
+I motori passo passo,  a differenza di tutti gli altri, hanno come scopo quello di mantenere fermo l'albero in una posizione di equilibrio: se alimentati si limitano infatti a bloccarsi in una ben precisa posizione angolare.  Solo indirettamente è possibile ottenerne la rotazione: occorre inviare al motore una serie di impulsi di corrente, secondo un'opportuna sequenza, in modo tale da far spostare, per scatti successivi, la posizione di equilibrio.
+Le posizioni di equilibrio dell'albero sono determinate meccanicamente con estrema precisione.  Di conseguenza, per far ruotare l'albero nella posizione e alla velocità voluta, è necessario contare il numero di impulsi inviati ed impostarne la frequenza.
+Il motore, che appare come una coppia di ruote dentate affiancate e solidali all'albero, permanentemente magnetizzate, una come NORD e l'altra come SUD. Tra le due ruote è presente uno sfasamento esattamente pari ad 1/2 del passo dei denti: il dente di una delle due sezioni corrisponde quindi alla valle dell'altra. Nel rotore non sono presenti fili elettrici e quindi manca completamente ogni connessione elettrica tra la parte in movimento e quella fissa.
+Lo statore presenta piccoli denti che si affacciano esattamente a quelli del rotore. O meglio, sono esattamente affacciati al rotore solo un gruppo di denti ogni quattro; gli altri sono sfalsati di 1/4, 1/2 e 3/4 del passo dei denti. Avvolti intorno ai poli magnetici dello statore, dei fili generano il campo magnetico quando vengono percorsi da corrente.  In ogni momento, per far compiere un passo al motore, si applica corrente alla parte di statore esattamente di fronte ai denti del rotore: la forza repulsiva tra poli magnetici opposti farà spostare il rotore.
+
+
+== Note ==
+
+
+== Voci correlate ==
+Macchina elettrica
+Motore sincrono
+Trasmissione in corrente continua
+Motore asincrono
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file su macchina in corrente continua
+
+
+== Collegamenti esterni ==
+Il motore in corrente continua (PDF), su mech.unibg.it. URL consultato il 18 dicembre 2012 (archiviato dall'url originale il 24 dicembre 2012).

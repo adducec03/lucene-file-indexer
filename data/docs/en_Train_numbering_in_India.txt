@@ -1,0 +1,165 @@
+Train numbering in India
+
+In accordance with an Indian Ministry of Railways decision, Indian Railways switched from its previous four-digit numbering system for passenger trains to a five-digit system on December 20, 2010.
+
+
+== First digit ==
+
+The first digit of the train number indicates the type of train:
+
+0 (0XXXX): Special trains, such as summer, holiday and exam specials and trains to clear large passenger loads
+Train Numbers starting with first two digits as 12 or 22 are super fast trains. Remaining are express trains.
+
+1 or 2 (1XXXX or 2XXXX): Long-distance trains, such as superfast express trains or express trains
+3 (3XXXX): Kolkata Suburban Railway
+4 (4XXXX): Other suburban trains, such as the Chennai and Delhi Suburban Railways and the Hyderabad Multi-Modal Transport System
+5 (5XXXX): Passenger trains with conventional coaches
+6 (6XXXX): MEMU service
+7 (7XXXX): Diesel multiple units and railcars
+8 (8XXXX): Suvidha Express trains
+9 (9XXXX): Mumbai Suburban Railway and Vande Metro
+
+
+== Second digit ==
+If the first digit is 0, 1 or 2, the second digit indicates the railway zone:
+
+0 (10XXX or 00XXX): Konkan Railway
+0 (20XXX): It is a new nomenclature used by railways to designate superfast or premium category trains
+1 (Y1XXX): Central Railway trains, some West Central and North Central Railway trains
+2 (Y2XXX): The Rajdhani, Shatabdi, Jan Shatabdi, Garib Rath, Duronto, Sampark Kranti and Gatimaan Express and all other superfast trains
+3 (Y3XXX): Eastern Railway and East Central Railway trains
+4 (Y4XXX): Northern Railway trains, some North Central and North Western Railway trains
+5 (Y5XXX): Northeast Frontier and North Eastern Railway trains
+6 (Y6XXX): Southern Railway and some South Western Railway trains
+7 (Y7XXX): South Central and some South Western Railway trains
+8 (Y8XXX): South Eastern, South East Central and East Coast Railway trains
+9 (Y9XXX): Western and some West Central and North Western Railway trains
+If the first digit is 3, the second digit indicates:
+
+0 to 7 (Eastern Railway zone):
+31XXX: From Sealdah towards Naihati
+32XXX: From Sealdah towards Dankuni
+33XXX: From Sealdah towards Barasat
+34XXX: From Sealdah towards Ballygunge Junction (Sealdah South section)
+35XXX From Barddhaman Junction towards Katwa Junction
+36XXX: From Howrah towards Dankuni
+37XXX: From Howrah towards Bandel Junction
+8 or 9 (38XXX or 39XXX, South Eastern Railway zone): May indicate destination(s) or branch line(s)
+If the first digit is 4, the second digit indicates:
+
+0 to 4 (Southern Railway zone):
+40ZXX: See Third digit section below
+41XXX: From Chennai Beach to Velachery
+42XXX: From Moore Market to Gummidipundi
+43AXX: See Third digit section below
+5 or 6 (45XXX, 46XXX): Northern Railway zone
+7 (47XXX): South Central Railway zone
+If the first digit is 5, 6 or 7, the second digit identifies the railway zone where the train is operated or maintained:
+
+0 (E0XXX): Konkan Railway
+1 (E1XXX): Some Central and West Central Railway zone trains
+2 (E2XXX): Some Northern, North Central, North Western, North Eastern and East Central Railway zone trains
+3 (E3XXX): All Eastern and some East Central Railway zone trains
+4 (E4XXX): Some Northern, North Central and North Western Railway zone trains
+5 (E5XXX): Northeast Frontier and some North Eastern Railway zone trains
+6 (E6XXX): Some Southern and South Western Railway zone trains
+7 (E7XXX): South Central and some South Western Railway zone trains
+8 (E8XXX): South Eastern, South East Central and East Coast Railway zone trains
+9 (E9XXX): Western and some West Central and North Western Railway zone trains
+If the first digit is 8, the second digit is 2. If the first digit is 9,
+the second digit identifies the railway zone where the train is operated or maintained:
+
+0 to 4 (Western Railway zone):
+90XXX: Originating and terminating at Virar
+91XXX" Originating and terminating at Vasai Road-Bhayander
+92XXX: Originating and terminating at Borivali
+93XXX: Originating and terminating at Malad-Goregaon
+94XXX: Originating and terminating at Andheri-Bandra-Mumbai Central-CSMT
+5 to 9 (Central Railway zone):
+95XXX: Fast trains
+96XXX: Slow trains travelling beyond Kalyan
+97XXX: Slow trains to the Harbour line
+98XXX: Slow trains to the Trans-Harbour line
+99XXX: Slow trains not travelling beyond Kalyan
+
+
+== Third digit ==
+If the first digit is 0, 1 or 2 and the second digit is 2 or 0(In case the first digit is 2), the third digit identifies the railway zone where the train is maintained, except for 0 (Y20XX, the Shatabdi and Jan Shatabdi Express in all zones):
+
+1 (Y21XX): Central and some West Central zone trains
+2 (Y22XX): Some Northern, North Central, North Western and Southern zone trains
+3 (Y23XX): Eastern and East Central zone trains
+4 (Y24XX): Some Northern, North Central and North Western zone trains
+5 (Y25XX): Northeast Frontier and North Eastern zone trains
+6 (Y26XX): Some Southern and South Western zone trains
+7 (Y27XX): South Central and some South Western zone trains
+8 (Y28XX): South Eastern, South East Central and East Coast zone trains
+9 (Y29XX): Western, some West Central and North Western zone trains
+If the second digit is other than 2, the second and third digits identify the railway division where the train is operated and maintained.
+
+If the first digit is 4 and the second digit is 0, the third digit indicates service between:
+
+400XX: Chennai Beach and Tambaram
+401XX: Chennai Beach and Tambaram
+403XX: Chennai Beach and Tambaram
+404XX: Chennai Beach and Tambaram
+405XX: Chengalpattu and Tambaram
+406XX: Chengalpattu and Tambaram
+407XX: Chengalpattu and Tirumalpur
+408XX: Chengalpattu and Kanchipuram
+If the second digit is 3, the third digit indicates service between:
+
+430XX: Chennai Central and Avadi
+431XX: Chennai Central and Pattabiram
+432XX: Chennai Central and Thiruvalluvar
+434XX: Chennai Central and Arakkonam
+435XX: Chennai Central and Thiruttani
+436XX: Chennai Beach and Avadi
+438XX: Chennai Beach and Arakkonam
+If the second digit is 5 or 6, the third digit indicates the direction of travel:
+
+4N0XX: DUK section
+4N1XX: Delhi Shahdara–Shamali section
+4N2XX: Ghaziabad–Meerut City section
+4N5XX, 4N6XX: Ghaziabad–Hapur section, towards Aligarh
+4N7XX: Shakur Basti–Rohtak section
+4N8XX: Ring Railway
+If the first digit is 5, 6 or 7, the second and third digits indicate the division where the train is operated and maintained:
+
+If the first digit is 8, the third digit identifies the zone where the train is operated or maintained:
+
+1 (821XX): Central and West Central zones, Konkan Railway and some North Central zone trains
+2 (822XX): As authorized by the Railway Board
+3 (823XX): Eastern zone and some East Central zone trains
+4 (824XX): Northern zone and some North Central and North Western zone trains
+5 (825XX): Northeast Frontier and North Eastern zone and some East Central zone trains
+6 (826XX): Southern zone and some South Western zone trains
+7 (827XX): South Central and some South Western zone trains
+8 (828XX): South Eastern, South East Central and East Coast zone trains
+9 (829XX): Western and some North Western zone trains
+If the first digit is “9” and the second and third digits are “98/99” then this makes the Pune-Lonavla Local trains.
+The fourth and fifth digits are random numbers but this represents:
+
+‘’ 8 ‘’ :(99800)- Daund Pune EMU Suburbans
+‘’ 8 ‘’: 998XX- Pune Lonavala Suburbans
+‘’Specials ‘’ 015XX - Pune Lonavla Suburban Specials
+‘’ 9 ‘’ (9990X)- Pune Talegaon Suburbans
+A new nomenclature for newly introduced Vande Bharat Express trains is 26NXX where N is the same regional code as mentioned for superfast express trains
+Similarly for Vande Bharat Sleeper Expresses, a new nomenclature of 27NXX where N is the same regional code as mentioned for superfast express trains
+
+
+== Fourth and fifth digits ==
+The fourth and fifth digits are random numbers, making each five-digit train number unique. However, on the Delhi Suburban Railway the fourth digit (4NXPX) indicates the following: 
+
+0 to 2: MEMU
+3 to 5: EMU
+6 and 7: Conventional passenger coach
+8: DEMU
+9: Other rolling stock
+
+
+== See also ==
+Wagon numbering system in India
+
+
+== References ==

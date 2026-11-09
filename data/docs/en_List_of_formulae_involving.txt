@@ -1,0 +1,347 @@
+List of formulae involving π
+
+The following is a list of significant formulae involving the mathematical constant π. Many of these formulae can be found in the article Pi, or the article Approximations of π.
+
+
+== Euclidean geometry ==
+π=Cd=C2r
+where C is the circumference of a circle, d is the diameter, and r is the radius. More generally,
+
+π=Lw
+where L and w are, respectively, the perimeter and the width of any curve of constant width.
+
+A=πr2
+where A is the area of a circle. More generally,
+
+A=πab
+where A is the area enclosed by an ellipse with semi-major axis a and semi-minor axis b.
+
+C=2πagm⁡(a,b)(a12−∑n=2∞2n−1(an2−bn2))
+where C is the circumference of an ellipse with semi-major axis a and semi-minor axis b and an,bn are the arithmetic and geometric iterations of agm⁡(a,b), the arithmetic-geometric mean of a and b with the initial values a0=a and b0=b.
+
+A=4πr2
+where A is the area between the witch of Agnesi and its asymptotic line; r is the radius of the defining circle.
+
+A=Γ(1/4)22πr2=πr2agm⁡(1,1/2)
+where A is the area of a squircle with minor radius r, Γ is the gamma function.
+
+A=(k+1)(k+2)πr2
+where A is the area of an epicycloid with the smaller circle of radius r and the larger circle of radius kr (k∈ℕ), assuming the initial point lies on the larger circle.
+
+A=(−1)k+38πa2
+where A is the area of a rose with angular frequency k (k∈ℕ) and amplitude a.
+
+L=Γ(1/4)2πc=2πcagm⁡(1,1/2)
+where L is the perimeter of the lemniscate of Bernoulli with focal distance c.
+
+V=43πr3
+where V is the volume of a sphere and r is the radius.
+
+SA=4πr2
+where SA is the surface area of a sphere and r is the radius.
+
+HV=12π2r4
+where HV is the hypervolume of a 3-sphere and r is the radius.
+
+SV=2π2r3
+where SV is the surface volume of a 3-sphere and r is the radius.
+
+
+=== Regular convex polygons ===
+Sum S of internal angles of a regular convex polygon with n sides:
+
+S=(n−2)π
+Area A of a regular convex polygon with n sides and side length s:
+
+A=ns24cot⁡πn
+Inradius r of a regular convex polygon with n sides and side length s:
+
+r=s2cot⁡πn
+Circumradius R of a regular convex polygon with n sides and side length s:
+
+R=s2csc⁡πn
+
+
+== Physics ==
+The cosmological constant:
+Λ=8πG3c2ρ
+Heisenberg's uncertainty principle:
+ΔxΔp≥h4π
+Einstein's field equation of general relativity:
+Rμν−12gμνR+Λgμν=8πGc4Tμν
+Coulomb's law for the electric force in vacuum:
+F=|q1q2|4πε0r2
+Magnetic permeability of free space:
+μ0≈4π⋅10−7N/A2
+Approximate period of a simple pendulum with small amplitude:
+T≈2πLg
+Exact period of a simple pendulum with amplitude θ0 (agm is the arithmetic–geometric mean):
+T=2πagm⁡(1,cos⁡(θ0/2))Lg
+Period of a spring-mass system with spring constant k and mass m:
+T=2πmk
+Kepler's third law of planetary motion:
+R3T2=GM4π2
+The buckling formula:
+F=π2EIL2
+A puzzle involving "colliding billiard balls":
+
+⌊bNπ⌋
+is the number of collisions made (in ideal conditions, perfectly elastic with no friction) by an object of mass m initially at rest between a fixed wall and another object of mass b2Nm, when struck by the other object. (This gives the digits of π in base b up to N digits past the radix point.)
+
+
+== Formulae yielding π ==
+
+
+=== Integrals ===
+2∫−111−x2dx=π (integrating two halves y(x)=1−x2 to obtain the area of the unit circle)
+∫024−x2dx=π (integrating a quarter of a circle with a radius of two x2+y2=4 to obtain 4π/4)
+∫−∞∞sech⁡xdx=π
+∫−∞∞∫t∞e−1/2t2−x2+xtdxdt=∫−∞∞∫t∞e−t2−1/2x2+xtdxdt=π
+∫−11dx1−x2=π
+∫−∞∞dx1+x2=π (see also Cauchy distribution)
+∫−∞∞sin⁡xxdx=π (see Dirichlet integral)
+∫−∞∞e−x2dx=π (see Gaussian integral).
+∮dzz=2πi (when the path of integration winds once counterclockwise around 0. See also Cauchy's integral formula).
+∫0∞ln⁡(1+1x2)dx=π
+∫01x4(1−x)41+x2dx=227−π (see also Proof that 22/7 exceeds π).
+∫01x2(1+x)41+x2dx=π−1715
+∫0∞xα−1x+1dx=πsin⁡πα,0<α<1
+∫0∞dxx(x+a)(x+b)=πagm⁡(a,b) (where agm is the arithmetic–geometric mean; see also elliptic integral)
+Note that with symmetric integrands f(−x)=f(x), formulas of the form ∫−aaf(x)dx can also be translated to formulas 2∫0af(x)dx.
+
+
+=== Efficient infinite series ===
+∑k=0∞k!(2k+1)!!=∑k=0∞2kk!2(2k+1)!=π2 (see also Double factorial)
+∑k=0∞k!2k(2k+1)!!=2π33
+∑k=0∞k!(2k)!(25k−3)(3k)!2k=π2
+∑k=0∞(−1)k(6k)!(13591409+545140134k)(3k)!(k!)36403203k=427093440010005π (see Chudnovsky algorithm)
+∑k=0∞(4k)!(1103+26390k)(k!)43964k=980122π (see Srinivasa Ramanujan, Ramanujan–Sato series)
+The following are efficient for calculating arbitrary binary digits of π:
+
+∑k=0∞(−1)k4k(24k+1+24k+2+14k+3)=π
+∑k=0∞116k(48k+1−28k+4−18k+5−18k+6)=π (see Bailey–Borwein–Plouffe formula)
+∑k=0∞116k(88k+2+48k+3+48k+4−18k+7)=2π
+∑k=0∞(−1)k210k(−254k+1−14k+3+2810k+1−2610k+3−2210k+5−2210k+7+110k+9)=26π
+Plouffe's series for calculating arbitrary decimal digits of π:
+
+∑k=1∞k2kk!2(2k)!=π+3
+
+
+=== Other infinite series ===
+ζ(2)=112+122+132+142+⋯=π26 (see also Basel problem and Riemann zeta function)
+ζ(4)=114+124+134+144+⋯=π490
+ζ(2n)=∑k=1∞1k2n=112n+122n+132n+142n+⋯=(−1)n+1B2n(2π)2n2(2n)! , where B2n is a Bernoulli number.
+∑n=1∞3n−14nζ(n+1)=π
+∑n=1∞7n−18nζ(n+1)=(1+2)π
+∑n=2∞2(3/2)n−3n(ζ(n)−1)=ln⁡π
+∑n=1∞ζ(2n)x2nn=ln⁡πxsin⁡πx,0<|x|<1
+∑n=0∞(−1)n2n+1=1−13+15−17+19−⋯=arctan⁡1=π4 (see Leibniz formula for pi)
+∑n=0∞(13n+1−13n+2)=1−12+14−15+⋯=π33
+∑n=0∞(−1)(n2−n)/22n+1=1+13−15−17+19+111−⋯=π22 (Newton, Second Letter to Oldenburg, 1676)
+∑n=0∞(−1)n3n(2n+1)=1−131⋅3+132⋅5−133⋅7+134⋅9−⋯=3arctan⁡13=π23 (Madhava series)
+∑n=1∞(−1)n+1n2=112−122+132−142+⋯=π212
+∑n=1∞1(2n)2=122+142+162+182+⋯=π224
+∑n=0∞(12n+1)2=112+132+152+172+⋯=π28
+∑n=0∞((−1)n2n+1)3=113−133+153−173+⋯=π332
+∑n=0∞(12n+1)4=114+134+154+174+⋯=π496
+∑n=0∞((−1)n2n+1)5=115−135+155−175+⋯=5π51536
+∑n=0∞(12n+1)6=116+136+156+176+⋯=π6960
+In general,
+
+∑n=0∞(−1)n(2n+1)2k+1=(−1)kE2k2(2k)!(π2)2k+1,k∈ℕ0
+where E2k is the 2kth Euler number.
+
+∑n=0∞(12n)(−1)n2n+1=1−16−140−⋯=π4
+∑n=0∞1(4n+1)(4n+3)=11⋅3+15⋅7+19⋅11+⋯=π8
+∑n=1∞(−1)(n2+n)/2+1|G((−1)n+1+6n−3)/4|=|G1|+|G2|−|G4|−|G5|+|G7|+|G8|−|G10|−|G11|+⋯=3π (see Gregory coefficients)
+∑n=0∞(1/2)n22nn!2∑n=0∞n(1/2)n22nn!2=1π (where (x)n is the rising factorial)
+∑n=1∞(−1)n+1n(n+1)(2n+1)=π−3 (Nilakantha series)
+∑n=1∞F2nn2(2nn)=4π2255 (where F2n is the 2nth Fibonacci number)
+∑n=1∞L2nn2(2nn)=π25 (where Ln is the nth Lucas number)
+∑n=1∞σ(n)e−2πn=124−18π (where σ is the sum-of-divisors function)
+π=∑n=1∞(−1)ε(n)n=1+12+13+14−15+16+17+18+19−110+111+112−113+⋯   (where ε(n) is the number of prime factors of the form p≡1(mod4) of n)
+π2=∑n=1∞(−1)ε(n)n=1+12−13+14+15−16−17+18+19+⋯   (where ε(n) is the number of prime factors of the form p≡3(mod4) of n)
+π=∑n=−∞∞(−1)nn+1/2
+π2=∑n=−∞∞1(n+1/2)2
+The last two formulas are special cases of
+
+πsin⁡πx=∑n=−∞∞(−1)nn+x(πsin⁡πx)2=∑n=−∞∞1(n+x)2
+which generate infinitely many analogous formulas for π when x∈ℚ∖ℤ.
+
+π=∑n=1∞6n2 (derived from Euler's solution to the Basel problem)
+Some formulas relating π and harmonic numbers are given here. Further infinite series involving π are:
+
+where (x)n is the Pochhammer symbol for the rising factorial. See also Ramanujan–Sato series.
+
+
+=== Machin-like formulae ===
+
+π4=arctan⁡1
+π4=arctan⁡12+arctan⁡13
+3π4=arctan⁡2+arctan⁡3
+π4=2arctan⁡12−arctan⁡17
+π4=2arctan⁡13+arctan⁡17
+π4=4arctan⁡15−arctan⁡1239 (the original Machin's formula)
+π4=5arctan⁡17+2arctan⁡379
+π4=6arctan⁡18+2arctan⁡157+arctan⁡1239
+π4=12arctan⁡149+32arctan⁡157−5arctan⁡1239+12arctan⁡1110443
+π4=44arctan⁡157+7arctan⁡1239−12arctan⁡1682+24arctan⁡112943
+
+
+=== Infinite products ===
+π4=(∏p≡1(mod4)pp−1)⋅(∏p≡3(mod4)pp+1)=34⋅54⋅78⋅1112⋅1312⋯, (Euler)
+where the numerators are the odd primes; each denominator is the multiple of four nearest to the numerator.
+
+3π6=(∏p≡1(mod6)p∈ℙpp−1)⋅(∏p≡5(mod6)p∈ℙpp+1)=56⋅76⋅1112⋅1312⋅1718⋯
+2π225=(∏p≡1(mod5)p∈ℙp2(p−1)2)(∏p≡2,3(mod5)p∈ℙp2p2+1)(∏p≡4(mod5)p∈ℙp2(p+1)2)=45⋅910⋅4950⋅121100⋅169170⋯,
+Where p is p also the prime number.
+
+π2=∏n=1∞(2n)(2n)(2n−1)(2n+1)=21⋅23⋅43⋅45⋅65⋅67⋅87⋅89⋯ (see also Wallis product)
+π2=∏n=1∞(1+1n)(−1)n+1=(1+11)+1(1+12)−1(1+13)+1⋯ (another form of Wallis product)
+Viète's formula:
+
+2π=22⋅2+22⋅2+2+22⋅⋯
+A double infinite product formula involving the Thue–Morse sequence:
+
+π2=∏m≥1∏n≥1((4m2+n−2)(4m2+2n−1)24(2m2+n−1)(4m2+n−1)(2m2+n))ϵn,
+where ϵn=(−1)tn and tn is the Thue–Morse sequence (Tóth 2020).
+One elegant infinite product formula:
+
+π=∏n=1∞(1+(n+2)+(2n+1)+(2n−1)(n+2)×(2n+1)×(2n−1))
+
+
+=== Arctangent formulas ===
+π2k+1=arctan⁡2−ak−1ak,k≥2
+π4=∑k≥2arctan⁡2−ak−1ak,
+where ak=2+ak−1 such that a1=2.
+
+π2=∑k=0∞arctan⁡1F2k+1=arctan⁡11+arctan⁡12+arctan⁡15+arctan⁡113+⋯
+where Fk is the kth Fibonacci number.
+π4=arctan⁡ab+c+arctan⁡ba+c,
+For Pythagorean triple (a,b,c).
+
+π=arctan⁡a+arctan⁡b+arctan⁡c
+whenever a+b+c=abc and a, b, c are positive real numbers (see List of trigonometric identities). A special case is
+
+π=arctan⁡1+arctan⁡2+arctan⁡3.
+
+
+=== Complex functions ===
+eiπ+1=0 (Euler's identity)
+The following equivalences are true for any complex z:
+
+ez∈ℝ↔ℑz∈πℤ
+ez=1↔z∈2πiℤ
+Also
+
+1ez−1=limN→∞∑n=−NN1z−2πin−12,z∈ℂ.
+Suppose a lattice Ω is generated by two periods ω1,ω2. We define the quasi-periods of this lattice by η1=ζ(z+ω1;Ω)−ζ(z;Ω) and η2=ζ(z+ω2;Ω)−ζ(z;Ω) where ζ is the Weierstrass zeta function (η1 and η2 are in fact independent of z). Then the periods and quasi-periods are related by the Legendre identity:
+
+η1ω2−η2ω1=2πi.
+
+
+=== Continued fractions ===
+4π=1+122+322+522+722+⋱
+ϖ2π=2+124+324+524+724+⋱ (Ramanujan, ϖ is the lemniscate constant)
+π=3+126+326+526+726+⋱
+π=41+123+225+327+429+⋱
+2π=6+2212+6212+10212+14212+18212+⋱
+π=4−21+11−11+21−21+31−3⋱
+2π=11+11+21+31+31+5⋱ (The partial numerators consist of two interleaved sequences: the sequence of natural numbers and the sequence of odd numbers, alternating by index.)
+For more on the fourth identity, see Euler's continued fraction formula.
+
+
+=== Iterative algorithms ===
+a0=1,an+1=(1+12n+1)an,π=limn→∞an2n
+a1=0,an+1=2+an,π=limn→∞2n2−an (closely related to Viète's formula)
+ω(in,in−1,…,i1)=2+in2+in−12+⋯+i12=ω(bn,bn−1,…,b1),ik∈{−1,1},bk={0if ik=11if ik=−1,π=limn→∞2n+12h+1ω(10…0⏟n−mgm,h+1) (where gm,h+1 is the h+1-th entry of m-bit Gray code, h∈{0,1,…,2m−1})
+∀k∈ℕ,a1=2−k,an+1=an+2−k(1−tan⁡(2k−1an)),π=2k+1limn→∞an (quadratic convergence)
+a1=1,an+1=an+sin⁡an,π=limn→∞an (cubic convergence)
+a0=23,b0=3,an+1=hm⁡(an,bn),bn+1=gm⁡(an+1,bn),π=limn→∞an=limn→∞bn (Archimedes' algorithm, see also harmonic mean and geometric mean)
+For more iterative algorithms, see the Gauss–Legendre algorithm and Borwein's algorithm.
+
+
+=== Asymptotics ===
+(2nn)∼4nπn (asymptotic growth rate of the central binomial coefficients)
+Cn∼4nπn3 (asymptotic growth rate of the Catalan numbers)
+n!∼2πn(ne)n (Stirling's approximation)
+log⁡n!≃(n+12)log⁡n−n+log⁡2π2
+∑k=1nφ(k)∼3n2π2 (where φ is Euler's totient function)
+∑k=1nφ(k)k∼6nπ2
+The symbol ∼ means that the ratio of the left-hand side and the right-hand side tends to one as n→∞.
+The symbol ≃ means that the difference between the left-hand side and the right-hand side tends to zero as n→∞.
+
+
+=== Hypergeometric inversions ===
+With 2F1 being the hypergeometric function:
+
+∑n=0∞r2(n)qn=2F1(12,12,1,z)
+where
+
+q=exp⁡(−π2F1(1/2,1/2,1,1−z)2F1(1/2,1/2,1,z)),z∈ℂ∖{0,1}
+and r2 is the sum of two squares function.
+Similarly,
+
+1+240∑n=1∞σ3(n)qn=2F1(16,56,1,z)4
+where
+
+q=exp⁡(−2π2F1(1/6,5/6,1,1−z)2F1(1/6,5/6,1,z)),z∈ℂ∖{0,1}
+and σ3 is a divisor function.
+More formulas of this nature can be given, as explained by Ramanujan's theory of elliptic functions to alternative bases.
+Perhaps the most notable hypergeometric inversions are the following two examples, involving the Ramanujan tau function τ and the Fourier coefficients j of the J-invariant ((sequence A000521 in the OEIS)):
+
+∑n=−1∞jnqn=256(1−z+z2)3z2(1−z)2,
+∑n=1∞τ(n)qn=z2(1−z)22562F1(12,12,1,z)12
+where in both cases
+
+q=exp⁡(−2π2F1(1/2,1/2,1,1−z)2F1(1/2,1/2,1,z)),z∈ℂ∖{0,1}.
+Furthermore, by expanding the last expression as a power series in
+
+121−(1−z)1/41+(1−z)1/4
+and setting z=1/2, we obtain a rapidly convergent series for e−2π:
+
+e−2π=w2+4w6+34w10+360w14+4239w18+⋯,w=1221/4−121/4+1.
+
+
+=== Miscellaneous ===
+Γ(s)Γ(1−s)=πsin⁡πs (Euler's reflection formula, see Gamma function)
+π=6ζ(2) (derived from Euler's solution to Basel problem, see Riemann zeta function)
+π−s/2Γ(s2)ζ(s)=π−(1−s)/2Γ(1−s2)ζ(1−s) (the functional equation of the Riemann zeta function)
+e−ζ′(0)=2π
+eζ′(0,1/2)−ζ′(0,1)=π (where ζ(s,a) is the Hurwitz zeta function and the derivative is taken with respect to the first variable)
+π=B(1/2,1/2)=Γ(1/2)2 (see also Beta function)
+π=Γ(3/4)4agm⁡(1,1/2)2=Γ(1/4)4/3agm⁡(1,2)2/32 (where agm is the arithmetic–geometric mean)
+π=agm⁡(θ22(1/e),θ32(1/e)) (where θ2 and θ3 are the Jacobi theta functions)
+agm⁡(1,2)=πϖ (due to Gauss, ϖ is the lemniscate constant)
+N⁡(2ϖ)=e2π,N⁡(ϖ)=eπ/2 (where N is the Gauss N-function)
+iπ=Log⁡(−1)=limn→∞n((−1)1/n−1) (where Log is the principal value of the complex logarithm)
+1−π212=limn→∞1n2∑k=1n(nmodk) (where nmodk is the remainder upon division of n by k)
+π=limr→∞1r2∑x=−rr∑y=−rr{1if x2+y2≤r0if x2+y2>r (summing a circle's area)
+π=limn→∞4n2∑k=1nn2−k2 (Riemann sum to evaluate the area of the unit circle)
+π=limn→∞24nn!4n(2n)!2=limn→∞24nn(2nn)2=limn→∞1n((2n)!!(2n−1)!!)2 (by combining Stirling's approximation with Wallis product)
+π=limn→∞1nln⁡16λ(ni) (where λ is the modular lambda function)
+π=limn→∞24nln⁡(21/4Gn)=limn→∞24nln⁡(21/4gn) (where Gn and gn are Ramanujan's class invariants)
+
+
+== See also ==
+List of mathematical identities
+Lists of mathematics topics
+List of trigonometric identities
+List of topics related to π
+List of representations of e
+
+
+== References ==
+
+
+=== Notes ===
+
+
+=== Other ===
+
+Tóth (2020), "Transcendental Infinite Products Associated with the +-1 Thue-Morse Sequence" (PDF), Journal of Integer Sequences, 23: 20.8.2, arXiv:2009.02025.
+
+
+== Further reading ==
+Borwein, Peter (2000). "The amazing number π" (PDF). Nieuw Archief voor Wiskunde. 5th series. 1 (3): 254–258. Zbl 1173.01300.
+Kazuya Kato, Nobushige Kurokawa, Saito Takeshi: Number Theory 1: Fermat's Dream. American Mathematical Society, Providence 1993, ISBN 0-8218-0863-X.

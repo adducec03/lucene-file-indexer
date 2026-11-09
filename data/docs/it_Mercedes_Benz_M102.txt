@@ -1,0 +1,83 @@
+Mercedes-Benz M102
+
+La sigla Mercedes-Benz M102 (o Daimler-Benz M102) indica una famiglia di motori a scoppio prodotti dal 1980 al 1993 dalla Casa tedesca Mercedes-Benz.
+
+
+== Profilo e caratteristiche ==
+
+I motori M102 sono nati per sostituire i precedenti motori M115, rispetto ai quali risultano essere più moderni come progettazione, più leggeri e migliori come rendimento. L'unico aspetto in comune con i motori M115 stava nell'architettura a 4 cilindri in linea. Le varie versioni comprese nella famiglia dei motori M102 avevano molte caratteristiche differenti tra loro. Possono essere a carburatore o ad iniezione e con distribuzione a due o a quattro valvole per cilindro. Questi motori sono nati inizialmente in configurazione monoalbero e nelle versioni da 2 e da 2.3 litri. Solo successivamente sono arrivate anche le più potenti versioni bialbero plurivalvole, con l'aggiunta di una nuova versione da 1.8 litri che andava a completare verso il basso questa famiglia, più una versione da 2.5 litri e 16 valvole, al vertice dei motori M102. 
+Altre caratteristiche fondamentali comuni ai motori M102 erano la testata in lega di alluminio ed il monoblocco in ghisa. L'albero a gomiti aveva 5 supporti di banco. Le camere di scoppio erano di tipo emisferico, con valvole posizionate a V.
+La produzione dei motori M102 cessò nel 1993, quando vennero soppiantati dai motori M111.
+Di seguito vengono descritte più in dettaglio le varie versioni dei motori M102.
+
+
+=== Versione da 2 litri ===
+Il 2 litri M102 è stato prodotto sia con alimentazione a carburatore, sia nella più moderna configurazione ad iniezione. Questo motore aveva una cilindrata di 1997 cm³ (alesaggio e corsa: 89x80.25 mm).
+Assieme al 2.3 M102 ha sancito nel 1980 il debutto di questa famiglia sotto il cofano di vari modelli della Casa tedesca.
+
+
+==== A carburatore (M102V20) ====
+I primi 2 litri M102 a debuttare sono stati quelli a carburatore. Nella famiglia di motori M102, solo quelli da 2 litri erano anche a carburatore. Ne sono esistite tre varianti. Quella di base era siglata 102.920 ed erogava 109 CV. Su tale base è stata realizzata una variante meno potente, poiché dotata di un asse a camme meno spinto e di un carburatore di prestazioni inferiori. La terza variante, siglata 102.924, proponeva la più moderna soluzione della distribuzione a punterie idrauliche. Era stata prodotta con e senza catalizzatore ed ha esordito nel 1984, con il lancio della nuova serie di berline.
+Di seguito vengono riassunte le caratteristiche dei motori M102 da 2 litri a carburatore:
+
+
+==== Ad iniezione (M102E20) ====
+Al contrario delle versioni a carburatore, che erano più di una, è esistito un solo 2 litri M102 ad iniezione, disponibile però con o senza catalizzatore. Tale versione, siglata M102.963, era caratterizzata da un rapporto di compressione pari a 9.1:1 e montava un sistema di iniezione Bosch KE-Jetronic. Poteva raggiungere una potenza massima di 122 CV a 5100 giri/min (118 CV nella versione catalizzata), con un picco di coppia pari a 178 N·m a 3500 giri/min (172 N·m nella versione catalizzata).
+Tale motore ha trovato applicazione nei seguenti modelli:
+
+Mercedes-Benz 190E W201 (1983-93);
+Mercedes-Benz 200E W124 (M102.963) (1985-93);
+Mercedes-Benz 200CE W124 (1990-92), solo per il mercato italiano;
+Mercedes-Benz 200GE W460 (1986-91), solo per il mercato italiano.
+
+
+=== Versione da 2.3 litri ===
+
+Lanciato nel 1980, il 2.3 litri M102 ha segnato anch'esso il debutto della famiglia M102. Chiamato a sostituire l'equivalente unità motrice della famiglia M115, questo motore era disponibile anch'esso sia ad iniezione sia a carburatore (sebbene quest'ultimo avesse trovato applicazione solo in un modello specifico) ed era in pratica una versione ad alesaggio maggiorato del 2 litri. Qui il diametro dei cilindri è stato portato infatti da 89 a 95.5 mm, con conseguente aumento di cilindrata da 1997 a 2299 cc. Il 2.3 M102 è stato prodotto in cinque varianti: una a carburatore, tre monoalbero a due valvole per cilindro, una bialbero a 4 valvole per cilindro. Quest'ultima era la più potente del gruppo e recava la sigla 102.983. Delle tre monoalbero a iniezione, solo la versione base (la prima in ordine cronologico) montava l'iniezione meccanica Bosch K-Jetronic, mentre le altre montavano la KE-Jetronic.
+
+
+==== Motori M102V23 carburatore ====
+Il 2.3 M102 a carburatore ha rimpiazzato nel 1986 le corrispondenti unità M115 da 90 e 102 CV. Esso eroga 109 CV a 5300 giri/min, con una coppia massima di 174 Nm a 2000 giri/min. È stato montato solo sulla Mercedes-Benz 230G prodotta dal 1986 al 1989.
+
+
+==== Motori M102E23 iniezione monoalbero ====
+Nella seguente tabella vengono riassunte le caratteristiche dei vari motori M102 da 2.3 litri con distribuzione monoalbero a due valvole per cilindro:
+
+
+==== Motore M102E23 iniezione bialbero ====
+È esistito un solo 2.3 M102 con distribuzione bialbero plurivalvole. Tale motore deriva direttamente dagli altri 2.3 della stessa famiglia, ma è stato sapientemente rivisitato dai tecnici dell'inglese Cosworth, un'azienda da sempre specializzata nella produzione di motori ad alte prestazioni, e che di lì a poco sarebbe divenuta famosa per le sue applicazioni a modelli Ford. Tornando a questo nuovo e potente motore, i tecnici Cosworth hanno mantenuto pressoché inalterato il monoblocco, ma hanno riprogettato la testata, sempre in lega leggera, ma a quattro valvole per cilindro e con due assi a camme in testa. Sono state inoltre ridisegnate le camere di scoppio, ora caratterizzate da una più alta turbolenza e quindi in grado di fornire un miglior rendimento al propulsore. Anche lo scarico è stato rivisto e sfruttava in maniera ottimale i fenomeni di risonanza, in modo da avere una decompressione all'apertura delle valvole di scarico, tale da generare un risucchio che avrebbe attirato in maniera più decisa i gas in entrata dal lato aspirazione. È stato anche aumentato il rapporto di compressione, ora pari a ben 10.5:1.
+Il motore risultante portava la sigla 102.983 ed era in grado di erogare una potenza massima di 185 CV a 6200 giri/min, con coppia massima di 235 N·m a 4500 giri/min. Ma a partire dal 1985, il rapporto di compressione è stato abbassato a 9.7:1, con conseguente diminuzione delle prestazioni (potenza massima di 177 CV a 5800 giri/min e coppia massima di 230 N·m a 4750 giri/min). Inoltre, di questo motore è esistita anche una variante catalizzata, in cui la potenza subì un ulteriore calo, portandosi a 170 CV, con picco di coppia pari a 220 N·m.
+In ogni caso, tale motore ha avuto una ed una sola applicazione, vale a dire la Mercedes-Benz 190E 2.3-16, prodotta dal 1983 al 1988.
+
+
+=== Versioni da 2.5 litri ===
+I motori M102 da 2.5 litri sono stati innanzitutto due, a loro volta prodotti in più varianti. Tali motori avevano in comune il tipo di distribuzione, in entrambi i casi bialbero in testa con quattro valvole per cilindro. Sono stati riservati alle versioni superiori della gamma W201. Il 2.5 litri M102 meno potente è stato introdotto nel 1988 ed erogava già 204 CV (che diventavano 195 CV nella versione catalizzata) ed andava a sostituire il motore 102.983 da 2.3 litri descritto poco sopra.
+L'altro 2.5 litri M102, introdotto l'anno seguente, era invece frutto di un nuovo progetto ed andava ad equipaggiare la 190 Evo, prodotta in due edizioni, ognuna spinta da una configurazione differente di quest'ultimo motore.
+Per maggior chiarezza, le diverse versioni e varianti del 2.5 litri M102 sono state riassunte nella seguente tabella:
+
+Come ultima precisazione, va ricordato che il 2.5 M102 più prestante, quello da 235 CV, è stato prodotto solo in versione catalizzata.
+
+
+=== Versione da 1.8 litri ===
+Nel 1990, per completare la famiglia M102 anche nella zona bassa, è stata introdotta la versione da 1.8 litri, praticamente una versione a corsa più corta del 2 litri M102. Tale versione aveva le seguenti caratteristiche:
+
+codice motore: M102.910;
+alesaggio e corsa: 89x72.2 mm;
+cilindrata: 1797 cc;
+rapporto di compressione: 9:1;
+alimentazione: iniezione meccanico-elettronica Bosch KE-Jetronic;
+potenza massima: 109 CV a 5500 giri/min;
+coppia massima: 150 N·m a 3700 giri/min;
+applicazioni: Mercedes-Benz 190E 1.8;
+anni di produzione: 1990-93.
+
+
+== Voci correlate ==
+Mercedes-Benz
+Motori Mercedes-Benz
+Daimler-Benz
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file su Mercedes-Benz M102

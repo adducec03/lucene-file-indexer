@@ -1,0 +1,114 @@
+Iperplasia surrenale congenita
+
+L'iperplasia surrenale congenita, anche conosciuta come sindrome surrenogenitale o virilizzazione surrenalica (CAH) rappresenta un gruppo di malattie genetiche ereditarie caratterizzate da un'insufficiente produzione di cortisolo e/o aldosterone. In generale si tratta di un disordine autosomico recessivo correlato al deficit o difetti di uno dei 7 enzimi o fattori coinvolti nella biosintesi dei due ormoni dovuto a una mutazione genetica.
+
+
+== Epidemiologia ==
+La prevalenza della malattia si attesta a 1/10 000 con un'incidenza annuale compresa tra 1/5 000 e 1/15 000. L'incidenza più alta è stata registrata in Nuova Zelanda (1/26 727), seguita a breve distanza dal Giappone (Tokyo 1/21 264 e Sapporo 1/20 756), mentre quella più bassa è stata registrata in Cina (1/6 084). Le forme più comuni di CAH sono: il deficit di 21-idrossilasi (21-OHD )e il deficit di 11β-idrossilasi, mentre la più rara è quella da deficit di 17-α-idrossilasi (17α-OHD).
+Negli Stati Uniti l'incidenza è maggiore nelle popolazioni di nativi americani e Yupik, mentre nella popolazione caucasica l'incidenza si attesta a 1/15 000.
+
+
+== Eziologia ==
+Il 90-95% dei casi sono causati da una mutazione nel gene CYP21A2, localizzato sul cromosoma 6p21.3, che codifica per un enzima che controlla il cortisolo e la produzione di aldosterone. Altri geni sono coinvolti in maniera meno frequente e determinano le seguenti varianti: da deficit di 17-α-idrossilasi, da deficit di 3-β-idrossisteroido deidrogenasi, da deficit di 11-β-idrossilasi, da deficit di citocromo P450 ossidoreduttasi e iperplasia surrenalica lipoide congenita.
+Il rischio di contrarre la malattia dipende dal fatto che i genitori siano o meno dei portatore della mutazione: qualora solo uno dei genitori sia portatore il feto sarà un portatore sano e non presenterà sintomi, nel caso invece in cui entrambi i genitori siano portatori della mutazione il rischio che il feto presenti sintomi è pari a circa il 25%, mentre la probabilità che sia portatore è del 50%.
+CAH da deficit della 21-idrossilasi è presente in tutte le popolazioni, mentre quella da deficit dell'11-β-idrossilasi è più comune negli individui con discendenza iraniana, ebrea o marocchina.
+
+
+== Patogenesi ==
+
+
+=== Complicanze ===
+A seconda del tipo e della gravità del difetto a livello enzimatico, il paziente può manifestare diverse alterazioni nella produzione di mineralcorticoidi, glucocorticoidi e ormoni sessuali sia a livello surrenalico che gonadico. La riduzione dell'attività degli enzimi coinvolti nella produzione di cortisolo porta alla sovra-stimolazione cronica della corteccia surrenale e all'accumulo di precursori prossimali al blocco enzimatico. Solo nei casi di varianti alla 21-idrossilasi e all'11beta-idrossilasi, la virilizzazione dei maschi è inadeguata, mentre nelle femmine non si osserva alcun difetto.
+Il blocco della biosintesi del cortisolo è responsabile dell'eccessiva produzione dell'ormone di rilascio della corticotropina (CRH) e dell'ormone adrenocorticotropo (ATCH) che portano all'iperplasia surrenale e dell'ipofisi.
+
+
+== Anatomia patologica ==
+A livello istologico si può osservare:
+
+iperplasia della corteccia surrenale
+un'architettura disorganizzata della midollare del surrene e della corteccia surrenale
+depositi lipidici che non possono entrare nei mitocondri per la sintesi degli steroidi
+ipertrofia dell'apparato iuxtaglomerulare
+
+
+== Clinica ==
+
+
+=== Segni e sintomi ===
+I sintomi si presentano già in età neonatale. Nei pazienti affetti da forme severe di CAH causata da deficit di 21-idrossilasi non prontamente trattati, possono presentarsi crisi potenzialmente fatali di iponatremia, iperkaliemia, acidosi e shock. Nei bambini in cui la produzione di aldosterone risulta lievemente superiore corrono un rischio inferiore di avere tali crisi.
+L'accumulo di precursori prossimali determina un aumento della sintesi di androgeni surrenalici con conseguente virilizzazione di vario grado nei genitali femminili esterni (aumento delle dimensioni del clitoride e fusione delle labbra), mentre nessun difetto è percepibile nei genitali maschili esterni. I dotti di Müller si sviluppano normalmente ad eccezione della formazione di una cavità che collega l'uretra e la vagina. Il dotto di Wolff si sviluppa normalmente nei maschi ma risulta assente nelle femmine in cui continua ad essere prodotto l'NR2F2responsabile della sua involuzione.
+L'eccesso di androgeni può causare il rapido sviluppo corporeo, una rapida maturazione scheletrica e un'altezza ridotta. In pazienti non trattati immediatamente c'è il rischio di andare incontro alla pubertà precoce. Nelle donne con CAH sotto controllo il menarca risulta regolare, mentre le pazienti non trattate possono presentare acne, irsutismo, calvizie, alterazioni delle abitudini corporee, ciclo mestruale irregolare e ridotta fertilità. Nei maschi non trattati possono presentarsi ipogonadismo e tumori surrenalici benigni.
+I pazienti affetti da forme lievi di CAH presentano una riduzione dell'attività enzimatica al 25-50% con una conseguente produzione basale di cortisolo e aldosterone normale, ma livelli di androgeni lievemente superiori alla norma. Questo può causare acne, pubertà precoce, maturazione scheletrica accelerata anche se in molti casi, specialmente nei maschi, risulta asintomatica. Donne e ragazze possono presentare irsutismo, oligomenorrea, acne e ridotta fertilità.
+Ulteriori sintomi legati allo squilibrio ormonale sono:
+
+obesità
+ipertensione
+iperglicemia
+cataratta
+infezioni urinarie ricorrenti
+
+
+=== Esami di laboratorio e strumentali ===
+Nelle femmine che nascono con genitali ambigui, la diagnosi viene fatta direttamente alla nascita. I neonati possono inoltre essere sottoposti a screening per identificare le forme classiche, misurando i livelli di 17-idrossi-progesterone. Lo screening genetico conferma, inoltre, la diagnosi attraverso l'identificazione di una mutazione legata alla CAH.
+
+
+=== Diagnosi differenziale ===
+Nelle donne adulte la diagnosi differenziale deve tener conto del tumore all'ovaio e della sindrome dell'ovaio policistico (PCOS). La diagnosi differenziale dovrà comunque tener conto anche di:
+
+ipoplasia surrenale
+sindrome da insensibilità agli androgeni
+emorragia surrenale bilaterale
+difetti nella sintesi del testosterone
+sindrome di Denys-Dash
+disordini dello sviluppo sessuale
+deficit familiare di glucocorticoidi
+gestione dei fluidi e degli elettroliti
+
+
+=== Diagnosi precoce ===
+La diagnosi prenatale può essere effettuata mediante villocentesi o amniocentesi.
+
+
+=== Risvolti psicologici ===
+È spesso necessario un supporto psicologico.
+
+
+== Trattamento ==
+
+
+=== Trattamento chirurgico ===
+La vaginoplastica può essere eseguita nel primo anno di vita.
+
+
+=== Trattamento farmacologico ===
+Tutti i bambini affetti da forme classiche di CAH trovano beneficio dall'assunzione di glucocorticoidi e mineralcorticoidi almeno nel primo anno di vita.
+Si rende necessaria la terapia ormonale sostitutiva permanente per trattare l'insufficienza surrenalica e ridurre i livelli degli ormoni androgeni. L'idrocortisone aiuta a regolare i cicli mestruali e favorisce la fertilità nelle donne adulte e viene di solito somministrato ai bambini come terapia sostitutiva dei glucocorticoidi insieme al 9α-fludrocortisone acetato per la sostituzione dei mineralcorticoidi. I cicli mestruali, talvolta, possono essere regolarizzati con i contraccettivi orali.
+
+
+=== Prognosi ===
+I pazienti adeguatamente trattati hanno generalmente un'aspettativa di vita normale.
+
+
+=== Follow up ===
+Molto importante per monitorare il dosaggio dei farmaci e modificarlo se necessario.
+
+
+== Note ==
+
+
+== Bibliografia ==
+Harrison T.R., Principi di medicina interna, 16ª ed., Milano, McGraw-Hill, 2005, ISBN 88-386-2999-4.
+
+
+== Voci correlate ==
+Surrene
+
+
+== Altri progetti ==
+
+ Wikimedia Commons contiene immagini o altri file su iperplasia surrenale congenita
+
+
+== Collegamenti esterni ==
+
+(EN) Robert D. Utiger, congenital adrenal hyperplasia, su Enciclopedia Britannica, Encyclopædia Britannica, Inc.

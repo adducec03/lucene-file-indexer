@@ -1,0 +1,42 @@
+2025 GN1
+
+2025 GN1 is an Atira-type near-Earth asteroid discovered by the Dark Energy Camera (DECam) at Cerro Tololo Inter-American Observatory on 4 April 2025. With a diameter of 0.4 km (0.25 mi), it is believed to be a fragment of the near-Earth asteroid 2021 PH27, the closest orbiting asteroid to the Sun known as of 2026. 2025 GN1 and 2021 PH27 form an asteroid pair because they share identical orbits and spectral types, which suggest that they split apart from a single parent body over 10,500 years ago. The splitting of the parent body was likely caused by either thermal fracturing or rotational fissioning due to either outgassing or the YORP effect.
+
+
+== Discovery ==
+2025 GN1 was discovered on 4 April 2025, by the 4.0-meter (13.1 ft) Víctor M. Blanco Telescope's Dark Energy Camera (DECam) at Cerro Tololo Inter-American Observatory in Chile. Astronomers involved in making the discovery observations included H. Perkins, T. Murphey, Jan Kleyna, and Robert Weryk. During the week after 2025 GN1's discovery, follow-up observations were supplied by T. Linder and R. Holmes using the 1.3-meter telescope at Cerro Tololo Observatory. With five nights of observations, the discovery of 2025 GN1 was announced by the Minor Planet Center (MPC) on 13 April 2025.
+In the same month as 2025 GN1's discovery, teams of astronomers independently led by Scott S. Sheppard and Albino Carbognani recognized that 2025 GN1 had a remarkably similar orbit as 2021 PH27—the closest orbiting asteroid to the Sun known at the time—which raised suspicions that the two asteroids might be physically related with identical colors and compositions. These predictions were confirmed in follow-up observations by the Magellan–Baade and Gemini South telescopes on 14–16 April 2025.
+
+
+== Name ==
+2025 GN1 is the minor planet provisional designation of this asteroid, given by the MPC as a shorthand for its discovery date. Before it was announced by the MPC, 2025 GN1 had the temporary internal designation JKt019. The MPC will give a permanent minor planet number to 2025 GN1 once its orbit is well determined with multiple years of observations, which would make it eligible for formal naming.
+
+
+== Orbit ==
+
+2025 GN1 orbits the Sun at an average distance or semi-major axis of 0.462 AU (69.1 million km; 42.9 million mi), with an orbital period of 114.7 days. 2025 GN1 is the second closest-orbiting asteroid to the Sun and the second shortest-period asteroid known as of 2026, narrowly following its kin 2021 PH27. It follows a highly tilted and eccentric orbit with an orbital inclination of 32.8° with respect to the ecliptic and an eccentricity of 0.71. In its eccentric orbit, it comes as close as 0.136 AU (20.3 million km; 12.6 million mi) to the Sun at perihelion to as far as 0.788 AU (117.9 million km; 73.2 million mi) at aphelion.
+The orbit of 2025 GN1 lies entirely inside the orbit of Earth, which makes it an Atira-class near-Earth asteroid, despite the fact that it does not come closer than 0.22 AU (33 million km; 20 million mi) from Earth (its minimum orbit intersection distance). 2025 GN1 frequently makes close approaches to Venus and will begin passing within the planet's Hill sphere (sphere of gravitational influence) in about 2,000 years into the future. These close encounters incrementally peturb the orbit of 2025 GN1 and make it difficult to predict its behavior far into the past or future.
+Like 2021 PH27, the short-period orbit of 2025 GN1 exhibits noticeable apsidal precession due to general relativity. Its orbit is estimated to precess at a rate of 52.6 arcseconds per century—faster than Mercury's apsidal precession rate. While 2025 GN1's apsidal precession does not affect its orbit as significantly as perturbations by close encounters with Venus, it does play a role in delaying the time at which the asteroid will begin passing within Venus's Hill sphere.
+
+
+== Physical characteristics ==
+Observations of 2025 GN1 in different light filters show that it has a neutral to slightly reddish color with a spectral type of X. The compositions of X-type asteroids are ambiguous and may correspond to spectral types of either E (enstatite composition), M (metallic composition), or P (organic-rich silicate composition). Because 2025 GN1 orbits very close to the Sun, it experiences temperatures high enough to cause thermal fracturing of its surface. Despite its extreme thermal environment, 2025 GN1 does not show evidence of dust ejection nor blue tinting of its surface by heated refractory organics.
+2025 GN1 is estimated to have a diameter of 0.4 ± 0.2 km (0.25 ± 0.12 mi), based on its absolute magnitude of 20.1 and an assumed X-type asteroid geometric albedo of 0.098±0.081. The brightness of 2025 GN1 appears to fluctuate with an amplitude of at least 0.2 magnitudes, which could indicate an elongated shape. The rotation period of 2025 GN1 is unknown, as it was not observed long enough to discern periodic variations in its brightness.
+
+
+== Relation to 2021 PH27 and origin ==
+The orbit and spectral type of 2025 GN1 are very similar to those of 2021 PH27, which makes them an asteroid pair. These similar properties led astronomers to hypothesize that 2025 GN1 and 2021 PH27 originated as fragments from a single parent body. The present-day longitude of perihelion of 2025 GN1's orbit is closely aligned with that of 2021 PH27 to within 1°, which suggests that the two asteroids must have split apart relatively recently—on the order of few to tens of thousands of years ago. Analysis of the 2021 PH27–2025 GN1 pair's orbital dynamics suggests that both asteroids underwent a similar history of orbital evolution up until at least 10,500 years ago, which astronomers have interpreted as the minimum separation age of the asteroid pair.
+A 2026 study led by Albino Carbognani investigated four possible mechanisms responsible for the splitting of 2021 PH27 and 2025 GN1: 1) tidal disruption by Venus, 2) tidal disruption by the Sun, 3) thermal fracturing due to a low perihelion, and 4) separation of a binary asteroid system formed by rotational fissioning. Their analysis of the 2021 PH27–2025 GN1 pair's orbital evolution 100,000 years into the past found that the two asteroids did not pass within the Roche limits of either Venus or the Sun, making both tidal disruption scenarios unlikely. Their analysis showed that the perihelion distances of both asteroids had momentarily dropped to 0.08–0.10 AU (12–15 million km; 7.4–9.3 million mi) during 17,000–21,000 and 45,000–48,000 years ago, which makes it plausible that the two asteroids may have split apart due to thermal fracturing induced by increased heating. The thermal splitting scenario is predicted to produce a meteor stream crossing Venus's orbit as well as asymmetric space weathering on the surfaces of both asteroids, although these predictions remain yet to be tested.
+Alternatively, the 2021 PH27–2025 GN1 pair's close proximity to the Sun makes it plausible that the two asteroids could have split apart due to rotational spin-up by either outgassing or the YORP effect, where sunlight gradually speeds up an asteroid's rotation until it breaks apart due to centrifugal forces. In this scenario, a binary asteroid system containing 2021 PH27 and 2025 GN1 was initially formed from rotational fissioning, but eventually separated. This hypothesis is supported by the fact that the 2021 PH27–2025 GN1 pair's mass ratio and primary body rotation period matches those seen in other binary near-Earth asteroids, which are also widely believed to have formed via rotational fissioning.
+
+
+== See also ==
+3200 Phaethon – a low-perihelion near-Earth asteroid that hosts an asteroid group with (155140) 2005 UD and (225416) 1999 YC
+1566 Icarus – another low-perihelion near-Earth asteroid belonging to an asteroid pair with 2007 MK6
+
+
+== References ==
+
+
+== External links ==
+2025 GN1 at the JPL Small-Body Database

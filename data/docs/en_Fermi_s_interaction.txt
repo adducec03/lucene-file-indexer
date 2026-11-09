@@ -1,0 +1,149 @@
+Fermi's interaction
+
+In particle physics, Fermi's interaction (also the Fermi theory of beta decay or the Fermi four-fermion interaction) is an explanation of the beta decay, proposed by Enrico Fermi in 1933. The theory posits four fermions directly interacting with one another (at one vertex of the associated Feynman diagram). This interaction explains beta decay of a neutron by direct coupling of a neutron with an electron, a neutrino (later determined to be an antineutrino) and a proton.
+Fermi first introduced this coupling in his description of beta decay in 1933.  The Fermi interaction was the precursor to the theory for the weak interaction where the interaction between the proton–neutron and electron–antineutrino is mediated by a virtual W− boson, of which the Fermi theory is the low-energy effective field theory.
+According to Eugene Wigner, who together with Pascual Jordan introduced the Jordan–Wigner transformation, Fermi's paper on beta decay was his main contribution to the history of physics.
+
+
+== History of initial rejection and later publication ==
+Fermi first submitted his "tentative" theory of beta decay to the prestigious science journal Nature, which rejected it "because it contained speculations too remote from reality to be of interest to the reader." It has been claimed that Nature later admitted the rejection to be one of the great editorial blunders in its history, but Fermi's biographer David N. Schwartz has objected that this is both unproven and unlikely. Fermi submitted versions of the paper to Italian and German publications, which accepted and published them in those languages in 1933 and 1934. The paper did not appear at the time in a primary publication in English.  An English translation of the seminal paper was published in the American Journal of Physics in 1968.
+Fermi found the initial rejection of the paper so troubling that he decided to take some time off from theoretical physics, and do only experimental physics. This would lead shortly to his famous work with activation of nuclei with slow neutrons, for which he received a Nobel Prize in Physics in 1938.
+
+
+== The "tentativo" ==
+
+
+=== Definitions ===
+The theory deals with three types of particles presumed to be in direct interaction: initially a "heavy particle" in the "neutron state" (ρ=+1), which then transitions into its "proton state" (ρ=−1) with the emission of an electron and a neutrino.
+
+
+==== Electron state ====
+ψ=∑sψsas,
+where ψ is the single-electron wavefunction, ψs are its stationary states.
+as is the operator which annihilates an electron in state s which acts on the Fock space as
+
+asΨ(N1,N2,…,Ns,…)=(−1)N1+N2+⋯+Ns−1(1−Ns)Ψ(N1,N2,…,1−Ns,…).
+as∗ is the creation operator for electron state s:
+
+as∗Ψ(N1,N2,…,Ns,…)=(−1)N1+N2+⋯+Ns−1NsΨ(N1,N2,…,1−Ns,…).
+
+
+==== Neutrino state ====
+Similarly,
+
+ϕ=∑σϕσbσ,
+where ϕ is the single-neutrino wavefunction, and ϕσ are its stationary states.
+bσ is the operator which annihilates a neutrino in state σ which acts on the Fock space as
+
+bσΦ(M1,M2,…,Mσ,…)=(−1)M1+M2+⋯+Mσ−1(1−Mσ)Φ(M1,M2,…,1−Mσ,…).
+bσ∗ is the creation operator for neutrino state σ.
+
+
+==== Heavy particle state ====
+ρ is the operator introduced by Heisenberg (later generalized into isospin) that acts on a heavy particle state, which has eigenvalue +1 when the particle is a neutron, and −1 if the particle is a proton. Therefore, heavy particle states will be represented by two-row column vectors, where
+
+(10)
+represents a neutron, and
+
+(01)
+represents a proton (in the representation where ρ is the usual σz spin matrix).
+The operators that change a heavy particle from a proton into a neutron and vice versa are respectively represented by
+
+Q=σx−iσy=(0100)
+and
+
+Q∗=σx+iσy=(0010).
+un(x) resp. vn(x) are the eigenfunctions for the heavy particle in the nth stationary state when ρ=+1 (neutron) resp. ρ=−1 (proton), where x is the position of the heavy particle.
+
+
+=== Hamiltonian ===
+The Hamiltonian is composed of three parts: Hh.p., representing the energy of the free heavy particles, Hl.p., representing the energy of the free light particles, and a part giving the interaction Hint..
+
+Hh.p.=12(1+ρ)N+12(1−ρ)P,
+where N and P are the energy operators of the neutron and proton respectively, so that if ρ=1, Hh.p.=N, and if ρ=−1, Hh.p.=P.
+
+Hl.p.=∑sHsNs+∑σKσMσ,
+where Hs is the energy of the electron in the sth state in the nucleus's Coulomb field, and  Ns is the number of electrons in that state; Mσ is the number of neutrinos in the σth state, and Kσ energy of each such neutrino (assumed to be in a free, plane wave state).
+The interaction part must contain a term representing the transformation of a proton into a neutron along with the emission of an electron and a neutrino (now known to be an antineutrino), as well as a term for the inverse process; the Coulomb force between the electron and proton is ignored as irrelevant to the β-decay process.
+Fermi proposes two possible values for Hint.: first, a non-relativistic version which ignores spin:
+
+Hint.=g[Qψ(x)ϕ(x)+Q∗ψ∗(x)ϕ∗(x)],
+and subsequently a version assuming that the light particles are four-component Dirac spinors, but that speed of the heavy particles is small relative to c and that the interaction terms analogous to the electromagnetic vector potential can be ignored:
+
+Hint.=g[Qψ~∗δϕ+Q∗ψ~δϕ∗],
+where ψ and ϕ are now four-component Dirac spinors, ψ~ represents the Hermitian conjugate of ψ, and δ is a matrix
+
+(0−1001000000100−10).
+
+
+=== Matrix elements ===
+The state of the system is taken to be given by the tuple ρ,n,N1,N2,…,M1,M2,…, where ρ=±1 specifies whether the heavy particle is a neutron or proton, n is the quantum state of the heavy particle, Ns is the number of electrons in state s and Mσ is the number of neutrinos in state σ.
+Using the relativistic version of Hint., Fermi gives the matrix element between the state with a neutron in state n and no electrons resp. neutrinos present in state s resp. σ, and the state with a proton in state m and an electron and a neutrino present in states s and σ as
+
+Hρ=−1,m,Ns=1,Mσ=1ρ=1,n,Ns=0,Mσ=0=±g∫vm∗unψ~sδϕσ∗dτ,
+where the integral is taken over the entire configuration space of the heavy particles (except for ρ). The ± is determined by whether the total number of light particles is odd (−) or even (+).
+
+
+=== Transition probability ===
+
+To calculate the lifetime of a neutron in a state n according to the usual quantum perturbation theory, the above matrix elements must be summed over all unoccupied electron and neutrino states. This is simplified by assuming that the electron and neutrino eigenfunctions ψs and ϕσ are constant within the nucleus (i.e., their Compton wavelength is much larger than the size of the nucleus). This leads to
+
+Hρ=−1,m,Ns=1,Mσ=1ρ=1,n,Ns=0,Mσ=0=±gψ~sδϕσ∗∫vm∗undτ,
+where ψs and ϕσ are now evaluated at the position of the nucleus.
+According to Fermi's golden rule, the probability of this transition is
+
+|aρ=−1,m,Ns=1,Mσ=1ρ=1,n,Ns=0,Mσ=0|2=|Hρ=−1,m,Ns=1,Mσ=1ρ=1,n,Ns=0,Mσ=0×exp⁡2πih(−W+Hs+Kσ)t−1−W+Hs+Kσ|2=4|Hρ=−1,m,Ns=1,Mσ=1ρ=1,n,Ns=0,Mσ=0|2×sin2(πth(−W+Hs+Kσ))(−W+Hs+Kσ)2,
+where W is the difference in the energy of the proton and neutron states.
+Averaging over all positive-energy neutrino spin / momentum directions (where Ω−1 is the density of neutrino states, eventually taken to infinity), we obtain
+
+⟨|Hρ=−1,m,Ns=1,Mσ=1ρ=1,n,Ns=0,Mσ=0|2⟩avg=g24Ω|∫vm∗undτ|2(ψ~sψs−μc2Kσψ~sβψs),
+where μ is the rest mass of the neutrino and β is the Dirac matrix.
+Noting that the transition probability has a sharp maximum for values of pσ for which −W+Hs+Kσ=0, this simplifies to 
+
+t8π3g2h4×|∫vm∗undτ|2pσ2vσ(ψ~sψs−μc2Kσψ~sβψs),
+where pσ and Kσ is the values for which −W+Hs+Kσ=0.
+Fermi makes three remarks about this function:
+
+Since the neutrino states are considered to be free, Kσ>μc2 and thus the upper limit on the continuous β-spectrum is Hs≤W−μc2.
+Since for the electrons Hs>mc2, in order for β-decay to occur, the proton–neutron energy difference must be W≥(m+μ)c2
+The factor
+Qmn∗=∫vm∗undτ
+in the transition probability is normally of magnitude 1, but in special circumstances it vanishes; this leads to (approximate) selection rules for β-decay.
+
+
+=== Forbidden transitions ===
+
+As noted above, when the inner product Qmn∗ between the heavy particle states un and vm vanishes, the associated transition is "forbidden" (or, rather, much less likely than in cases where it is closer to 1).
+If the description of the nucleus in terms of the individual quantum states of the protons and neutrons is accurate to a good approximation, Qmn∗ vanishes unless the neutron state un and the proton state vm have the same angular momentum; otherwise, the total angular momentum of the entire nucleus before and after the decay must be used.
+
+
+== Influence ==
+Shortly after Fermi's paper appeared, Werner Heisenberg noted in a letter to Wolfgang Pauli that the emission and absorption of neutrinos and electrons in the nucleus should, at the second order of perturbation theory, lead to an attraction between protons and neutrons, analogously to how the emission and absorption of photons leads to the electromagnetic force. He found that the force would be of the form Const.r5, but noted that contemporary experimental data led to a value that was too small by a factor of a million.
+The following year, Hideki Yukawa picked up on this idea, but in his theory the neutrinos and electrons were replaced by a new hypothetical particle with a rest mass approximately 200 times heavier than the electron.
+
+
+== Later developments ==
+Fermi's four-fermion theory describes the weak interaction remarkably well. Unfortunately, the calculated cross-section, the probability of the interaction multiplied by the common interaction area, grows as the square of the energy σ≈GF2E2.  Since this cross section grows without bound, the theory is not valid at energies much higher than about 100 GeV. Here GF is the Fermi constant, which denotes the strength of the interaction. This eventually led to the replacement of the four-fermion contact interaction by a more complete theory (ultraviolet completion)—an exchange of a W or Z boson as explained in the electroweak theory.
+
+The interaction could also explain muon decay via a coupling of a muon, electron-antineutrino, muon-neutrino and electron, with the same fundamental strength of the interaction. This hypothesis was put forward by Semyon Gershtein and Yakov Zeldovich and is known as the vector current conservation hypothesis.
+In the original theory, Fermi assumed that the form of interaction is a contact coupling of two vector currents. Subsequently, it was pointed out by T.-D. Lee and C. N. Yang that nothing prevented the appearance of an axial, parity violating current, and this was confirmed by experiments carried out by Chien-Shiung Wu.
+The inclusion of parity violation in Fermi's interaction was done by George Gamow and Edward Teller in the so-called Gamow–Teller transitions which described Fermi's interaction in terms of parity-violating "allowed" decays and parity-conserving "superallowed" decays in terms of anti-parallel and parallel electron and neutrino spin states respectively. Before the advent of the electroweak theory and the Standard Model, George Sudarshan and Robert Marshak, and also independently Richard Feynman and Murray Gell-Mann, were able to determine the correct tensor structure (vector minus axial vector, V − A) of the four-fermion interaction.
+
+
+== Fermi constant ==
+The most precise experimental determination of the Fermi constant comes from measurements of the muon lifetime, which is inversely proportional to the square of GF (when neglecting the muon mass against the mass of the W boson). In modern terms, the "reduced Fermi constant", that is, the constant in natural units is
+
+GF0=GF(ℏc)3=28g2MW2c4=1.1663787(6)×10−5GeV−2≈4.5437957×1014J−2 .
+Here, g is the coupling constant of the weak interaction, and MW is the mass of the W boson, which mediates the decay in question.
+In the Standard Model, the Fermi constant is related to the Higgs vacuum expectation value 
+
+v=(2GF0)−1/2≃246.22GeV.
+More directly, approximately (tree level for the standard model),
+
+GF0≃πα2 MW2c4(1−MW2/MZ2).
+This can be further simplified in terms of the Weinberg angle using the relation between the W and Z bosons with MZ=MWcos⁡θW, so that
+
+GF0≃πα2 MZ2c4cos2θWsin2θW.
+
+
+== References ==

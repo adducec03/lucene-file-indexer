@@ -1,0 +1,34 @@
+Hicklin test
+
+The Hicklin test is a legal test for obscenity established by the English case R. v Hicklin (1868). At issue was the statutory interpretation of the word "obscene" in the Obscene Publications Act 1857, which authorized the destruction of obscene books. The court held that all material tending "to deprave and corrupt those whose minds are open to such immoral influences" was obscene, regardless of its artistic or literary merit.
+
+
+== History ==
+The modern English law of obscenity began with the Obscene Publications Act 1857, also known as Lord Campbell's Act. Lord Campbell, the Chief Justice of Queen's Bench, introduced the bill, which provided for the seizure and summary disposition of obscene and pornographic materials.  The Act also granted authority to issue search warrants for premises suspected of housing such materials.
+Regina v Hicklin involved one Henry Scott, who resold copies of an anti-Catholic pamphlet entitled "The Confessional Unmasked: shewing the depravity of the Romish priesthood, the iniquity of the Confessional, and the questions put to females in confession". When the pamphlets were ordered destroyed as obscene, Scott appealed the order to the court of quarter sessions. Benjamin Hicklin, the official in charge of such orders as Recorder, revoked the order of destruction. Hicklin held that Scott's purpose had not been to corrupt public morals but to expose problems within the Catholic Church; hence, Scott's intention was innocent. The authorities appealed Hicklin's reversal, bringing the case to the consideration of the Court of Queen's Bench.
+Chief Justice Cockburn, on April 29, 1868, reinstated the order of the lower court, holding that Scott's intention was immaterial if the publication was obscene in fact. Justice Cockburn reasoned that the Obscene Publications Act allowed banning of a publication if it had a "tendency ... to deprave and corrupt those whose minds are open to such immoral influences, and into whose hands a publication of this sort may fall". Hicklin therefore allowed portions of a suspect work to be judged independently of context. If any portion of a work was deemed obscene, the entire work could be outlawed.
+
+
+== In India ==
+The Hicklin test is no longer used in Indian courts. Instead, the contemporary community standards test is now the guiding standard for determining obscenity in India. In Aveek Sarkar v. State of West Bengal (2014), the Supreme Court of India formally rejected the Hicklin test and instead adopted the "community standards test", bringing Indian obscenity law closer to U.S. and international standards. The court ruled that the image of a nude Boris Becker with his fiancée was not obscene as it was published in a journalistic and non-exploitative context.
+Historically as part of the British Empire, India had inherited much of British common law, including the Hicklin test. After independence in 1947, Indian courts continued to rely on that test as the standard for judging obscenity under Section 292 of the Indian Penal Code (IPC), which criminalizes the sale, distribution, and public exhibition of obscene material.
+The landmark case Ranjit D. Udeshi v. State of Maharashtra (19 August 1964) cemented the Hicklin test as the dominant legal standard in India. Ranjit Udeshi, a bookseller, was prosecuted for selling an unexpurgated copy of Lady Chatterley's Lover by D.H. Lawrence. The Supreme Court of India upheld the conviction, applying the Hicklin test to determine that certain passages were obscene and had the potential to corrupt readers. The Court ruled that even though the book had literary merit, individual obscene portions could still warrant its prohibition. In Samaresh Bose v. Amal Mitra (1985), the Supreme Court, while examining a Bengali novel, departed slightly from a strict Hicklin application and emphasized the importance of context and literary value. Obscenity judgments using essentially these standards continued until the Aveek Sarkar case mentioned above.
+
+
+== In the United States ==
+
+Adoption of obscenity laws in the United States was largely by the efforts of Anthony Comstock, whose intense lobbying led to the passage in 1873 of an anti-obscenity statute known as the Comstock Act. Comstock was appointed postal inspector to enforce the new law. Twenty-four states passed similar prohibitions on materials distributed within those states. The law criminalized not only sexually explicit material, but also material dealing with birth control and abortion. Although lower courts in the U.S. had used the Hicklin standard sporadically since 1868, it was not until 1879, when prominent federal judge Samuel Blatchford upheld the obscenity conviction of D. M. Bennett using Hicklin, that the constitutionality of the Comstock Law became firmly established. In 1896, the Supreme Court in Rosen v. United States, 161 U.S. 29 (1896), adopted the Hicklin test as the appropriate test of obscenity.
+Use of the Hicklin test in the U.S. ended on the federal level in 1933, when Judge John Woolsey found Ulysses to not be obscene in United States v. One Book Called Ulysses, 72 F.2d 705 (2d Cir. 1933). Avoiding the Hicklin test, he said instead that in evaluating obscenity, a court must consider (1) the work as a whole, not just selected passages that could be interpreted out of context; (2) the effect on an average, rather than the most susceptible person; and (3) contemporary community standards. This ruling refuted those who argued against adult possession of material that could hypothetically corrupt a child.
+In 1957, the Supreme Court ruled in Roth v. United States, 354 U.S. 476 (1957), that the Hicklin test was inappropriate. In Roth, Justice Brennan, writing for the majority, noted that some American courts had adopted the Hicklin standard, but that later decisions more commonly relied upon the question of "whether to the average person, applying contemporary community standards, the dominant theme of the material taken as a whole appeals to prurient interest". This Roth test became essentially the new definition of obscenity in the United States.
+
+
+== References ==
+
+
+== Further reading ==
+"Obscene Publications Act (British law) - Britannica Online Encyclopedia". Britannica.com. Retrieved 2011-09-30.
+"The Confessional Unmasked: Showing the Depravity of the Roman Priesthood, the Iniquity of the Confessional and the Questions Put to Females in Confession". Google Books. Retrieved 2025-12-14.
+"Pornography On Trial". Bsos.umd.edu. Archived from the original on 2011-09-27. Retrieved 2011-09-30.
+"Obscene Censorship - A History of Erotica Censorship". Eroticabibliophile.com. Retrieved 2011-09-30.
+"The Free Expression Policy Project". Fepproject.org. Retrieved 2011-09-30.
+"Obscenity and media law". Radford.edu. 1968-06-14. Archived from the original on 2011-09-27. Retrieved 2011-09-30.

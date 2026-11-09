@@ -1,0 +1,103 @@
+Passenger name record
+
+A passenger name record (PNR) is a record in the database of a computer reservation system (CRS) that contains the itinerary for a passenger or a group of passengers travelling together. The concept of a PNR was first introduced by airlines that needed to exchange reservation information in case passengers required flights of multiple airlines to reach their destination ("interlining"). For this purpose, IATA and ATA have defined standards for interline messaging of PNR and other data through the "ATA/IATA Reservations Interline Message Procedures - Passenger" (AIRIMP). There is no general industry standard for the layout and content of a PNR. In practice, each CRS or hosting system has its own proprietary standards, although common industry needs, including the need to map PNR data easily to AIRIMP messages, has resulted in many general similarities in data content and format between all of the major systems.
+When a passenger books an itinerary, the travel agent or travel website user will create a PNR in the computer reservation system it uses. This is typically one of the large global distribution systems, such as Amadeus, Sabre, or Travelport (Apollo, Galileo, and Worldspan) but if the booking is made directly with an airline the PNR can also be in the database of the airline's CRS. This PNR is called the Master PNR for the passenger and the associated itinerary. The PNR is identified in the particular database by a record locator.
+When portions of the travel are not provided by the holder of the master PNR, then copies of the PNR information are sent to the CRSs of the airlines that will be providing transportation. These CRSs will open copies of the original PNR in their own database to manage the portion of the itinerary for which they are responsible. Many airlines have their CRS hosted by one of the GDSs, which allows sharing of the PNR.
+The record locators of the copied PNRs are communicated back to the CRS that owns the Master PNR, so all records remain tied together. This allows exchanging updates of the PNR when the status of trip changes in any of the CRSs.
+Although PNRs were originally introduced for air travel, airlines systems can now also be used for bookings of hotels, car rental, airport transfers, and train trips.
+
+
+== Parts ==
+
+From a technical point of view, there are five parts of a PNR required before the booking can be completed. They are:
+
+The name of the passenger
+Contact details for the travel agent or airline office.
+Ticketing details, either a ticket number or a ticketing time limit.
+Itinerary of at least one segment, which must be the same for all passengers listed.
+Name of the person providing the information or making the booking.
+Other information, such as a timestamp and the agency's pseudo-city code, will go into the booking automatically.  All entered information will be retained in the "history" of the booking.
+Once the booking has been completed to this level, the CRS will issue a unique all alpha or alpha-numeric record locator, which will remain the same regardless of any further changes made (except if a multi-person PNR is split).  Each airline will create their own booking record with a unique record locator, which, depending on service level agreement between the CRS and the airline(s) involved, will be transmitted to the CRS and stored in the booking.  If an airline uses the same CRS as the travel agency, the record locator will be the same for both.
+A considerable amount of other information is often desired by both the airlines and the travel agent to ensure efficient travel. This includes:
+
+Fare details, (although the amount may be suppressed, the type of fare will be shown), and any restrictions that may apply to the ticket.
+Tax amounts paid to the relevant authorities involved in the itinerary.
+The form of payment used, as this will usually restrict any refund if the ticket is not used.
+Further contact details, such as agency phone number and address, additional phone contact numbers at passenger address and intended destination.
+Age details if it is relevant to the travel, e.g., unaccompanied children or elderly passengers requiring assistance.
+Frequent flyer data.
+Seat allocation (or seat type request).
+Special Service Requests (SSR) such as meal requirements, wheelchair assistance, and other similar requests.
+"Optional Services Instruction" or "Other Service Information" (OSI) -  information sent to a specific airline, or all airlines in the booking, which enables them to better provide a service.  This information can include ticket numbers, local contacts details (the phone section is limited to only a few entries), airline staff onload and upgrade priority codes, and other details such as a passenger's language or details of a disability.
+Vendor Remarks.  VRs are comments made by the airline, typically generated automatically once the booking or request is completed. These will normally include the airline's own record locator, replies to special requests, and advice on ticketing time limits.  While normally sent by the airlines to an agent, it is also possible for an agent to send a VR to an airline.
+In more recent times, many governments now require the airline to provide further information included assisting investigators tracing criminals or terrorists. These include:
+
+Passengers' gender
+Passport details - nationality, number, and date of expiry
+Date and place of birth
+Redress number (if previously given to the passenger by the US authorities).
+All available payment/billing information.
+The components of a PNR are identified internally in a CRS by a one-character code. This code is often used when creating a PNR via direct entry into a terminal window (as opposed to using a graphical interface). The following codes are standard across all CRSs based on the original PARS system:
+
+- Name
+0 Segment (flight) information, including number of seats booked, status code (for example HK1 - confirmed for one passenger) and fare class
+1 Related PNR record IDs.
+2 PNR owner identification (airline, CRS user name and role)
+3 Other airline Other Service Information (OSI) or Special Service Request (SSR) items
+4 Host airline OSI or SSR items
+5 Remarks
+6 Received from
+7 Ticketing information (including ticket number)
+8 Ticketing time limit
+9 Contact phone numbers
+
+
+== Storage ==
+The majority of airlines and travel agencies choose to host their PNR databases with a computer reservations system (CRS) or global distribution system (GDS) company such as Sabre, Galileo, Worldspan and Amadeus.
+
+
+== Privacy concerns ==
+Some privacy organizations are concerned at the amount of personal data that a PNR might contain.  While the minimum data for completing a booking is quite small, a PNR will typically contain much more information of a sensitive nature.
+This will include the passenger's full name, date of birth, home and work address, telephone number, e-mail address, credit card details, IP address if booked online, as well as the names and personal information of emergency contacts.
+Designed to "facilitate easy global sharing of PNR data," the CRS-GDS companies "function both as data warehouses and data aggregators, and have a relationship to travel data analogous to that of credit bureaus to financial data.".   A canceled or completed trip does not erase the record since "copies of the PNRs are ‘purged’ from live to archival storage systems, and can be retained indefinitely by CRSs, airlines, and travel agencies." Further, CRS-GDS companies maintain web sites that allow almost unrestricted access to PNR data – often, the information is accessible by just the reservation number printed on the ticket.
+Additionally, "[t]hrough billing, meeting, and discount eligibility codes, PNRs contain detailed information on patterns of association between travelers. PNRs can contain religious meal preferences and special service requests that describe details of physical and medical conditions (e.g., "Uses wheelchair, can control bowels and bladder") – categories of information that have special protected status in the European Union and some other countries as “sensitive” personal data.” Despite the sensitive character of the information they contain, PNRs are generally not recognized as deserving the same privacy protection afforded to medical and financial records.  Instead, they are treated as a form of commercial transaction data.
+
+
+== International PNR sharing agreements ==
+
+
+=== European Union to United States ===
+
+
+=== European Union to Australia ===
+On 16 January 2004, the Article 29 Working Party released their Opinion 1/2004 (WP85) on the level of PNR protection ensured in Australia for the transmission of Passenger Name Record data from airlines.
+
+Customs applies a general policy of non-retention for these data. For those 0.05% to 0.1% of passengers who are referred to Customs for further evaluation, the airline PNR data are temporarily retained, but not stored, pending resolution of the border evaluation. After resolution, their PNR data are erased from the PC of the Customs PAU officer concerned and are not entered into Australian databases.
+In 2010 the European Commission's Directorate-General for Justice, Freedom and Security was split in two.  The resulting bodies were the Directorate-General for Justice (European Commission) and the Directorate-General for Home Affairs (European Commission).
+On 4 May 2011, Stefano Manservisi, Director-General at the Directorate-General for Home Affairs (European Commission) wrote to the European Data Protection Supervisor (EDPS) with regards to a PNR sharing agreement with Australia, a close ally of the US and signatory to the UKUSA Agreement on signals intelligence.
+The EDPS responded on 5 May in Letter 0420 D845:
+
+I am writing to you in reply to your letter of 4 May concerning the two draft Proposals for Council Decisions on (i) the conclusion and (ii) the signature of the Agreement between the European Union and Australia on the processing and transfer of Passenger Name Record (PNR) data by air carriers to the Australian Customs and Border Protection Service.
+We understand that the consultation of the EDPS takes place in the context of a fast track procedure. However, we regret that the time available for us to analyse the Proposal is reduced to a single day. Such a deadline precludes the EDPS from being able to exercise its competences in an appropriate way, even in the context of a file which we have been closely following since 2007.
+
+
+=== European Union to Canada ===
+The Article 29 Working Party document Opinion 1/2005 on the level of protection ensured in Canada for the transmission of Passenger Name Record and Advance Passenger Information from airlines (WP 103), 19 January 2005, offers information on the nature of PNR agreements with Canada. Archived 2014-11-27 at the Wayback Machine.
+
+
+== See also ==
+Advance Passenger Information System
+Flight manifest
+Machine-readable passport
+
+
+== Further reading ==
+Farrell, Henry and Abraham Newman. 2019. Of Privacy and Power: The Transatlantic Struggle over Freedom and Security. Princeton University Press.
+
+
+== References ==
+
+
+== External links ==
+European Union Freedom of Information Request for Information on PNR Agreements, AskTheEU.org.
+Guidelines on Passenger Name Record (PNR) Data, iata.org
