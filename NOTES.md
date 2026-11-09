@@ -91,23 +91,55 @@ Il default (`StandardAnalyzer`) non viene mai usato perché i campi sono solo du
 - `search <indexDir>` avvia il ciclo di ricerca interattivo (**da implementare**).
 - Il numero di argomenti viene controllato per ciascun comando; negli altri casi stampa l'uso.
 
-## 6. Ricerca (`QueryBuilder`, `FileSearcher`): scelte decise, implementazione da fare
+## 6. Costruzione della query (`QueryBuilder`): fatto
 
 - **Sintassi della query:** `nome <termini>` oppure `contenuto <termini>`,
   con le virgolette per le frasi (richiesto dalla consegna).
-- **Parsing:** si usa il `QueryParser` di Lucene, con il campo scelto come campo di default
-  e l'analyzer di quel campo. Si estrae a mano solo la parola chiave iniziale.
+- **Parsing:** si usa il `QueryParser` di Lucene. A mano si estrae solo la parola chiave
+  iniziale (`split(" ", 2)`: campo + resto della riga); il resto viene passato al parser con
+  il campo scelto come **campo di default** e l'analyzer per campo (`Analyzers.perField()`).
+  Così i termini della query vengono analizzati come quelli dell'indice (minuscole, stopword,
+  separatori), altrimenti non coinciderebbero con i termini indicizzati.
   Valutare più avanti un parsing manuale se questa scelta mostra dei limiti.
+- **Parola chiave:** non distingue maiuscole/minuscole (`Nome`, `NOME` valgono come `nome`).
 - **Più termini senza virgolette: OR.** È il comportamento standard del `QueryParser`
   e coincide con le slide (termini senza modificatori "optional", `Occur.SHOULD`).
   I documenti che contengono più termini ottengono un punteggio più alto.
+- **Frasi:** il testo tra virgolette diventa una phrase query.
+- **Errori di input:** il metodo lancia sempre `IllegalArgumentException` con un messaggio
+  chiaro, che il chiamante (ciclo di ricerca) stampa senza chiudere il programma:
+  campo sconosciuto, testo della query mancante, sintassi non valida (es. virgolette non chiuse).
 - **Ranking:** similarity di default di Lucene (BM25), non modificata.
 
-## 7. Punti ancora aperti
+### Verifica (output reale di `query.toString()`)
+| Riga digitata | Query Lucene |
+|---|---|
+| `nome roma` | `nome:roma` |
+| `contenuto data scientist` | `contenuto:data contenuto:scientist` |
+| `contenuto "data scientist"` | `contenuto:"data scientist"` |
+| `contenuto Data` | `contenuto:data` |
+| `nome Relazione_Finale` | `nome:relazione nome:finale` |
+| `titolo qualcosa` | errore: campo sconosciuto |
+| `contenuto` | errore: manca il testo della query |
+| `contenuto "frase aperta` | errore: sintassi non valida |
 
-- Escape dei caratteri speciali del `QueryParser` (`:`, `+`, `-`, `*`, ...): da decidere
-  se lasciarli attivi o neutralizzarli.
-- Gestione degli errori di sintassi nella query (virgolette non chiuse, campo sconosciuto).
+### Limiti noti (da citare nella relazione)
+- Se tutti i termini sono stopword o simboli (es. `contenuto il the`, `contenuto c++`) l'analyzer
+  li elimina e la query risulta **vuota**: non dà errore ma non trova nulla. La ricerca dovrà
+  segnalarlo all'utente.
+- Il `QueryParser` accetta la sintassi `campo:valore`, quindi `nome foo:bar` cerca `bar` nel campo
+  `foo` (inesistente) e non trova nulla. Anche gli operatori di Lucene (`+`, `-`, `AND`, `OR`,
+  `*`, `?`) restano attivi: i caratteri speciali non vengono neutralizzati.
+- Nessuno stemming: cercare `libro` non trova `libri`.
+
+## 7. Ricerca (`FileSearcher`) e ciclo in `Main`: da fare
+
+- Aprire l'indice in lettura, eseguire la query, stampare posizione, punteggio e nome file.
+- Gestire la query vuota (nessun termine utile) e le `IllegalArgumentException` del `QueryBuilder`.
+
+## 8. Punti ancora aperti
+
 - Numero di risultati stampati (top-K).
 - Una decina di query di test, con risultati e commento.
 - URL del repository GitHub.
+- Modello di computer usato per le misure dei tempi.
