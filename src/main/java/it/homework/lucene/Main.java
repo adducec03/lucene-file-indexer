@@ -17,10 +17,14 @@ public class Main {
 
     private static void runIndex(Path docsDir, Path indexDir) throws Exception{
         // crea l'indexer e gli passa docsDir e indexDir
-        FileIndexer indexer = new FileIndexer();
-        indexer.index(docsDir, indexDir);
+        try {
+            FileIndexer indexer = new FileIndexer();
+            indexer.index(docsDir, indexDir);
+        } catch (IOException e) {
+            System.err.println("cannot index " + docsDir + ": " + e.getMessage());
+        }
     }
-
+    
     private static void runSearch(Path indexDir) throws Exception{
         
         QueryBuilder queryBuilder = new QueryBuilder();
