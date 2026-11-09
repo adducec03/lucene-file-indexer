@@ -14,6 +14,13 @@ with Apache Lucene (fields: file name, file content) and query them from the con
 ./mvnw exec:java -Dexec.args="search index"
 ```
 
+### Shortcut scripts (macOS/Linux)
+```bash
+index.sh [docsDir] [indexDir]   # defaults: data/docs, index
+search.sh [indexDir]            # default: index
+```
+They wrap the `./mvnw` commands above (paths with spaces are not supported).
+
 ## Query syntax
 ```
 nome <terms>            e.g.  nome ingegneria
