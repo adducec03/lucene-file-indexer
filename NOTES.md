@@ -2,7 +2,7 @@
 
 File di appunti: raccoglie le scelte fatte durante lo sviluppo, con le motivazioni,
 da riutilizzare nella relazione finale. Si aggiorna man mano.
-Stato: **in corso** (indicizzazione fatta, ricerca da implementare).
+Stato: **in corso** (indicizzazione e ricerca implementate; mancano le query di test e la relazione).
 
 ## 1. Setup del progetto
 
@@ -88,8 +88,16 @@ Il default (`StandardAnalyzer`) non viene mai usato perché i campi sono solo du
 ## 5. Interfaccia da riga di comando (`Main`)
 
 - `index <docsDir> <indexDir>` costruisce l'indice.
-- `search <indexDir>` avvia il ciclo di ricerca interattivo (**da implementare**).
-- Il numero di argomenti viene controllato per ciascun comando; negli altri casi stampa l'uso.
+- `search <indexDir>` avvia il ciclo di ricerca interattivo (vedi sezione 7).
+- Il numero di argomenti viene controllato per ciascun comando (3 per `index`, 2 per `search`);
+  negli altri casi stampa un messaggio d'uso con la descrizione dei comandi e due esempi.
+- All'avvio di `search`, dopo l'apertura dell'indice, stampa un breve promemoria della sintassi
+  (campi `nome` / `contenuto`, esempi con più termini e con frase tra virgolette, numero di
+  risultati mostrati, come uscire). Il promemoria compare solo per `search`, non per `index`.
+- Se l'indice non si può aprire (cartella inesistente o senza indice) stampa un messaggio
+  di errore chiaro invece di uno stack trace.
+- Esecuzione: `./mvnw exec:java -Dexec.args="index data/docs index"` e
+  `./mvnw exec:java -Dexec.args="search index"`.
 
 ## 6. Costruzione della query (`QueryBuilder`): fatto
 
@@ -132,14 +140,56 @@ Il default (`StandardAnalyzer`) non viene mai usato perché i campi sono solo du
   `*`, `?`) restano attivi: i caratteri speciali non vengono neutralizzati.
 - Nessuno stemming: cercare `libro` non trova `libri`.
 
-## 7. Ricerca (`FileSearcher`) e ciclo in `Main`: da fare
+## 7. Ricerca (`FileSearcher`) e ciclo in `Main`: fatto
 
-- Aprire l'indice in lettura, eseguire la query, stampare posizione, punteggio e nome file.
-- Gestire la query vuota (nessun termine utile) e le `IllegalArgumentException` del `QueryBuilder`.
+### `FileSearcher`
+- Apre l'indice in lettura (`FSDirectory` + `DirectoryReader` + `IndexSearcher`) e controlla
+  prima che la cartella esista.
+- Implementa `AutoCloseable` (`close()` chiude reader e directory) ed è usato con
+  `try-with-resources` nel `Main`: viene chiuso una volta sola a fine sessione, non a ogni query.
+- **Top-K = 5** risultati (costante `TOP_K` in `Main`). Scelta pratica: con 200 file e query
+  su una parola, pochi risultati bastano per verificare il ranking.
+- **Output:** numero totale di risultati trovati (anche oltre il top-K) e, per ogni file,
+  nome, punteggio e posizione in classifica. Con zero risultati stampa solo il totale.
+- Il nome viene letto dal campo stored `nome`; il contenuto non si può stampare perché
+  non è salvato nell'indice (scelta della sezione 4).
+- **Query senza termini utili** (solo stopword o simboli): stampa un avviso su `stderr`
+  e non esegue la ricerca.
+- **Ranking:** punteggio di default di Lucene (BM25), non modificato.
 
-## 8. Punti ancora aperti
+### Ciclo interattivo in `Main`
+- Prompt `> `, lettura di una riga alla volta con `Scanner`.
+- Righe vuote ignorate; `exit` o `quit` (anche in maiuscolo) terminano il programma;
+  anche la fine dell'input (Ctrl+D) termina il ciclo.
+- Gli errori di input (`IllegalArgumentException` del `QueryBuilder`) vengono stampati
+  come `Error: ...` e il ciclo continua.
 
-- Numero di risultati stampati (top-K).
-- Una decina di query di test, con risultati e commento.
+## 8. Come testare
+
+1. Costruire l'indice: `./mvnw exec:java -Dexec.args="index data/docs index"`
+   (atteso: 202 file indicizzati, 0 saltati).
+2. Avviare la ricerca: `./mvnw exec:java -Dexec.args="search index"`.
+3. Verificare i risultati con `grep` sui file originali, ad esempio
+   `grep -il "parola" data/docs/*.txt` (il numero di file deve coincidere con il totale
+   stampato). Attenzione: il confronto può differire per le stopword e per le forme diverse
+   della stessa parola (nessuno stemming).
+4. Per rieseguire una serie di query senza digitarle:
+   `printf 'nome roma\nexit\n' | ./mvnw -q exec:java -Dexec.args="search index"`.
+
+Nota: all'avvio compaiono avvisi `WARNING` di Java/Lucene sul modulo vettoriale: sono innocui.
+
+### Query di test (da completare dopo l'esecuzione)
+| # | Query | Risultati | Primo file | Commento |
+|---|---|---|---|---|
+| 1 | | | | |
+
+Casi da coprire: un termine su `nome`; un termine su `contenuto`; più termini (OR);
+frase tra virgolette; maiuscole diverse; parola in italiano e in inglese; nessun risultato;
+solo stopword; campo sconosciuto; errore di sintassi.
+
+## 9. Punti ancora aperti
+
+- Eseguire una decina di query di test e compilare la tabella della sezione 8.
+- Refactor di `Main` (due metodi, uno per `index` e uno per `search`), se fatto.
 - URL del repository GitHub.
 - Modello di computer usato per le misure dei tempi.
