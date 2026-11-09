@@ -14,6 +14,57 @@ import org.apache.lucene.search.Query;
 public class Main {
 
     private final static int TOP_K = 5;
+
+    private static void runIndex(Path docsDir, Path indexDir) throws Exception{
+        // crea l'indexer e gli passa docsDir e indexDir
+        FileIndexer indexer = new FileIndexer();
+        indexer.index(docsDir, indexDir);
+    }
+
+    private static void runSearch(Path indexDir) throws Exception{
+        
+        QueryBuilder queryBuilder = new QueryBuilder();
+
+        try (FileSearcher searcher = new FileSearcher(indexDir);
+            Scanner in = new Scanner(System.in)) {
+
+            System.out.println("Lucene file searcher - index: " + indexDir);
+            System.out.println("Query syntax:  <field> <terms>");
+            System.out.println("  fields:      nome (file name) | contenuto (file content)");
+            System.out.println("  examples:    nome relazione");
+            System.out.println("               contenuto data scientist      (files with any of the words)");
+            System.out.println("               contenuto \"data scientist\"    (exact phrase)");
+            System.out.println("Shows the top " + TOP_K + " results. Type 'exit' or 'quit' to leave.");
+
+            while (true) {
+
+                System.out.print("> ");
+                if (!in.hasNextLine()){
+                    break;
+                }
+
+                String line = in.nextLine().trim();
+                if(line.isEmpty()){
+                    continue;
+                }
+
+                if(line.equalsIgnoreCase("exit") || line.equalsIgnoreCase("quit")){
+                    break;
+                }
+                
+                try {
+                    Query query = queryBuilder.parse(line);
+                    searcher.search(query, TOP_K);
+                } catch (IllegalArgumentException e) {
+                    System.err.println("Error: " + e.getMessage());
+                }
+            
+            }
+            
+        } catch (IOException e) {
+            System.err.println("Cannot open index in " + indexDir + ": " + e.getMessage());
+        }
+    }
     
 
     public static void main(String[] args) throws Exception {
@@ -23,57 +74,13 @@ public class Main {
             // costruisce i path a partire dagli argomenti
             Path docsDir = Path.of(args[1]);
             Path indexDir = Path.of(args[2]);
-
-            // crea l'indexer e gli passa docsDir e indexDir
-            FileIndexer indexer = new FileIndexer();
-            indexer.index(docsDir, indexDir);
+            runIndex(docsDir,indexDir);
         }
         // se chiama search
         else if (args.length == 2 && args[0].equals("search")) {
             // costruisce il path a partire dagli argomenti
             Path indexDir = Path.of(args[1]);
-            QueryBuilder queryBuilder = new QueryBuilder();
-
-            try (FileSearcher searcher = new FileSearcher(indexDir);
-                Scanner in = new Scanner(System.in)) {
-
-                System.out.println("Lucene file searcher - index: " + indexDir);
-                System.out.println("Query syntax:  <field> <terms>");
-                System.out.println("  fields:      nome (file name) | contenuto (file content)");
-                System.out.println("  examples:    nome relazione");
-                System.out.println("               contenuto data scientist      (files with any of the words)");
-                System.out.println("               contenuto \"data scientist\"    (exact phrase)");
-                System.out.println("Shows the top " + TOP_K + " results. Type 'exit' or 'quit' to leave.");
-
-                while (true) {
-
-                    System.out.print("> ");
-                    if (!in.hasNextLine()){
-                        break;
-                    }
-
-                    String line = in.nextLine().trim();
-                    if(line.isEmpty()){
-                        continue;
-                    }
-
-                    if(line.equalsIgnoreCase("exit") || line.equalsIgnoreCase("quit")){
-                        break;
-                    }
-                    
-                    try {
-                        Query query = queryBuilder.parse(line);
-                        searcher.search(query, TOP_K);
-                    } catch (IllegalArgumentException e) {
-                        System.err.println("Error: " + e.getMessage());
-                    }
-
-                
-                }
-                
-            } catch (IOException e) {
-                System.err.println("Cannot open index in " + indexDir + ": " + e.getMessage());
-            }
+            runSearch(indexDir);
         }
         // altrimenti se il comando è sbagliato stampa usage
         else{
