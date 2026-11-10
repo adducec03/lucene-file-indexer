@@ -4,7 +4,7 @@
 # Default: indexDir=index
 # Note: paths containing spaces are not supported.
 set -euo pipefail
-cd "$(dirname "$0")/.."
+cd "$(dirname "$0")"
 
 INDEX_DIR="${1:-index}"
 

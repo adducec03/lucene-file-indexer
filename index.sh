@@ -4,7 +4,7 @@
 # Defaults: docsDir=data/docs, indexDir=index
 # Note: paths containing spaces are not supported.
 set -euo pipefail
-cd "$(dirname "$0")/.."
+cd "$(dirname "$0")"
 
 DOCS_DIR="${1:-data/docs}"
 INDEX_DIR="${2:-index}"
