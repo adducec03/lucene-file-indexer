@@ -1,0 +1,51 @@
+# Test queries for the report.
+# Format: a line starting with '#' is the description of the query on the next line.
+# Blank lines are ignored. Each query uses the console syntax: <field> <terms>
+
+# Un termine nel nome del file
+nome knitting
+
+# Più termini nel nome (OR): basta che ne compaia uno
+nome history martial
+
+# Frase tra virgolette nel nome
+nome "martial arts"
+
+# Termine molto comune nei nomi: il totale supera il top-K mostrato
+nome list
+
+# Termine italiano nel contenuto
+contenuto napoleone
+
+# Termine inglese nel contenuto
+contenuto earthquake
+
+# Frase nel contenuto
+contenuto "world war"
+
+# Più termini nel contenuto (OR)
+contenuto guerra mondiale
+
+# Maiuscole ignorate: stesso risultato di "contenuto napoleone"
+contenuto NAPOLEONE
+
+# Frase presente in un solo file
+contenuto "data scientist"
+
+# Termine inesistente: nessun risultato
+contenuto xyzqwerty
+
+# Solo stopword: nessun termine utile
+contenuto il the
+
+# Numero nel nome: l'analyzer separa example e 1
+nome example1
+
+# Campo sconosciuto
+titolo knitting
+
+# Testo della query mancante
+contenuto
+
+# Virgolette non chiuse
+contenuto "frase aperta
