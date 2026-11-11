@@ -35,11 +35,26 @@ contenuto "data scientist"
 # Termine inesistente: nessun risultato
 contenuto xyzqwerty
 
-# Solo stopword: nessun termine utile
+# Solo parole comuni: senza stopword vengono trovati quasi tutti i file (BM25 le pesa poco)
 contenuto il the
 
-# Numero nel nome: l'analyzer separa example e 1
+# Numero nel nome: example1 resta un unico termine e trova solo example1
 nome example1
+
+# Elisione: "uomo" deve trovare anche "dell'uomo" e "l'uomo"
+contenuto uomo
+
+# Elisione: "italia" deve trovare anche "l'Italia" e "dell'Italia"
+contenuto italia
+
+# Accenti: "citta" (senza accento) deve trovare "città"
+contenuto citta
+
+# Possessivo inglese: "king" deve trovare anche "king's"
+contenuto king
+
+# Parola comune italiana che è anche una parola inglese: non è più eliminata
+contenuto era
 
 # Campo sconosciuto
 titolo knitting
