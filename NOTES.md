@@ -1,195 +1,205 @@
 # Note per la relazione
 
-File di appunti: raccoglie le scelte fatte durante lo sviluppo, con le motivazioni,
-da riutilizzare nella relazione finale. Si aggiorna man mano.
-Stato: **in corso** (indicizzazione e ricerca implementate; mancano le query di test e la relazione).
+File di appunti: raccoglie le scelte fatte durante lo sviluppo, con le motivazioni e i numeri
+misurati, da riutilizzare nella relazione finale. Si aggiorna man mano.
+
+**Stato:** indicizzazione, ricerca, 21 query di test e relazione (bozza completa in
+`relazione/relazione.tex` / `.pdf`) pronte. In corso: dataset più grande e valutazione con
+metriche (consiglio del professore). Ultimo aggiornamento: 12 novembre 2026.
 
 ## 1. Setup del progetto
 
 - **Linguaggio / build:** Java 21, Maven (con wrapper `./mvnw`, nessuna installazione richiesta).
 - **Lucene 10.3.1**, la stessa versione delle slide del corso.
   Dipendenze: `lucene-core`, `lucene-analysis-common`, `lucene-queryparser`.
-- **Struttura:** package `it.homework.lucene` con le classi
-  `Main`, `Analyzers`, `FileIndexer`, `QueryBuilder`, `FileSearcher`.
-- **Lingua del codice e del README:** inglese.
+- **Classi** (package `it.homework.lucene`): `Main`, `Analyzers`, `FileIndexer`, `QueryBuilder`,
+  `FileSearcher`.
+- **Script nella radice:** `index.sh`, `search.sh` (scorciatoie per i comandi Maven) e
+  `run-queries.sh` (esegue `queries.txt` e scrive `results/query-results.md`).
+- **Script in `tools/` (Python, solo libreria standard):**
+  - `build_corpus.py`: scarica il corpus da Wikipedia e scrive `data/corpus-manifest.csv`;
+  - `benchmark_indexing.py`: misura i tempi di indicizzazione al crescere dei file.
+- **Lingua del codice e del README:** inglese; commenti in `Analyzers.java` in italiano.
+- **Relazione:** `cd relazione && pdflatex relazione.tex` (due volte, per i riferimenti).
+  La cartella `relazione/` è nel `.gitignore` (scelta dell'autore).
 
-## 2. Dataset di prova
+## 2. Dataset
 
-- **202 file `.txt`, circa 3 MB** in `data/docs/`:
-  - 100 articoli di Wikipedia in italiano (prefisso `it_`)
-  - 100 articoli di Wikipedia in inglese (prefisso `en_`)
-  - 2 file di esempio scritti a mano (`example1.txt`, `example2.txt`)
-- **Perché Wikipedia:** serviva un corpus multilingua (italiano + inglese) di testo reale.
-  Project Gutenberg non era raggiungibile dall'ambiente di sviluppo.
+### 2.1 Corpus piccolo (`data/docs/`, usato finora)
+- **202 file `.txt`, circa 2,8 MB**: 100 articoli di Wikipedia in italiano (`it_`), 100 in inglese
+  (`en_`), più 2 file scritti a mano (`example1.txt`, `example2.txt`). Circa 425.000 parole
+  (215.000 italiane, 209.000 inglesi); dimensione mediana 10 KB, massima 103 KB.
+- **Perché Wikipedia:** serviva testo reale multilingua (italiano + inglese). Project Gutenberg
+  non era raggiungibile dall'ambiente di sviluppo.
 - **Come sono stati scelti:** articoli casuali tramite le API di Wikipedia, scartando quelli
   troppo corti (< 12000 byte di pagina, < 5000 caratteri di testo estratto).
-  Ogni file contiene il titolo nella prima riga, poi il testo in chiaro.
-- **Nomi dei file:** `<lingua>_<Titolo_con_underscore>.txt`, così il campo `nome`
-  contiene parole significative da cercare.
-- **Licenza:** i testi di Wikipedia sono CC BY-SA, da citare nella relazione.
+- **Formato:** `<lingua>_<Titolo_con_underscore>.txt`, prima riga = titolo, poi testo in chiaro.
+  Il nome contiene parole significative da cercare.
+- **Licenza:** CC BY-SA, da citare nella relazione.
 
-## 3. Analyzer scelti (campo per campo)
+### 2.2 Corpus grande (`data/corpus/`, in costruzione)
+Motivo: il professore ha osservato che molte relazioni usano pochi documenti; con più file si
+valutano meglio i tempi e si può parlare di recall.
+- **Script riproducibile:** `tools/build_corpus.py` (nel repository). Usa le API di Wikipedia
+  (it/en), rispetta il limite di richieste (`Retry-After`), 3 richieste in parallelo, ripartenza
+  senza riscaricare.
+- **Composizione prevista (~2.800 file):** per lingua 14 argomenti × 80 articoli presi da
+  categorie di Wikipedia (terremoti, battaglie della seconda guerra mondiale, guerre napoleoniche,
+  squadre di calcio, teoremi, pittura, composti chimici, vulcani, fiumi, imperatori romani, malattie
+  infettive, opera, aerei, linguaggi di programmazione) + 400 articoli casuali per lingua come
+  "rumore". Scartati gli articoli sotto i 3000 caratteri.
+- **Manifest** (`data/corpus-manifest.csv`): lingua, titolo, file, argomento di provenienza,
+  lunghezza e categorie di Wikipedia di ogni articolo. Permette di costruire in seguito una verità
+  tematica senza riscaricare.
+- **Git:** il testo (`data/corpus/`) è escluso dal repository; si versionano script e manifest.
+- **Da riportare nella relazione appena finito:** numero di file, MB, parole per lingua.
+- Le categorie italiane "Battaglie della seconda guerra mondiale" e "Aerei da caccia" non
+  esistono: usate "Battaglie e operazioni della seconda guerra mondiale" e "Aerei militari della
+  seconda guerra mondiale".
 
-Combinati con un `PerFieldAnalyzerWrapper` (un analyzer diverso per campo, come nella slide 28).
-Il default (`StandardAnalyzer`) non viene mai usato perché i campi sono solo due.
+## 3. Analyzer
 
-### Campo `nome`
-- **Analyzer:** `CustomAnalyzer` = `StandardTokenizer` + `LowerCaseFilter` + `WordDelimiterGraphFilter`.
-- **Motivazione:**
-  - il tokenizer standard spezza su spazi, trattini e punti, ma **non sul carattere `_`**,
-    che nei nomi dei file è il separatore più comune: il `WordDelimiterGraphFilter` lo risolve
-    (spezza anche tra lettere e numeri);
-  - minuscole, per cercare senza badare alle maiuscole;
-  - **nessuna stopword e nessuno stemming**: nei nomi anche le parole "di" o "il" possono
-    essere significative e lo stemming altera nomi propri e sigle.
-- **Estensione `.txt`:** rimossa prima di indicizzare il nome, altrimenti "txt" sarebbe un
-  termine presente in tutti i documenti.
-- **Verifica (output reale):**
-  - `Relazione_Finale-2024.txt` → `relazione`, `finale`, `2024`, `txt`
-  - `iPhone15 Notes` → `iphone`, `15`, `notes`
+Combinati con un `PerFieldAnalyzerWrapper` (un analyzer per campo, slide 28). Il default
+(`StandardAnalyzer`) non viene mai usato: i campi sono solo due.
 
-### Campo `contenuto`
-- **Analyzer:** `StandardAnalyzer` con un insieme di stopword che è **l'unione** delle
-  stopword italiane (`ItalianAnalyzer`) e inglesi (`EnglishAnalyzer`).
-- **Motivazione:** i testi sono in due lingue. `ItalianAnalyzer` o `EnglishAnalyzer` da soli
-  applicherebbero lo stemming di una lingua anche all'altra, storpiando le parole.
-  Il tokenizer Unicode e le minuscole vanno bene per entrambe.
-- **Limiti da dichiarare:**
-  - **nessuno stemming**: "libro" e "libri" restano termini diversi;
-  - l'unione delle stopword può eliminare una parola che in una lingua è stopword e
-    nell'altra è significativa.
-- **Verifica (output reale):** `Il Data Scientist e the quick brown fox, perché?`
-  → `data`, `scientist`, `quick`, `brown`, `fox`.
+### 3.1 Prima versione (scartata) e problemi trovati
+- `contenuto`: `StandardAnalyzer` + unione delle stopword italiane e inglesi.
+- `nome`: `StandardTokenizer` + minuscolo + `WordDelimiterGraphFilter`.
+- **Il confronto con `grep -ilw` ha mostrato file non trovati:**
+
+| Termine | `grep` | Prima | Definitiva |
+|---|---:|---:|---:|
+| uomo | 19 | 10 | 19 |
+| italia | 38 | 28 | 38 |
+| impero | 10 | 5 | 10 |
+| anno | 55 | 43 | 53 |
+| king | 21 | 18 | 21 |
+| citta (senza accento) | 34 | 0 | 34 |
+| era | 95 | nessun termine utile | 95 |
+
+  Recall della prima versione, ad esempio: `uomo` 10/19 = 0,53; `citta` 0/34 = 0.
+- **Tre cause:** (1) lo `StandardTokenizer` non spezza sugli apostrofi (`dell'uomo`, `l'Italia`,
+  `king's` restano un solo token); (2) gli accenti non sono normalizzati (`città` ≠ `citta`);
+  (3) le stopword delle due lingue si scontrano: 27 stopword italiane sono anche parole inglesi
+  (`era`, `dove`, `all`).
+- **Nome:** `WordDelimiterGraphFilter` separa lettere e numeri → `nome example1` = `example` OR `1`
+  e trovava 4 file, 3 spuri (`example2`, `en_2025_GN1`, `it_..._DHC_1_...`).
+- **Lezione:** un analyzer si valuta confrontando i risultati con una verità indipendente (`grep`),
+  non guardando i token di due frasi.
+
+### 3.2 Versione definitiva
+- **`nome`:** `CustomAnalyzer` = `PatternReplaceCharFilter` (`_` → spazio) + `StandardTokenizer` +
+  `LowerCaseFilter` + `ASCIIFoldingFilter`. Senza stopword, stemming né `WordDelimiterGraphFilter`.
+  `example1` resta un termine solo; `nome example` non lo trova più (compromesso dichiarato).
+- **`contenuto`:** sottoclasse di `Analyzer` = `StandardTokenizer` + `ElisionFilter` (articoli
+  italiani) + `EnglishPossessiveFilter` + `LowerCaseFilter` + `ASCIIFoldingFilter`.
+  **Senza stopword e senza stemming** (corpus bilingue).
+- **Perché una sottoclasse e non `CustomAnalyzer`:** `ElisionFilterFactory` vuole l'elenco degli
+  articoli in un file di risorse, altrimenti usa quelli francesi; la sottoclasse passa il
+  `CharArraySet` direttamente. Risultato identico (verificato).
+- **Estensione `.txt`:** tolta prima di indicizzare il nome.
+- **Limiti:** nessuno stemming (`libro` ≠ `libri`); elenco articoli incompleto (`quell'anno`
+  7 volte non trattato → `anno` 53 contro 55); `contenuto il the` trova 199 file su 202.
+
+### 3.3 Alternative sulle stopword (misurate)
+Indice dei 202 file, miglior tempo di 5 prove nello stesso processo (senza avvio JVM):
+
+| Variante | Parole eliminate | Indice | Tempo |
+|---|---:|---:|---:|
+| Nessuna (**scelta**) | 0 | 1299 KB | 148 ms |
+| Solo articoli | 11 | 1261 KB | 132 ms |
+| Selettiva (tutte tranne 8 ambigue) | 302 | 1133 KB | 124 ms |
+| Completa (prima versione) | 310 | 1128 KB | 123 ms |
+
+- Parole ambigue (frequenti nella lingua sbagliata): `all`, `i`, `era`, `ed`, `c`, `io`, `mi` + `dove`.
+- Anche la selettiva toglie parole inglesi vere: `non` in 29 file inglesi, `per` in 22, `come` in 16
+  (per `non-profit` il tokenizer produce `non`). Dipende dal corpus.
+- **Riconoscimento della lingua** con conta di parole funzionali: 200/200 sul corpus piccolo, margine
+  minimo 6 punti percentuali. Non adottato: in Lucene l'analyzer è per campo, servirebbero un campo
+  per lingua o un `TokenStream` per documento e query analizzate con entrambi gli analyzer.
+- **Decisione:** nessuna stopword (guadagno piccolo, costo = ricerca scorretta; BM25 pesa già poco
+  i termini frequenti).
+- Misure fatte con programmi temporanei (non nel repository): se servono nella relazione finale come
+  riproducibili, vanno trasformate in uno script.
 
 ## 4. Indicizzazione (`FileIndexer`)
+- Un `Document` per file con due campi: `nome` (`TextField`, `Store.YES`, per stamparlo) e
+  `contenuto` (`TextField`, `Store.NO`, solo ricercabile).
+- Visita ricorsiva; accetta `.txt` senza distinguere maiuscole. Indice ricreato da zero a ogni
+  esecuzione (`OpenMode.CREATE`). File illeggibili saltati con avviso e contati.
+- Stampa file indicizzati, saltati e millisecondi.
 
-- **Un `Document` Lucene per file**, con due campi (due posting list):
-  - `nome` → `TextField`, `Store.YES` (serve per stamparlo nei risultati)
-  - `contenuto` → `TextField`, `Store.NO` (solo ricercabile, il testo non viene salvato
-    nell'indice: risparmia spazio e non serve rileggerlo)
-- **Visita ricorsiva** della cartella; accetta `.txt` senza distinguere maiuscole/minuscole.
-- **Indice ricreato da zero a ogni esecuzione** (`OpenMode.CREATE`): niente duplicati.
-- **File illeggibili** (es. codifica non UTF-8): vengono saltati con un avviso e contati a parte,
-  senza interrompere l'indicizzazione.
-- **Statistiche stampate:** file indicizzati, file saltati, millisecondi totali.
+### Tempi misurati (corpus piccolo, 202 file)
+| Analyzer | Esecuzioni (ms) | Media | Indice |
+|---|---|---:|---:|
+| Prima versione | 565, 466, 477 | 503 | 1,2 MB |
+| Definitivo | 696, 691, 577, 489, 502 | 591 | 1,3 MB |
 
-### Risultati misurati
-| Esecuzione | File indicizzati | Saltati | Tempo |
-|---|---|---|---|
-| 1 | 202 | 0 | 565 ms |
-| 2 | 202 | 0 | 466 ms |
-| 3 | 202 | 0 | 477 ms |
-
-- Dimensione dell'indice: circa 1,2 MB (dataset di 3,0 MB).
-- Il tempo include lettura dei file e analisi, ed è misurato in una JVM appena avviata
-  (nessun warm-up): conviene citare l'ordine di grandezza (~0,5 s) e non il singolo valore.
-- Macchina: da indicare nella relazione (modello, CPU, RAM).
+- Tempo comprensivo di lettura e analisi, in JVM appena avviata (senza warm-up).
+- **Macchina:** MacBook Pro (`MacBookPro17,1`), Apple M1 8 core (4 prestazioni + 4 efficienza),
+  8 GB RAM, macOS 26.6, OpenJDK 21.0.10.
+- **Da fare:** misure su più dimensioni con `tools/benchmark_indexing.py` (grafico tempo/file).
 
 ## 5. Interfaccia da riga di comando (`Main`)
+- `index <docsDir> <indexDir>` e `search <indexDir>`; argomenti controllati per comando; messaggio
+  d'uso con esempi; promemoria della sintassi solo per `search`; errore chiaro se l'indice non si
+  apre. Refactor fatto in `runIndex` / `runSearch`.
+- Esecuzione: `./mvnw exec:java -Dexec.args="index data/docs index"` e `"search index"`
+  (oppure `./index.sh`, `./search.sh`).
 
-- `index <docsDir> <indexDir>` costruisce l'indice.
-- `search <indexDir>` avvia il ciclo di ricerca interattivo (vedi sezione 7).
-- Il numero di argomenti viene controllato per ciascun comando (3 per `index`, 2 per `search`);
-  negli altri casi stampa un messaggio d'uso con la descrizione dei comandi e due esempi.
-- All'avvio di `search`, dopo l'apertura dell'indice, stampa un breve promemoria della sintassi
-  (campi `nome` / `contenuto`, esempi con più termini e con frase tra virgolette, numero di
-  risultati mostrati, come uscire). Il promemoria compare solo per `search`, non per `index`.
-- Se l'indice non si può aprire (cartella inesistente o senza indice) stampa un messaggio
-  di errore chiaro invece di uno stack trace.
-- Esecuzione: `./mvnw exec:java -Dexec.args="index data/docs index"` e
-  `./mvnw exec:java -Dexec.args="search index"`.
+## 6. Costruzione della query (`QueryBuilder`)
+- Sintassi: `nome <termini>` oppure `contenuto <termini>`, virgolette per le frasi.
+- **`QueryParser` di Lucene** con il campo scelto come campo di default e l'analyzer per campo; a
+  mano si estrae solo la parola chiave (`split(" ", 2)`, non distingue maiuscole).
+- **Più termini: OR** (default del `QueryParser`, come nelle slide: `Occur.SHOULD`).
+- Errori sempre come `IllegalArgumentException` con messaggio (campo sconosciuto, testo mancante,
+  sintassi non valida).
+- **Sintassi extra gratuita** (verificata sull'indice): `+guerra +mondiale` (AND, 19 file),
+  `guerra -mondiale` (17), `+guerra mondiale` (36), `"world war"~5` (slop, 17 contro 16 della frase
+  esatta), `napol*` (wildcard, 13), `guerra^5 mondiale` (boost). Vedi anche **sezione 9**.
+- **Limiti:** `nome foo:bar` cerca nel campo `foo`; operatori e caratteri speciali di Lucene restano
+  attivi. Alternativa non scelta: query costruite a mano (`TermQuery`, `PhraseQuery`,
+  `BooleanQuery`): più controllo (AND/OR configurabile, sintassi limitata, boost per campo) ma più
+  codice e analisi dei termini a carico nostro.
+- Ranking: BM25 di default.
 
-## 6. Costruzione della query (`QueryBuilder`): fatto
+## 7. Ricerca (`FileSearcher`)
+- Apre l'indice (`FSDirectory`, `DirectoryReader`, `IndexSearcher`); `AutoCloseable` usato con
+  `try-with-resources`. **Top-K = 5**. Output: totale dei risultati (anche oltre il top-K) e, per
+  file, nome, punteggio, posizione. Query senza termini utili: avviso e nessuna ricerca.
+- Il contenuto non si può mostrare (non è memorizzato).
+- Ciclo interattivo: prompt `> `, righe vuote ignorate, `exit`/`quit`, errori di input stampati senza
+  uscire.
 
-- **Sintassi della query:** `nome <termini>` oppure `contenuto <termini>`,
-  con le virgolette per le frasi (richiesto dalla consegna).
-- **Parsing:** si usa il `QueryParser` di Lucene. A mano si estrae solo la parola chiave
-  iniziale (`split(" ", 2)`: campo + resto della riga); il resto viene passato al parser con
-  il campo scelto come **campo di default** e l'analyzer per campo (`Analyzers.perField()`).
-  Così i termini della query vengono analizzati come quelli dell'indice (minuscole, stopword,
-  separatori), altrimenti non coinciderebbero con i termini indicizzati.
-  Valutare più avanti un parsing manuale se questa scelta mostra dei limiti.
-- **Parola chiave:** non distingue maiuscole/minuscole (`Nome`, `NOME` valgono come `nome`).
-- **Più termini senza virgolette: OR.** È il comportamento standard del `QueryParser`
-  e coincide con le slide (termini senza modificatori "optional", `Occur.SHOULD`).
-  I documenti che contengono più termini ottengono un punteggio più alto.
-- **Frasi:** il testo tra virgolette diventa una phrase query.
-- **Errori di input:** il metodo lancia sempre `IllegalArgumentException` con un messaggio
-  chiaro, che il chiamante (ciclo di ricerca) stampa senza chiudere il programma:
-  campo sconosciuto, testo della query mancante, sintassi non valida (es. virgolette non chiuse).
-- **Ranking:** similarity di default di Lucene (BM25), non modificata.
+## 8. Test con 21 query
+- File `queries.txt` (descrizioni incluse) eseguito da `./run-queries.sh`, che produce
+  `results/query-results.md` (tabella riassuntiva + output di ogni query). Riproducibile.
+- Per le query 5-11 e 14-18 il totale coincide con `grep -il`.
+- **Risultati notevoli:** `guerra mondiale` (OR) 44 file contro `"world war"` 16; `nome list` 6 file
+  ma ne mostra 5 (top-K); query 5 e 9 (`napoleone`/`NAPOLEONE`) identiche; `uomo` 19, `italia` 38,
+  `citta` 34, `king` 21, `era` 95 (= `grep`); `nome example1` 1; `il the` 199; errori gestiti.
 
-### Verifica (output reale di `query.toString()`)
-| Riga digitata | Query Lucene |
-|---|---|
-| `nome roma` | `nome:roma` |
-| `contenuto data scientist` | `contenuto:data contenuto:scientist` |
-| `contenuto "data scientist"` | `contenuto:"data scientist"` |
-| `contenuto Data` | `contenuto:data` |
-| `nome Relazione_Finale` | `nome:relazione nome:finale` |
-| `titolo qualcosa` | errore: campo sconosciuto |
-| `contenuto` | errore: manca il testo della query |
-| `contenuto "frase aperta` | errore: sintassi non valida |
+## 9. Valutazione con metriche (in corso)
 
-### Limiti noti (da citare nella relazione)
-- Se tutti i termini sono stopword o simboli (es. `contenuto il the`, `contenuto c++`) l'analyzer
-  li elimina e la query risulta **vuota**: non dà errore ma non trova nulla. La ricerca dovrà
-  segnalarlo all'utente.
-- Il `QueryParser` accetta la sintassi `campo:valore`, quindi `nome foo:bar` cerca `bar` nel campo
-  `foo` (inesistente) e non trova nulla. Anche gli operatori di Lucene (`+`, `-`, `AND`, `OR`,
-  `*`, `?`) restano attivi: i caratteri speciali non vengono neutralizzati.
-- Nessuno stemming: cercare `libro` non trova `libri`.
+Suggerimenti del professore: più documenti (tempi e recall), spiegare come è costruito il dataset,
+usare metriche.
 
-## 7. Ricerca (`FileSearcher`) e ciclo in `Main`: fatto
+- **Verità lessicale (scelta attuale):** per un termine o una frase i file rilevanti sono quelli che
+  lo contengono (calcolati indipendentemente da Lucene). Precision = trovati corretti / trovati;
+  recall = trovati corretti / rilevanti. Permette di confrontare varianti (es. prima versione contro
+  definitiva: recall `uomo` 0,53 → 1,00).
+- **Verità tematica (se avanza tempo):** rilevanti = articoli di una categoria di Wikipedia (campo
+  `source` e `categories` del manifest); metriche precision@5, recall, MAP.
+- **Da decidere:** per calcolare la recall serve l'elenco completo dei risultati (la CLI stampa solo
+  5). Ipotesi: nuova classe `Evaluator` che usa `QueryBuilder` e l'indice, senza toccare le altre.
+- **Da fare:** corpus grande → indicizzare → tempi su 200/500/1000/2000/tutto → query con verità
+  lessicale → tabelle precision/recall → aggiornare la relazione.
 
-### `FileSearcher`
-- Apre l'indice in lettura (`FSDirectory` + `DirectoryReader` + `IndexSearcher`) e controlla
-  prima che la cartella esista.
-- Implementa `AutoCloseable` (`close()` chiude reader e directory) ed è usato con
-  `try-with-resources` nel `Main`: viene chiuso una volta sola a fine sessione, non a ogni query.
-- **Top-K = 5** risultati (costante `TOP_K` in `Main`). Scelta pratica: con 200 file e query
-  su una parola, pochi risultati bastano per verificare il ranking.
-- **Output:** numero totale di risultati trovati (anche oltre il top-K) e, per ogni file,
-  nome, punteggio e posizione in classifica. Con zero risultati stampa solo il totale.
-- Il nome viene letto dal campo stored `nome`; il contenuto non si può stampare perché
-  non è salvato nell'indice (scelta della sezione 4).
-- **Query senza termini utili** (solo stopword o simboli): stampa un avviso su `stderr`
-  e non esegue la ricerca.
-- **Ranking:** punteggio di default di Lucene (BM25), non modificato.
-
-### Ciclo interattivo in `Main`
-- Prompt `> `, lettura di una riga alla volta con `Scanner`.
-- Righe vuote ignorate; `exit` o `quit` (anche in maiuscolo) terminano il programma;
-  anche la fine dell'input (Ctrl+D) termina il ciclo.
-- Gli errori di input (`IllegalArgumentException` del `QueryBuilder`) vengono stampati
-  come `Error: ...` e il ciclo continua.
-
-## 8. Come testare
-
-1. Costruire l'indice: `./mvnw exec:java -Dexec.args="index data/docs index"`
-   (atteso: 202 file indicizzati, 0 saltati).
-2. Avviare la ricerca: `./mvnw exec:java -Dexec.args="search index"`.
-3. Verificare i risultati con `grep` sui file originali, ad esempio
-   `grep -il "parola" data/docs/*.txt` (il numero di file deve coincidere con il totale
-   stampato). Attenzione: il confronto può differire per le stopword e per le forme diverse
-   della stessa parola (nessuno stemming).
-4. Per rieseguire una serie di query senza digitarle:
-   `printf 'nome roma\nexit\n' | ./mvnw -q exec:java -Dexec.args="search index"`.
-
-Nota: all'avvio compaiono avvisi `WARNING` di Java/Lucene sul modulo vettoriale: sono innocui.
-
-### Query di test (da completare dopo l'esecuzione)
-| # | Query | Risultati | Primo file | Commento |
-|---|---|---|---|---|
-| 1 | | | | |
-
-Casi da coprire: un termine su `nome`; un termine su `contenuto`; più termini (OR);
-frase tra virgolette; maiuscole diverse; parola in italiano e in inglese; nessun risultato;
-solo stopword; campo sconosciuto; errore di sintassi.
-
-## 9. Punti ancora aperti
-
-- Eseguire una decina di query di test e compilare la tabella della sezione 8.
-- Refactor di `Main` (due metodi, uno per `index` e uno per `search`), se fatto.
-- URL del repository GitHub.
-- Modello di computer usato per le misure dei tempi.
+## 10. Punti ancora aperti
+- Finire il download del corpus e riportare numeri e composizione nella relazione.
+- Benchmark dei tempi e valutazione con precision/recall; aggiornare grafici e tabelle.
+- Rifare le 21 query (o quelle nuove) sul corpus grande e rigenerare `results/query-results.md`.
+- Aggiornare la relazione: dataset, metodo di valutazione, metriche.
+- Facoltativo: test JUnit; query costruite a mano; completare l'elenco degli articoli italiani;
+  commenti in lingua uniforme (`TODO.md`).
+- Commit e push finali (URL nella relazione: https://github.com/adducec03/lucene-file-indexer).
