@@ -26,18 +26,16 @@ import org.apache.lucene.analysis.util.ElisionFilter;
  * Analyzer dei due campi indicizzati (analyzer = tokenizer + catena di token filter).
  * Gli stessi analyzer sono usati sia in indicizzazione sia nell'analisi della query.
  *
- * <ul>
- *   <li><b>nome</b>: "_" diventa uno spazio (lo standard tokenizer terrebbe
+ *   nome: "_" diventa uno spazio (lo standard tokenizer terrebbe
  *       "Relazione_Finale" come un unico token), poi standard tokenizer, minuscolo e
  *       normalizzazione degli accenti. Niente stopword, niente stemming. Lettere e
- *       numeri non vengono separati, quindi "example1" resta un unico termine.</li>
- *   <li><b>contenuto</b>: il corpus è bilingue (italiano + inglese), quindi niente
+ *       numeri non vengono separati, quindi "example1" resta un unico termine.
+ *   contenuto: il corpus è bilingue (italiano + inglese), quindi niente
  *       stemming e nessuna lista di stopword (le liste delle due lingue si scontrano,
  *       ad esempio "era" o "dove" in italiano sono parole comuni inglesi). La catena
  *       rimuove le elisioni italiane ("dell'uomo" -&gt; "uomo") e il possessivo inglese
  *       ("dog's" -&gt; "dog"), porta in minuscolo e normalizza gli accenti
- *       ("citta" = "città").</li>
- * </ul>
+ *       ("citta" = "città").
  */
 public final class Analyzers {
 
