@@ -8,4 +8,4 @@ cd "$(dirname "$0")"
 
 INDEX_DIR="${1:-index}"
 
-./mvnw -q exec:java -Dexec.args="search $INDEX_DIR"
+./mvnw -q compile exec:java -Dexec.args="search $INDEX_DIR"

@@ -9,4 +9,4 @@ cd "$(dirname "$0")"
 DOCS_DIR="${1:-data/docs}"
 INDEX_DIR="${2:-index}"
 
-./mvnw -q exec:java -Dexec.args="index $DOCS_DIR $INDEX_DIR"
+./mvnw -q compile exec:java -Dexec.args="index $DOCS_DIR $INDEX_DIR"
