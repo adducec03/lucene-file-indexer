@@ -745,9 +745,11 @@ mediana non ne risente.
 \label{fig:scala}
 \end{figure}
 
-\noindent La crescita è quasi lineare. Con pochi file il tempo è dominato da un costo
-fisso di circa 400~ms (avvio di JVM e Lucene); oltre i 2\,000 file il costo si
-stabilizza a circa \textbf{0,83~ms per file}, cioè circa 15~MB di testo al secondo.
+\noindent La crescita è quasi lineare. Il tempo è circa un costo fisso di
+300~ms (avvio di JVM e Lucene) più circa \textbf{0,7~ms per file} (stima dai punti
+a 200 e a 2\,810 file). Per questo il costo medio per file scende con la dimensione
+del corpus e oltre i 2\,000 file si stabilizza a circa 0,83~ms (colonna
+\emph{ms/file}), cioè circa 15~MB di testo al secondo.
 L'indice occupa circa il 40\% del testo, perché il contenuto non è memorizzato.
 Indicizzare tutti i 2\,810 file richiede quindi circa 2,3 secondi.
 
@@ -1029,8 +1031,11 @@ I casi più chiari sono:
   \item \code{contenuto impero}, \code{uomo}, \code{italia}: la prima versione perde
         i file in cui la parola segue un articolo con apostrofo (\emph{dell'impero},
         \emph{l'uomo}, \emph{l'Italia}), con recall rispettivamente 0,40, 0,63 e
-        0,82; \code{napoleon} (recall 0,83) perde i file che contengono solo il
-        possessivo inglese \emph{Napoleon's};
+        0,82; \code{napoleon} (recall 0,83) perde 17 file su 100: 10 in cui compare
+        solo come possessivo inglese (\emph{Napoleon's}, per lo più in titoli di libri
+        nelle bibliografie), 6 in cui compare solo con l'accento (\emph{Napoléon},
+        in citazioni francesi) e 1 in cui compare solo in un indirizzo web
+        (\code{napoleon.org});
   \item \code{nome example1}: la prima versione restituisce 10 file non pertinenti,
         perché \code{WordDelimiterGraphFilter} separa \emph{example1} in
         \emph{example} e \emph{1} e cerca il numero 1 in molti nomi; nel corpus non
