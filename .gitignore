@@ -4,6 +4,5 @@ index/
 *.iml
 .DS_Store
 data/corpus
-data/corpus-manifest.csv
 NOTES.md
 TODO.md

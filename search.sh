@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Starts the interactive search on an existing index.
-# Usage: scripts/search.sh [indexDir]
+# Usage: ./search.sh [indexDir]
 # Default: indexDir=index
 # Note: paths containing spaces are not supported.
 set -euo pipefail

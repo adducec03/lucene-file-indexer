@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Builds the Lucene index.
-# Usage: scripts/index.sh [docsDir] [indexDir]
+# Usage: ./index.sh [docsDir] [indexDir]
 # Defaults: docsDir=data/docs, indexDir=index
 # Note: paths containing spaces are not supported.
 set -euo pipefail
