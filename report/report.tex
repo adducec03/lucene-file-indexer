@@ -10,6 +10,7 @@
 \usepackage{xcolor}
 \usepackage{booktabs}
 \usepackage{tabularx}
+\usepackage{float}
 \usepackage{caption}
 \usepackage{listings}
 \usepackage{tikz}
@@ -110,7 +111,7 @@ indicizzazione e ricerca, condividono lo stesso analyzer: è essenziale, perché
 termini della query devono essere trattati esattamente come quelli dell'indice
 (figura~\ref{fig:architettura}).
 
-\begin{table}[!htbp]
+\begin{table}[H]
 \centering
 \begin{tabularx}{\linewidth}{@{}lX@{}}
 \toprule
@@ -128,7 +129,7 @@ termini della query devono essere trattati esattamente come quelli dell'indice
 \label{tab:classi}
 \end{table}
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
   % --- indicizzazione (riga in alto)
@@ -975,7 +976,7 @@ file rilevanti coincidono \textbf{su tutte le 26 query, file per file}.
 
 \subsection{Risultati}
 
-\begin{table}[!htbp]
+\begin{table}[H]
 \centering
 \footnotesize
 \begin{tabularx}{\linewidth}{@{}Xrrrrrrr@{}}
