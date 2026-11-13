@@ -3,7 +3,7 @@ index/
 .idea/
 *.iml
 .DS_Store
-relazione/
 data/corpus
 data/corpus-manifest.csv
 NOTES.md
+TODO.md

@@ -1,0 +1,1125 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{microtype}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,shapes.misc,fit,calc}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+
+% ---------------------------------------------------------------------------
+% Macro di servizio
+% ---------------------------------------------------------------------------
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{[TODO: #1]}}}
+\newcommand{\dq}{\textquotedbl}            % virgolette dritte nelle query
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\field}[1]{\texttt{#1}}
+
+\definecolor{accent}{HTML}{1F6F8B}
+\definecolor{light}{HTML}{E8F1F5}
+\definecolor{warm}{HTML}{C8553D}
+\definecolor{codebg}{HTML}{F6F8FA}
+
+\lstset{
+  language=Java,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{accent}\bfseries,
+  commentstyle=\color{gray}\itshape,
+  backgroundcolor=\color{codebg},
+  frame=single, rulecolor=\color{gray!40},
+  columns=fullflexible, keepspaces=true,
+  showstringspaces=false, breaklines=true,
+  xleftmargin=4pt, xrightmargin=4pt
+}
+
+\tikzset{
+  box/.style={draw=accent, fill=light, rounded corners=3pt, align=center,
+              minimum height=8mm, inner sep=4pt, font=\small},
+  store/.style={draw=warm, fill=warm!10, rounded corners=3pt, align=center,
+                minimum height=8mm, inner sep=4pt, font=\small},
+  tok/.style={draw=accent, fill=white, inner sep=3pt, font=\ttfamily\small},
+  arr/.style={-{Stealth[length=2.5mm]}, thick, accent},
+}
+
+\title{Homework 3: indicizzazione e ricerca di file di testo con Lucene}
+\author{Carmine Adduce \\ \small Matricola 589659 \\
+            \small E-mail car.adduce@stud.uniroma3.it \\
+            \small Corso di Ingegneria dei Dati}
+\date{Novembre 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Questa relazione descrive un programma Java che indicizza con Apache Lucene i file
+\code{.txt} di una cartella, usando due campi (nome del file e contenuto) con un
+analyzer dedicato ciascuno, e che permette di interrogare l'indice da console con
+una sintassi semplice. Il sistema è stato sviluppato e provato con 21 query su un
+corpus bilingue (italiano e inglese) di 202 file, poi misurato su un corpus più
+grande di 2\,810 file (circa 34~MB) costruito con uno script riproducibile da
+Wikipedia: l'indicizzazione richiede circa 2,3 secondi e il tempo cresce quasi
+linearmente con il numero di file. La qualità è valutata con precision e recall
+rispetto a una verità lessicale indipendente da Lucene (e controllata con
+\code{grep}).
+\end{abstract}
+
+\noindent\textbf{Repository:}
+\url{https://github.com/adducec03/lucene-file-indexer}
+
+% ===========================================================================
+\section{Obiettivo e tecnologie}
+% ===========================================================================
+
+La consegna chiedeva di:
+\begin{enumerate}
+  \item indicizzare i file \code{.txt} di una cartella su due campi, nome e
+        contenuto, scegliendo per ciascuno un analyzer appropriato;
+  \item leggere da console una query che inizia con la parola chiave del campo
+        (\field{nome} o \field{contenuto}), seguita da termini eventualmente tra
+        virgolette per esprimere una \emph{phrase query}, e stamparne i risultati;
+  \item provare il sistema con una decina di query diverse.
+\end{enumerate}
+
+\noindent Il progetto usa Java~21, Maven (con il wrapper \code{./mvnw}, che non
+richiede installazioni) e \textbf{Lucene~10.3.1}. Le dipendenze sono \code{lucene-core}, \code{lucene-analysis-common} e
+\code{lucene-queryparser}.
+
+\noindent Oltre alla consegna, il sistema è stato provato anche su un corpus molto più
+grande di quello usato per lo sviluppo, per misurare come crescono i tempi di
+indicizzazione e per valutare la qualità dei risultati con metriche (precision e
+recall), non solo contando i file trovati.
+
+% ===========================================================================
+\section{Architettura}
+% ===========================================================================
+
+Il codice è nel package \code{it.homework.lucene} ed è diviso in cinque classi,
+ciascuna con un solo compito (tabella~\ref{tab:classi}), più una sesta classe,
+\code{Evaluator}, che serve solo per la valutazione (sezione~\ref{sec:valutazione}). I due flussi principali,
+indicizzazione e ricerca, condividono lo stesso analyzer: è essenziale, perché i
+termini della query devono essere trattati esattamente come quelli dell'indice
+(figura~\ref{fig:architettura}).
+
+\begin{table}[!htbp]
+\centering
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+\toprule
+\textbf{Classe} & \textbf{Responsabilità} \\
+\midrule
+\code{Main} & comandi \code{index} e \code{search}, ciclo interattivo su console \\
+\code{Analyzers} & nomi dei campi e analyzer per campo (\code{PerFieldAnalyzerWrapper}) \\
+\code{FileIndexer} & visita la cartella, crea un \code{Document} per file, misura i tempi \\
+\code{QueryBuilder} & traduce la riga digitata in una \code{Query} di Lucene \\
+\code{FileSearcher} & apre l'indice in lettura, esegue la query e stampa i risultati \\
+\code{Evaluator} & (solo valutazione) calcola precision e recall confrontando i risultati con una verità lessicale \\
+\bottomrule
+\end{tabularx}
+\caption{Le classi del progetto.}
+\label{tab:classi}
+\end{table}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+  % --- indicizzazione (riga in alto)
+  \node[store] (docs)  at (0,0)    {cartella\\\code{data/docs}};
+  \node[box]   (idx)   at (3.7,0)  {\code{FileIndexer}};
+  \node[box]   (iw)    at (7.5,0)  {\code{IndexWriter}};
+  \node[store] (index) at (11,0)   {indice\\Lucene};
+  \draw[arr] (docs) -- node[above, font=\scriptsize]{file .txt} (idx);
+  \draw[arr] (idx) -- node[above, font=\scriptsize]{Document} (iw);
+  \draw[arr] (iw) -- node[above, font=\scriptsize]{commit} (index);
+
+  % --- analyzer condiviso (al centro)
+  \node[box, fill=warm!15, draw=warm] (an) at (5.6,-1.75)
+        {\code{Analyzers.perField()}\\\scriptsize nome / contenuto};
+
+  % --- ricerca (riga in basso)
+  \node[store] (console) at (0,-3.5)   {console\\\scriptsize riga digitata};
+  \node[box]   (qb)      at (3.7,-3.5) {\code{QueryBuilder}\\\scriptsize QueryParser};
+  \node[box]   (fs)      at (7.5,-3.5) {\code{FileSearcher}\\\scriptsize IndexSearcher};
+  \node[store] (res)     at (11,-3.5)  {risultati\\\scriptsize top-5};
+  \draw[arr] (console) -- (qb);
+  \draw[arr] (qb) -- node[above, font=\scriptsize]{Query} (fs);
+  \draw[arr] (fs) -- (res);
+  \draw[arr, dashed] (index.south) -- (index.south |- 0,-2.45) -| (fs.north)
+        node[pos=0.25, above, font=\scriptsize]{lettura};
+
+  \draw[arr, warm] (an.north) -- (iw.south west);
+  \draw[arr, warm] (an.south) -- (qb.north east);
+
+  \node[font=\small\bfseries, anchor=west] at (-1,0.95) {Indicizzazione};
+  \node[font=\small\bfseries, anchor=west] at (-1,-4.45) {Ricerca};
+\end{tikzpicture}
+\caption{I due flussi del programma. Lo stesso analyzer per campo (in rosso) viene
+usato sia per scrivere l'indice sia per analizzare la query.}
+\label{fig:architettura}
+\end{figure}
+
+% ===========================================================================
+\section{Dataset}
+% ===========================================================================
+
+Sono stati usati due corpora. Il \textbf{corpus piccolo} (202 file) è servito per lo
+sviluppo e per le 21 query di test; il \textbf{corpus grande} (2\,810 file) è servito
+per misurare i tempi su molti documenti e per valutare precision e recall. Entrambi
+sono testi di Wikipedia in italiano e in inglese, scaricati con le API pubbliche di
+Wikipedia; i testi sono distribuiti con licenza CC~BY-SA. Non sono un benchmark
+pubblico, ma servono a provare l'indicizzazione su testo reale.
+
+\subsection{Corpus piccolo (sviluppo e test)}
+\label{sec:corpus-piccolo}
+
+Il corpus piccolo contiene
+\textbf{200 articoli di Wikipedia scelti a caso}, 100 in italiano e 100 in inglese,
+scaricati tramite le API di Wikipedia. Sono stati scartati gli articoli troppo
+corti, sotto i 5000 caratteri di testo. A questi si aggiungono due piccoli file
+scritti a mano (\code{example1.txt}, \code{example2.txt}). I testi di Wikipedia
+sono distribuiti con licenza CC~BY-SA.
+
+Ogni file contiene il titolo dell'articolo nella prima riga e poi il testo in
+chiaro. Il nome del file è \code{<lingua>\_<Titolo\_con\_underscore>.txt}
+(ad esempio \code{en\_History\_of\_martial\_arts.txt}), così il campo \field{nome}
+contiene parole significative da cercare.
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+& \textbf{File} & \textbf{Parole} & \textbf{Dimensione} \\
+\midrule
+Italiano & 100 & 215\,394 & 1,44 MB \\
+Inglese  & 100 & 209\,421 & 1,32 MB \\
+Esempi   &   2 &       23 & < 1 KB \\
+\midrule
+\textbf{Totale} & \textbf{202} & \textbf{424\,838} & \textbf{2,76 MB} \\
+\bottomrule
+\end{tabular}
+\caption{Composizione del corpus. La dimensione mediana di un file è di circa
+10 KB, la massima di 103 KB.}
+\label{tab:dataset}
+\end{table}
+
+\subsection{Corpus grande (tempi e valutazione)}
+\label{sec:corpus-grande}
+
+Il corpus grande è stato costruito con lo script \code{tools/build\_corpus.py}
+(Python, solo libreria standard), incluso nel repository, in modo che chiunque possa
+rigenerarlo. Il procedimento è il seguente:
+\begin{enumerate}
+  \item \textbf{Articoli per argomento.} Per ciascuna lingua sono state scelte 14
+        categorie di Wikipedia (terremoti, battaglie della seconda guerra mondiale,
+        guerre napoleoniche, squadre di calcio italiane, teoremi, pittori italiani,
+        composti chimici, vulcani, fiumi italiani, imperatori romani, malattie
+        infettive, opere liriche, aerei militari e linguaggi di programmazione). Dalle
+        categorie, scendendo nelle sottocategorie fino a due livelli, si prendono fino
+        a 80 articoli per argomento e per lingua. Così il corpus contiene gruppi di
+        documenti sullo stesso tema, con parole che ricorrono in molti file e parole
+        rare.
+  \item \textbf{Articoli casuali.} Altri 400 articoli casuali per lingua (369 italiani
+        e 346 inglesi effettivamente salvati) fanno da rumore di fondo e sono su
+        qualunque argomento.
+  \item \textbf{Filtri e formato.} Sono scartati gli articoli sotto i 3\,000 caratteri.
+        Ogni file contiene il titolo e il testo in chiaro e si chiama
+        \code{<lingua>\_<Titolo\_con\_underscore>.txt}, come nel corpus piccolo.
+  \item \textbf{Manifest.} Il file \code{data/corpus-manifest.csv} elenca per ogni
+        articolo lingua, titolo, nome del file, argomento di provenienza, lunghezza e
+        categorie di Wikipedia. Descrive com'è fatto il corpus.
+\end{enumerate}
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+& \textbf{File} & \textbf{Parole} & \textbf{Dimensione} \\
+\midrule
+Italiano & 1\,401 & 2\,419\,562 & 16,2 MB \\
+Inglese  & 1\,409 & 2\,868\,253 & 18,2 MB \\
+\midrule
+\textbf{Totale} & \textbf{2\,810} & \textbf{5\,287\,815} & \textbf{34,4 MB} \\
+\bottomrule
+\end{tabular}
+\caption{Composizione del corpus grande. La dimensione mediana di un file è di circa
+6,9 KB, la massima di 145 KB.}
+\label{tab:dataset-grande}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\small
+\begin{tabular}{@{}lrrlrr@{}}
+\toprule
+\textbf{Argomento} & \textbf{it} & \textbf{en} & \textbf{Argomento} & \textbf{it} & \textbf{en} \\
+\midrule
+Terremoti & 74 & 80 & Fiumi & 54 & 27 \\
+Battaglie 2ª g.\,m. & 80 & 80 & Imperatori romani & 80 & 80 \\
+Guerre napoleoniche & 80 & 80 & Malattie infettive & 80 & 80 \\
+Squadre di calcio & 80 & 80 & Opere liriche & 80 & 80 \\
+Teoremi & 80 & 80 & Aerei militari & 80 & 80 \\
+Pittori & 80 & 80 & Linguaggi di prog. & 80 & 80 \\
+Composti chimici & 41 & 80 & Articoli casuali & 369 & 346 \\
+Vulcani & 63 & 76 & & & \\
+\bottomrule
+\end{tabular}
+\caption{Numero di articoli per argomento e lingua. Alcune categorie italiane (chimica,
+fiumi, vulcani, terremoti) contengono meno di 80 articoli abbastanza lunghi.}
+\label{tab:argomenti}
+\end{table}
+
+% ===========================================================================
+\section{Analyzer scelti}
+% ===========================================================================
+
+I due campi hanno caratteristiche molto diverse, quindi ricevono analyzer diversi,
+combinati con un \code{PerFieldAnalyzerWrapper}. L'analyzer di default del wrapper
+(\code{StandardAnalyzer}) non viene mai usato, perché i campi sono solo due.
+Gli analyzer sono stati scelti in due passi: una prima versione, che il confronto con
+\code{grep} ha mostrato inadeguata, e la versione definitiva.
+
+\subsection{Prima versione e problemi riscontrati}
+\label{sec:prima}
+
+La prima versione era la scelta più immediata:
+\begin{itemize}
+  \item \field{contenuto}: \code{StandardAnalyzer} con l'\emph{unione} delle stopword
+        italiane e inglesi di Lucene;
+  \item \field{nome}: \code{StandardTokenizer}, \code{LowerCaseFilter} e
+        \code{WordDelimiterGraphFilter}.
+\end{itemize}
+Sembrava ragionevole e le prime prove funzionavano. Confrontando però il numero di
+file trovati con quello di \code{grep -ilw} sui file originali, sono emersi
+\textbf{molti file che il sistema non trovava}:
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+\textbf{Termine cercato} & \textbf{\code{grep} (reale)} & \textbf{Prima versione} &
+\textbf{Versione definitiva} \\
+\midrule
+\code{uomo}    & 19 & \textcolor{warm}{10}  & 19 \\
+\code{italia}  & 38 & \textcolor{warm}{28}  & 38 \\
+\code{impero}  & 10 & \textcolor{warm}{5}   & 10 \\
+\code{anno}    & 55 & \textcolor{warm}{43}  & 53 \\
+\code{king}    & 21 & \textcolor{warm}{18}  & 21 \\
+\code{citta} (senza accento) & 34 & \textcolor{warm}{0} & 34 \\
+\code{era}     & 95 & \textcolor{warm}{nessun termine utile} & 95 \\
+\bottomrule
+\end{tabular}
+\caption{File trovati per alcuni termini, con la prima versione degli analyzer e con
+quella definitiva, a confronto con il numero reale ottenuto con \code{grep}.}
+\label{tab:confronto}
+\end{table}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[x=1cm, y=0.065cm]
+  \draw[->] (-0.2,0) -- (13.2,0);
+  \draw[->] (-0.2,0) -- (-0.2,66) node[above, font=\small] {file trovati};
+  \foreach \y in {0,20,40,60}
+    \draw (-0.25,\y) -- (-0.15,\y) node[left=1mm, font=\scriptsize] {\y};
+  \foreach \n/\g/\p/\d [count=\i from 0] in
+      {uomo/19/10/19, italia/38/28/38, impero/10/5/10, anno/55/43/53,
+       king/21/18/21, citta/34/0/34} {
+    \pgfmathsetmacro{\x}{\i*2.15+0.2}
+    \fill[gray!55]  (\x,0)       rectangle (\x+0.55,\g);
+    \fill[warm]     (\x+0.6,0)   rectangle (\x+1.15,\p);
+    \fill[accent]   (\x+1.2,0)   rectangle (\x+1.75,\d);
+    \node[above, font=\tiny] at (\x+0.275,\g) {\g};
+    \node[above, font=\tiny] at (\x+0.875,\p) {\p};
+    \node[above, font=\tiny] at (\x+1.475,\d) {\d};
+    \node[below, font=\scriptsize\ttfamily] at (\x+0.875,-1) {\n};
+  }
+  \fill[gray!55] (9.0,58) rectangle (9.5,62);
+  \node[right, font=\scriptsize] at (9.6,60) {grep (reale)};
+  \fill[warm] (9.0,50) rectangle (9.5,54);
+  \node[right, font=\scriptsize] at (9.6,52) {prima versione};
+  \fill[accent] (9.0,42) rectangle (9.5,46);
+  \node[right, font=\scriptsize] at (9.6,44) {versione definitiva};
+\end{tikzpicture}
+\caption{File trovati per termine: nella prima versione una parte dei file, a
+volte tutti, andava persa.}
+\label{fig:confronto}
+\end{figure}
+
+Le cause sono tre, tutte verificate con prove dirette sugli analyzer.
+
+\paragraph{1. Gli apostrofi non separano le parole.}
+Lo \code{StandardTokenizer} segue le regole Unicode e non spezza su un apostrofo
+tra due lettere: \code{dell'uomo} resta \emph{un solo token}, e così \code{l'Italia}
+e \code{nell'anno}. Nel testo italiano di Wikipedia queste forme sono continue
+(\code{dell'anno} compare 28 volte, \code{l'anno} 26), quindi cercare \code{uomo}
+non trovava i file in cui compare solo come \code{dell'uomo} o \code{l'uomo}:
+10 file invece di 19. Lo stesso avviene per il possessivo inglese
+(\code{king's} resta un token a sé), con 18 file invece di 21.
+
+\paragraph{2. Gli accenti non sono normalizzati.}
+\code{città} e \code{citta} sono termini diversi: cercando senza accento, come si
+fa spesso, la prima versione trovava \textbf{0 file} contro i 34 reali.
+
+\paragraph{3. Le stopword delle due lingue si scontrano.}
+L'unione delle liste elimina da \emph{tutti} i testi le parole vuote di entrambe le
+lingue. Ma 27 stopword italiane compaiono anche nel dizionario inglese del sistema, e alcune
+sono parole inglesi comuni, per esempio \emph{era}, \emph{dove} e \emph{all}.
+Con la prima versione la query \code{contenuto era} rispondeva ``nessun termine
+utile'', pur esistendo 95 file che contengono la parola.
+
+\paragraph{Campo \field{nome}.}
+Il \code{WordDelimiterGraphFilter} separava anche lettere e numeri:
+\code{example1} diventava \code{example} e \code{1}, e con l'operatore OR la query
+\code{nome example1} restituiva 4 file, tre dei quali trovati solo per una parte del termine:
+\code{example2} per \code{example}, \code{en\_2025\_GN1} e
+\code{it\_De\_Havilland\_Canada\_DHC\_1\_Chipmunk} per il numero \code{1}.
+
+\medskip
+\noindent\textbf{Lezione appresa:} un analyzer non si valuta guardando i token di
+due frasi di prova, ma confrontando il numero di risultati con una verità
+indipendente (qui \code{grep}) su termini reali del corpus.
+
+\subsection{Versione definitiva: campo \field{nome}}
+
+\textbf{Scelta:} un \code{CustomAnalyzer} con un \code{CharFilter} che sostituisce
+\code{\_} con uno spazio, poi \code{StandardTokenizer}, \code{LowerCaseFilter} e
+\code{ASCIIFoldingFilter}; senza stopword e senza stemming.
+
+\textbf{Motivazione:}
+\begin{itemize}
+  \item i nomi dei file usano spesso \code{\_}, \code{-} e \code{.} come
+        separatori. Lo \code{StandardTokenizer} spezza su trattini e punti ma
+        \emph{non} su \code{\_}, che lo standard Unicode considera parte della
+        parola: il \code{CharFilter} lo trasforma in uno spazio \emph{prima} del
+        tokenizer, e il problema è risolto;
+  \item si è tolto il \code{WordDelimiterGraphFilter}: lettere e numeri non vengono
+        più separati, quindi \code{example1} resta un unico termine;
+  \item minuscolo e normalizzazione degli accenti rendono la ricerca indipendente
+        da maiuscole e accenti;
+  \item nei nomi anche le parole brevi (\emph{di}, \emph{the}) possono essere
+        significative, e lo stemming altererebbe nomi propri e sigle, quindi non
+        si usano né stopword né stemming;
+  \item l'estensione \code{.txt} viene tolta prima dell'indicizzazione:
+        altrimenti \code{txt} sarebbe un termine presente in ogni documento.
+\end{itemize}
+
+\subsection{Versione definitiva: campo \field{contenuto}}
+
+\textbf{Scelta:} un analyzer composto da \code{StandardTokenizer},
+\code{ElisionFilter} (articoli italiani), \code{EnglishPossessiveFilter},
+\code{LowerCaseFilter} e \code{ASCIIFoldingFilter}; \textbf{senza stopword e senza
+stemming}.
+
+\textbf{Motivazione:} il corpus è bilingue.
+\begin{itemize}
+  \item i filtri aggiunti risolvono i primi due problemi della
+        sezione~\ref{sec:prima}: l'elisione toglie l'articolo davanti all'apostrofo
+        (\code{dell'uomo} $\rightarrow$ \code{uomo}), il filtro del possessivo toglie
+        \code{'s} (\code{king's} $\rightarrow$ \code{king}) e la normalizzazione degli
+        accenti rende uguali \code{città} e \code{citta};
+  \item \textbf{nessuno stemming}: un \code{ItalianAnalyzer} o un
+        \code{EnglishAnalyzer} applicherebbero lo stemming di una lingua anche ai
+        testi dell'altra, storpiandone le parole;
+  \item \textbf{nessuna lista di stopword}: senza riconoscere la lingua di ogni
+        testo, le liste delle due lingue si scontrano (terzo problema). Il ranking
+        BM25 abbassa già da solo il peso dei termini molto frequenti, quindi la perdita
+        di precisione è piccola, come mostrano i test (query~12 e~18). Le
+        alternative valutate, con le misure, sono nella
+        sezione~\ref{sec:alternative}.
+\end{itemize}
+
+\begin{lstlisting}
+// nome
+CustomAnalyzer.builder()
+    .addCharFilter(PatternReplaceCharFilterFactory.class,
+                   "pattern", "_", "replacement", " ")
+    .withTokenizer(StandardTokenizerFactory.class)
+    .addTokenFilter(LowerCaseFilterFactory.class)
+    .addTokenFilter(ASCIIFoldingFilterFactory.class)
+    .build();
+
+// contenuto
+Tokenizer source = new StandardTokenizer();
+TokenStream chain = new ElisionFilter(source, ITALIAN_ARTICLES);
+chain = new EnglishPossessiveFilter(chain);
+chain = new LowerCaseFilter(chain);
+chain = new ASCIIFoldingFilter(chain);
+\end{lstlisting}
+
+\begin{table}[!htbp]
+\centering
+\begin{tabularx}{\linewidth}{@{}lXl@{}}
+\toprule
+\textbf{Componente} & \textbf{Cosa fa} & \textbf{Esempio} \\
+\midrule
+\code{PatternReplaceCharFilter} & sostituisce \code{\_} con uno spazio prima del
+  tokenizer & \code{Finale\_2024} $\rightarrow$ \code{Finale 2024} \\
+\code{StandardTokenizer} & divide sui confini di parola (Unicode), scarta la
+  punteggiatura & \code{e-mail,} $\rightarrow$ \code{e}, \code{mail} \\
+\code{ElisionFilter} & toglie l'articolo davanti all'apostrofo, per gli articoli
+  italiani dell'elenco & \code{dell'uomo} $\rightarrow$ \code{uomo} \\
+\code{EnglishPossessiveFilter} & toglie il possessivo inglese &
+  \code{dog's} $\rightarrow$ \code{dog} \\
+\code{LowerCaseFilter} & porta in minuscolo & \code{Roma} $\rightarrow$ \code{roma} \\
+\code{ASCIIFoldingFilter} & toglie gli accenti & \code{città} $\rightarrow$
+  \code{citta} \\
+\bottomrule
+\end{tabularx}
+\caption{I componenti degli analyzer definitivi.}
+\label{tab:filtri}
+\end{table}
+
+\subsection{Alternative valutate}
+\label{sec:alternative}
+
+Prima di eliminare le stopword dalla versione definitiva sono state confrontate
+quattro varianti dello stesso analyzer di \field{contenuto}, cambiando solo l'elenco
+delle parole eliminate (tabella~\ref{tab:stopword}). Per ciascuna è stato costruito
+l'indice dei 202 file e ne sono stati misurati la dimensione su disco e il tempo
+di indicizzazione.
+
+\begin{table}[!htbp]
+\centering
+\begin{tabularx}{\linewidth}{@{}Xrrr@{}}
+\toprule
+\textbf{Variante} & \textbf{Parole eliminate} & \textbf{Indice} & \textbf{Tempo} \\
+\midrule
+Nessuna stopword (\textbf{scelta finale}) & 0 & 1299 KB & 148 ms \\
+Solo articoli (\emph{il, lo, la, gli, le, un, uno, una, the, a, an}) & 11 & 1261 KB & 132 ms \\
+Lista selettiva (tutte tranne 8 parole ambigue) & 302 & 1133 KB & 124 ms \\
+Lista completa (italiano + inglese, prima versione) & 310 & 1128 KB & 123 ms \\
+\bottomrule
+\end{tabularx}
+\caption{Effetto dell'elenco di stopword su dimensione dell'indice e tempo di
+indicizzazione (202 file).}
+\label{tab:stopword}
+\end{table}
+
+\paragraph{Lista completa.} Riduce l'indice del 13\% ma, come visto nella
+sezione~\ref{sec:prima}, elimina da tutti i testi parole che nell'altra lingua sono
+significative.
+
+\paragraph{Solo articoli.} Elimina solo le parole più innocue, ma il vantaggio è
+minimo (3\%): lo spazio è occupato soprattutto da preposizioni e verbi ausiliari
+(\emph{di}, \emph{che}, \emph{avere}, \emph{essere}).
+
+\paragraph{Lista selettiva.} Per escludere le parole ambigue si è misurata, per ogni
+stopword, la frequenza (ogni 10\,000 parole) nei testi italiani e in quelli inglesi.
+Solo 7 parole risultano frequenti nella lingua sbagliata (\emph{all}, \emph{i},
+\emph{era}, \emph{ed}, \emph{c}, \emph{io}, \emph{mi}), alle quali si è aggiunta
+\emph{dove}. Con queste esclusioni le prestazioni sono praticamente quelle della
+lista completa (1133 contro 1128~KB). Il metodo ha però un limite: restano
+eliminate parole che nei testi inglesi esistono davvero, anche se meno frequenti
+che in italiano (tabella~\ref{tab:ambigue}). Ad esempio \code{non} compare in 29 file
+inglesi, in gran parte perché il tokenizer spezza i composti come \emph{non-profit};
+chi cerca \code{non} in un testo inglese non troverebbe il file. Inoltre l'elenco
+dipende dal corpus e andrebbe rifatto per testi diversi.
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\textbf{Stopword italiana} & \textbf{File inglesi} & \textbf{File italiani} \\
+\midrule
+\code{non}  & 29 &  86 \\
+\code{per}  & 22 & 100 \\
+\code{come} & 16 &  93 \\
+\bottomrule
+\end{tabular}
+\caption{Stopword italiane che la lista selettiva elimina (non risultano ambigue
+nella misura di frequenza) ma che compaiono comunque in molti file inglesi.}
+\label{tab:ambigue}
+\end{table}
+
+\paragraph{Riconoscimento della lingua.} L'approccio corretto sarebbe applicare
+l'analyzer (e la lista di stopword) della lingua di ciascun documento. La lingua si
+riconosce bene anche senza librerie: contando nel testo alcune parole funzionali
+(\emph{di, e, il, la, che, per, \ldots} contro \emph{the, of, and, to, in, \ldots}) e
+scegliendo la lingua con la percentuale più alta, sui 200 articoli di Wikipedia la
+lingua è stata indovinata in \textbf{200 casi su 200}, con un margine minimo di 6
+punti percentuali tra le due lingue. Usarla in Lucene è però più complesso: l'analyzer
+è associato al campo e non al documento, quindi servirebbero un campo per lingua
+(\code{contenuto\_it}, \code{contenuto\_en}) oppure un \code{TokenStream} costruito
+per ogni documento, e le query dovrebbero essere analizzate con entrambi gli
+analyzer, perché la lingua di una query di una o due parole non è affidabile.
+
+\paragraph{Conclusione.} Si è scelto di \textbf{non usare stopword}. Il vantaggio
+della lista completa è piccolo (13\% di spazio, pochi millisecondi su 202 file, un
+guadagno che diventa rilevante solo su grandi collezioni), mentre il costo è una
+ricerca scorretta; la lista selettiva ridurrebbe il costo ma non lo azzera ed è
+legata al corpus; il riconoscimento della lingua è la soluzione più corretta, ma
+richiede molto codice in più per un risultato che con l'analyzer attuale è già
+verificato (i totali coincidono con \code{grep}). Il ranking BM25 dà già un peso
+molto basso ai termini molto frequenti, quindi la precisione non ne risente in modo
+sensibile. Il riconoscimento della lingua resta come possibile estensione
+(sezione~\ref{sec:limiti}).
+
+\subsection{Verifica}
+
+La figura~\ref{fig:token} riporta i token realmente prodotti dagli analyzer
+definitivi (output del programma di prova).
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[node distance=2mm]
+  \node[anchor=west, font=\small] (in1) at (0,0)
+       {\field{nome}: \code{Relazione\_Finale-2024}};
+  \node[tok, anchor=west] (a1) at (7.6,0) {relazione};
+  \node[tok, right=of a1] (a2) {finale};
+  \node[tok, right=of a2] (a3) {2024};
+  \draw[arr] (in1.east) -- (a1.west);
+
+  \node[anchor=west, font=\small] (in2) at (0,-1)
+       {\field{nome}: \code{Città\_di\_Perché}};
+  \node[tok, anchor=west] (b1) at (7.6,-1) {citta};
+  \node[tok, right=of b1] (b2) {di};
+  \node[tok, right=of b2] (b3) {perche};
+  \draw[arr] (in2.east) -- (b1.west);
+
+  \node[anchor=west, font=\small, align=left] (in3) at (0,-2.2)
+       {\field{contenuto}: \code{L'Italia e dell'uomo}\\
+        \hspace*{19mm}\code{nell'anno 1861}};
+  \node[tok, anchor=west] (c1) at (7.6,-2.2) {italia};
+  \node[tok, right=of c1] (c2) {e};
+  \node[tok, right=of c2] (c3) {uomo};
+  \node[tok, right=of c3] (c4) {anno};
+  \node[tok, right=of c4] (c5) {1861};
+  \draw[arr] (in3.east) -- (c1.west);
+
+  \node[anchor=west, font=\small] (in4) at (0,-3.4)
+       {\field{contenuto}: \code{The dog's bone, perché?}};
+  \node[tok, anchor=west] (d1) at (7.6,-3.4) {the};
+  \node[tok, right=of d1] (d2) {dog};
+  \node[tok, right=of d2] (d3) {bone};
+  \node[tok, right=of d3] (d4) {perche};
+  \draw[arr] (in4.east) -- (d1.west);
+\end{tikzpicture}
+\caption{Token prodotti dagli analyzer definitivi. Il carattere \code{\_} separa le
+parole, gli articoli elisi e il possessivo vengono tolti, accenti e maiuscole
+normalizzati; le parole comuni (\emph{e}, \emph{the}) restano.}
+\label{fig:token}
+\end{figure}
+
+\subsection{Limiti noti}
+\begin{itemize}
+  \item \textbf{Nessuno stemming:} cercare \emph{libro} non trova \emph{libri}.
+        È il prezzo della scelta multilingua.
+  \item \textbf{Nessuna stopword:} una query fatta solo di parole comuni, come
+        \code{contenuto il the}, trova quasi tutti i file (199 su 202, e 2\,803 su 2\,810 nel
+        corpus grande); il ranking
+        li mette comunque in ordine di rilevanza, ma l'utente non viene avvisato.
+  \item \textbf{Elenco degli articoli incompleto:} \code{quell'anno} (7 occorrenze)
+        non viene trattato perché \code{quell} non è nell'elenco, e per questo
+        \code{anno} trova 53 file invece di 55 (nel corpus grande la valutazione trova
+        casi analoghi: \emph{quest'uomo}, \emph{pover'uomo}, \emph{quand'era},
+        \emph{com'era}).
+  \item \textbf{Indirizzi web nel testo:} lo \code{StandardTokenizer} non spezza una
+        parola su un punto tra due lettere, per cui in un testo con
+        \code{volcano.und} il termine \emph{volcano} non viene trovato.
+  \item \textbf{Numeri nei nomi:} \code{example1} è un unico termine, quindi la
+        query \code{nome example} non trova più il file \code{example1}. È il
+        rovescio della scelta fatta per evitare i risultati spuri.
+\end{itemize}
+
+% ===========================================================================
+\section{Indicizzazione}
+% ===========================================================================
+
+Si crea un \code{Document} Lucene per ogni file, con due campi
+(tabella~\ref{tab:campi}). La cartella viene visitata ricorsivamente e vengono presi
+i file con estensione \code{.txt}, senza distinguere maiuscole e minuscole.
+L'indice è ricreato da zero a ogni esecuzione (\code{OpenMode.CREATE}), così
+rieseguire il programma non duplica i documenti. Un file illeggibile (ad esempio
+non codificato in UTF-8) viene saltato con un avviso e contato a parte, senza
+interrompere il lavoro. Alla fine viene fatto il \code{commit()} e vengono stampati
+il numero di file e il tempo impiegato.
+
+\begin{table}[!htbp]
+\centering
+\begin{tabularx}{\linewidth}{@{}llcX@{}}
+\toprule
+\textbf{Campo} & \textbf{Tipo} & \textbf{Stored} & \textbf{Perché} \\
+\midrule
+\field{nome} & \code{TextField} & sì & serve per stampare il nome nei risultati \\
+\field{contenuto} & \code{TextField} & no & serve solo per cercare: non salvarlo
+  riduce lo spazio occupato dall'indice \\
+\bottomrule
+\end{tabularx}
+\caption{I campi del documento Lucene.}
+\label{tab:campi}
+\end{table}
+
+\subsection{Risultati sul corpus piccolo}
+
+Sul corpus piccolo, su cinque esecuzioni consecutive con gli analyzer definitivi sono stati indicizzati
+\textbf{202 file}, con \textbf{0 file saltati}, in circa \textbf{0,6 secondi}
+(figura~\ref{fig:tempi}). L'indice occupa circa 1,3 MB, contro i 2,8 MB di testo.
+La prima versione degli analyzer impiegava circa 0,5 secondi (tre esecuzioni:
+565, 466 e 477 ms) e produceva un indice di circa 1,2 MB: i filtri aggiunti e
+l'assenza di stopword costano poco, dello stesso ordine di grandezza.
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[x=1.3cm, y=0.008cm]
+  % assi
+  \draw[->] (0.3,0) -- (5.9,0);
+  \draw[->] (0.3,0) -- (0.3,800) node[above, font=\small] {ms};
+  \foreach \y in {0,200,400,600}
+    \draw (0.27,\y) -- (0.33,\y) node[left=1mm, font=\scriptsize] {\y};
+  % barre
+  \foreach \x/\v in {1/696, 2/691, 3/577, 4/489, 5/502} {
+    \fill[accent] (\x-0.3,0) rectangle (\x+0.3,\v);
+    \node[below, font=\small, text=white] at (\x,\v) {\v};
+    \node[below, font=\small] at (\x,0) {run \x};
+  }
+  % media
+  \draw[warm, thick, dashed] (0.4,591) -- (5.5,591)
+       node[right, font=\scriptsize, text=warm] {media 591};
+\end{tikzpicture}
+\caption{Tempo totale di indicizzazione dei 202 file in cinque esecuzioni.}
+\label{fig:tempi}
+\end{figure}
+
+\noindent\textbf{Ambiente di misura:} MacBook Pro (2020) con chip
+Apple M1 a 8 core (4 prestazioni e 4 efficienza), 8~GB di RAM, macOS~26.6,
+OpenJDK~21.0.10.
+
+
+\noindent Il tempo misurato comprende la lettura dei file e l'analisi del testo
+ed è preso in una JVM appena avviata, senza riscaldamento: le prime esecuzioni
+sono le più lente. Per questo conviene considerare l'ordine di grandezza
+(circa 0,5--0,7 s) più del valore singolo. Il costo per file (2--3 ms) è però
+sovrastimato, perché su pochi file pesa molto il tempo fisso di avvio di JVM e Lucene:
+lo mostra la misura sul corpus grande.
+
+\subsection{Tempi al crescere del corpus}
+\label{sec:tempi-grande}
+
+Per capire come crescono i tempi, lo script \code{tools/benchmark\_indexing.py} costruisce
+sottoinsiemi casuali (con seme fisso, quindi sempre uguali) del corpus grande da 200,
+500, 1\,000, 2\,000 e 2\,810 file e lancia l'indicizzatore cinque volte per ciascuno,
+ogni volta in una nuova JVM. Nella tabella~\ref{tab:scala} si riporta la
+\textbf{mediana}: una delle cinque esecuzioni sul corpus completo è durata 3\,289~ms
+contro circa 2\,150~ms delle altre (probabilmente un disturbo del sistema) e la
+mediana non ne risente.
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+\textbf{File} & \textbf{Testo (MB)} & \textbf{Indice (MB)} & \textbf{Mediana (ms)} & \textbf{ms/file} \\
+\midrule
+200   & 2,1  & 1,05  &  461 & 2,31 \\
+500   & 5,7  & 2,52  &  705 & 1,41 \\
+1\,000 & 12,0 & 4,86  & 1\,013 & 1,01 \\
+2\,000 & 23,9 & 9,63  & 1\,664 & 0,83 \\
+2\,810 & 34,4 & 13,73 & 2\,326 & 0,83 \\
+\bottomrule
+\end{tabular}
+\caption{Tempo di indicizzazione al crescere del corpus (mediana di cinque esecuzioni).}
+\label{tab:scala}
+\end{table}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[x=0.0045cm, y=0.0022cm]
+  \draw[->] (0,0) -- (3050,0) node[right, font=\small] {file};
+  \draw[->] (0,0) -- (0,2600) node[above, font=\small] {ms};
+  \foreach \x in {500,1000,1500,2000,2500,3000}
+    \draw (\x,0) -- (\x,-40) node[below, font=\scriptsize] {\x};
+  \foreach \y in {500,1000,1500,2000,2500}
+    \draw (0,\y) -- (-30,\y) node[left, font=\scriptsize] {\y};
+  \draw[accent, thick] (200,461) -- (500,705) -- (1000,1013) -- (2000,1664) -- (2810,2326);
+  \foreach \x/\y in {200/461,500/705,1000/1013,2000/1664,2810/2326}
+    \fill[warm] (\x,\y) circle (2.5pt);
+  \node[font=\scriptsize, anchor=south east] at (2810,2326) {2\,326 ms};
+\end{tikzpicture}
+\caption{Tempo di indicizzazione in funzione del numero di file (mediana).}
+\label{fig:scala}
+\end{figure}
+
+\noindent La crescita è quasi lineare. Con pochi file il tempo è dominato da un costo
+fisso di circa 400~ms (avvio di JVM e Lucene); oltre i 2\,000 file il costo si
+stabilizza a circa \textbf{0,83~ms per file}, cioè circa 15~MB di testo al secondo.
+L'indice occupa circa il 40\% del testo, perché il contenuto non è memorizzato.
+Indicizzare tutti i 2\,810 file richiede quindi circa 2,3 secondi.
+
+% ===========================================================================
+\section{Ricerca}
+% ===========================================================================
+
+\subsection{Sintassi della query}
+
+Ogni riga digitata ha la forma \code{<campo> <termini>}, dove \code{<campo>} è
+\field{nome} o \field{contenuto}. Il
+testo tra virgolette è una frase. Ad esempio:
+\begin{center}
+\code{nome knitting}\\
+\code{contenuto guerra mondiale}\\
+\code{contenuto \dq{}world war\dq}
+\end{center}
+
+\subsection{Costruzione della query}
+
+La parola chiave iniziale viene separata a mano (\code{split(\dq{} \dq{}, 2)}), mentre il
+resto della riga è affidato al \code{QueryParser} di Lucene, configurato con il
+campo scelto come \emph{campo di default} e con lo stesso analyzer usato in
+indicizzazione. In questo modo le frasi tra virgolette e l'analisi dei termini
+sono gestite da Lucene, con meno codice e meno casi limite rispetto a un parser
+scritto a mano.
+
+\textbf{Più termini senza virgolette sono in OR.} È il comportamento predefinito
+del \code{QueryParser}: i termini senza
+modificatori sono \emph{opzionali} (\code{BooleanClause.\allowbreak Occur.\allowbreak SHOULD}). I documenti
+che contengono più termini ottengono comunque un punteggio maggiore. Il ranking è
+quello predefinito di Lucene (BM25).
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Riga digitata} & \textbf{Query Lucene generata} \\
+\midrule
+\code{nome roma} & \code{nome:roma} \\
+\code{contenuto data scientist} & \code{contenuto:data contenuto:scientist} \\
+\code{contenuto \dq{}data scientist\dq} & \code{contenuto:\dq{}data scientist\dq} \\
+\code{contenuto Data} & \code{contenuto:data} \\
+\code{nome Relazione\_Finale} & \code{nome:relazione nome:finale} \\
+\bottomrule
+\end{tabular}
+\caption{Traduzione delle righe digitate (output reale di \code{query.toString()}).}
+\label{tab:parsing}
+\end{table}
+
+\subsection{Esecuzione e risultati}
+
+Il \code{FileSearcher} apre l'indice con \code{DirectoryReader} e
+\code{IndexSearcher} e viene chiuso automaticamente a fine sessione
+(\code{try-with-resources}). Per ogni query stampa il numero totale di file
+trovati e i primi \textbf{5} (posizione, nome e punteggio). Il nome viene letto
+dal campo memorizzato; il contenuto non si può mostrare perché non è memorizzato.
+
+Gli errori di input sono gestutu: campo sconosciuto, testo
+mancante e sintassi non valida (ad esempio virgolette non chiuse) producono un
+messaggio e il ciclo prosegue. Se tutti i termini vengono eliminati
+dall'analyzer (ad esempio una query fatta solo di simboli, come \code{c++}) la
+query è vuota e il programma lo segnala invece di restituire zero risultati senza
+spiegazione.
+
+% ===========================================================================
+\section{Test del sistema}
+\label{sec:test}
+% ===========================================================================
+
+Le 21 query di test sono eseguite sul \textbf{corpus piccolo} (202 file). Sono
+raccolte nel file \code{queries.txt} ed eseguite in modo
+automatico dallo script \code{run-queries.sh}, che salva l'output completo in
+\code{results/query-results.md}. I test sono quindi riproducibili. Per le query sul
+contenuto con un termine o una frase (query 5--11 e 14--18) il numero di risultati è
+stato confrontato con quello di \code{grep -il} sui file originali: in tutti i casi
+coincide. Le query 14--18 sono state aggiunte per verificare i problemi della
+sezione~\ref{sec:prima}.
+
+\textbf{Perché il corpus piccolo.} Questi test sono \emph{funzionali}: mostrano il
+comportamento del programma (output, top-5, frasi, casi di errore) e non dipendono
+dalla dimensione del corpus. Si usa il corpus piccolo perché con 202 file il numero
+di risultati si controlla facilmente a mano con \code{grep}, e perché i problemi
+della sezione~\ref{sec:prima} sono stati individuati e corretti su quei file, quindi i
+numeri si possono confrontare direttamente. La correttezza su larga scala, con 2\,810
+file e un riferimento indipendente da Lucene, è valutata nella
+sezione~\ref{sec:valutazione}.
+
+\begin{table}[!htbp]
+\centering
+\small
+\begin{tabularx}{\linewidth}{@{}rlXrl@{}}
+\toprule
+\textbf{\#} & \textbf{Query} & \textbf{Cosa verifica} & \textbf{Ris.} &
+\textbf{Primo risultato} \\
+\midrule
+1  & \code{nome knitting} & un termine nel nome & 1 & \code{en\_Knitting} \\
+2  & \code{nome history martial} & più termini nel nome (OR) & 1 & \code{en\_History\_of\_martial\ldots} \\
+3  & \code{nome \dq{}martial arts\dq} & frase nel nome & 1 & \code{en\_History\_of\_martial\ldots} \\
+4  & \code{nome list} & totale oltre il top-5 & 6 & \code{en\_List\_of\_formulae\ldots} \\
+5  & \code{contenuto napoleone} & termine italiano & 5 & \code{it\_Castello\_di\_Saint\ldots} \\
+6  & \code{contenuto earthquake} & termine inglese & 1 & \code{en\_2020\_Petrinja\ldots} \\
+7  & \code{contenuto \dq{}world war\dq} & frase nel contenuto & 16 & \code{en\_Protectorate\_of\ldots} \\
+8  & \code{contenuto guerra mondiale} & più termini (OR) & 44 & \code{it\_Polemiko\_Nautiko} \\
+9  & \code{contenuto NAPOLEONE} & maiuscole ignorate & 5 & come la query 5 \\
+10 & \code{contenuto \dq{}data scientist\dq} & frase in un solo file & 1 & \code{example1} \\
+11 & \code{contenuto xyzqwerty} & nessun risultato & 0 & -- \\
+12 & \code{contenuto il the} & solo parole comuni & 199 & \code{it\_Emily\_Blunt} \\
+13 & \code{nome example1} & numero nel nome & 1 & \code{example1} \\
+14 & \code{contenuto uomo} & elisione (\emph{dell'uomo}) & 19 & \code{it\_Belle\_Gunness} \\
+15 & \code{contenuto italia} & elisione (\emph{l'Italia}) & 38 & \code{it\_Giuliano\_Ferrara} \\
+16 & \code{contenuto citta} & accenti (\emph{città}) & 34 & \code{it\_Citta\_di\_Ebla} \\
+17 & \code{contenuto king} & possessivo (\emph{king's}) & 21 & \code{it\_Non\_siamo\_piu\ldots} \\
+18 & \code{contenuto era} & parola italiana e inglese & 95 & \code{it\_Detlev\_Peukert} \\
+19 & \code{titolo knitting} & campo sconosciuto & -- & errore gestito \\
+20 & \code{contenuto} & testo mancante & -- & errore gestito \\
+21 & \code{contenuto \dq{}frase aperta} & virgolette non chiuse & -- & errore gestito \\
+\bottomrule
+\end{tabularx}
+\caption{Le 21 query di test (risultati reali, con gli analyzer definitivi).}
+\label{tab:query}
+\end{table}
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[x=0.1cm, y=0.5cm]
+  \foreach \i/\q/\v/\c in {
+      1/{nome knitting}/1/accent,
+      2/{nome history martial}/1/accent,
+      3/{nome \dq{}martial arts\dq}/1/warm,
+      4/{nome list}/6/accent,
+      5/{nome example1}/1/accent,
+      6/{contenuto napoleone}/5/accent,
+      7/{contenuto earthquake}/1/accent,
+      8/{contenuto guerra mondiale}/44/accent,
+      9/{contenuto \dq{}world war\dq}/16/warm,
+      10/{contenuto \dq{}data scientist\dq}/1/warm,
+      11/{contenuto xyzqwerty}/0/accent,
+      12/{contenuto uomo}/19/accent,
+      13/{contenuto italia}/38/accent,
+      14/{contenuto citta}/34/accent,
+      15/{contenuto king}/21/accent,
+      16/{contenuto era}/95/accent} {
+    \pgfmathsetmacro{\yy}{-\i}
+    \node[anchor=east, font=\scriptsize\ttfamily] at (-3,\yy) {\q};
+    \fill[\c] (0,\yy-0.3) rectangle (\v,\yy+0.3);
+    \node[anchor=west, font=\scriptsize] at (\v+2,\yy) {\v};
+  }
+  \draw (0,-0.4) -- (0,-16.6);
+  \fill[accent] (70,-2.2) rectangle (75,-1.8);
+  \node[anchor=west, font=\scriptsize] at (77,-2) {termini (OR)};
+  \fill[warm] (70,-3.7) rectangle (75,-3.3);
+  \node[anchor=west, font=\scriptsize] at (77,-3.5) {frase};
+\end{tikzpicture}
+\caption{Numero di file trovati dalle query di test (in rosso le frasi tra
+virgolette). Sono escluse la query 9, che duplica la 5, la query 12 (199 file) e i
+casi di errore 19--21.}
+\label{fig:risultati}
+\end{figure}
+
+\subsection{Osservazioni}
+
+\begin{itemize}
+  \item \textbf{Problemi risolti.} Le query 14--18 danno esattamente il numero di
+        file di \code{grep} (19, 38, 34, 21, 95): elisioni, accenti, possessivi e
+        parole come \emph{era} non causano più file mancanti. La query~13 trova solo
+        \code{example1}, senza i risultati spuri della prima versione.
+  \item \textbf{OR contro frase.} \code{contenuto guerra mondiale} trova 44 file,
+        cioè tutti quelli che contengono almeno una delle due parole, mentre la
+        frase \code{\dq{}world war\dq} ne trova 16: la frase è molto più precisa.
+        Il ranking BM25 porta comunque in cima i file che contengono entrambe le
+        parole più volte.
+  \item \textbf{Analyzer coerente tra indice e query.} Le query 5 e 9 danno
+        esattamente gli stessi risultati e gli stessi punteggi: il minuscolo è
+        applicato sia ai documenti sia alla query.
+  \item \textbf{Parole comuni.} Senza stopword, la query~12 trova 199 file su 202:
+        è il costo della scelta, mitigato dal fatto che BM25 dà poco peso ai termini
+        molto frequenti.
+  \item \textbf{Casi di errore.} Le query 19--21 non fanno terminare il
+        programma: ognuna produce un messaggio comprensibile.
+\end{itemize}
+
+% ===========================================================================
+\section{Valutazione con precision e recall}
+\label{sec:valutazione}
+% ===========================================================================
+
+Contare i file trovati non dice se ne mancano. Per valutare la \emph{recall} serve un
+riferimento indipendente da Lucene che dica quali file \emph{dovrebbero} essere
+trovati. La valutazione è fatta sul corpus grande (2\,810 file) dalla classe
+\code{Evaluator}.
+
+\subsection{Metodo}
+
+\textbf{Verità lessicale.} Per ogni query, un file è \emph{rilevante} se contiene
+davvero la parola cercata (o, per una frase tra virgolette, le parole una dopo
+l'altra). L'insieme dei file rilevanti è calcolato senza usare Lucene: il programma
+legge ogni file, toglie gli accenti, porta il testo in minuscolo, lo divide su ogni
+carattere che non sia una lettera o una cifra e controlla se i termini della query
+compaiono, come farebbe \code{grep -iw}. Più termini senza virgolette sono in OR, come
+nel \code{QueryParser}. Per il campo \field{nome} si fa lo stesso sul nome del file.
+
+\textbf{Metriche.} Per ogni query, su \emph{tutti} i risultati:
+\begin{gather*}
+\text{precision}=\frac{\text{file trovati e rilevanti}}{\text{file trovati}},\qquad
+\text{recall}=\frac{\text{file trovati e rilevanti}}{\text{file rilevanti}},\\[2pt]
+F_1=\frac{2\cdot\text{precision}\cdot\text{recall}}{\text{precision}+\text{recall}}.
+\end{gather*}
+Se non esistono file rilevanti e non ne viene trovato nessuno la risposta è corretta
+(precision e recall pari a 1); se ne esistono ma non ne viene trovato nessuno la
+precision è posta a 0. Si riporta la media sulle query (media macro).
+
+\textbf{Cosa si confronta.} Le stesse 26 query (20 sul contenuto e 6 sul nome),
+con gli stessi file, sono eseguite con due configurazioni: la \emph{prima versione}
+degli analyzer (sezione~\ref{sec:prima}) e la \emph{versione definitiva}. Le query
+comprendono termini italiani e inglesi, frasi, parole con elisione o accento, parole
+comuni e casi sul nome.
+
+\textbf{Controllo dell'oracolo.} Poiché la verità è scritta da noi, i suoi insiemi
+sono stati ricalcolati con altri due strumenti (\code{perl} per minuscolo e accenti,
+\code{grep -E} per la ricerca) con lo script \code{tools/crosscheck\_oracle.py}: i
+file rilevanti coincidono \textbf{su tutte le 26 query, file per file}.
+
+\subsection{Risultati}
+
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}Xrrrrrrr@{}}
+\toprule
+& & \multicolumn{3}{c}{\textbf{Prima versione}} & \multicolumn{3}{c}{\textbf{Definitiva}} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}
+\textbf{Query} & \textbf{Ril.} & \textbf{Trov.} & \textbf{P} & \textbf{R} & \textbf{Trov.} & \textbf{P} & \textbf{R} \\
+\midrule
+\code{contenuto napoleone} & 83 & 83 & 1,00 & 1,00 & 83 & 1,00 & 1,00 \\
+\code{contenuto napoleon} & 100 & 83 & 1,00 & 0,83 & 100 & 1,00 & 1,00 \\
+\code{contenuto terremoto} & 109 & 109 & 1,00 & 1,00 & 109 & 1,00 & 1,00 \\
+\code{contenuto earthquake} & 140 & 140 & 1,00 & 1,00 & 140 & 1,00 & 1,00 \\
+\code{contenuto vulcano} & 74 & 74 & 1,00 & 1,00 & 74 & 1,00 & 1,00 \\
+\code{contenuto volcano} & 100 & 99 & 1,00 & 0,99 & 99 & 1,00 & 0,99 \\
+\code{contenuto \dq{}world war\dq{}} & 349 & 349 & 1,00 & 1,00 & 349 & 1,00 & 1,00 \\
+\code{contenuto \dq{}seconda guerra mondiale\dq{}} & 186 & 186 & 1,00 & 1,00 & 186 & 1,00 & 1,00 \\
+\code{contenuto \dq{}roman empire\dq{}} & 119 & 119 & 1,00 & 1,00 & 119 & 1,00 & 1,00 \\
+\code{contenuto \dq{}machine learning\dq{}} & 12 & 12 & 1,00 & 1,00 & 12 & 1,00 & 1,00 \\
+\code{contenuto impero} & 209 & 84 & 1,00 & 0,40 & 209 & 1,00 & 1,00 \\
+\code{contenuto uomo} & 211 & 133 & 1,00 & 0,63 & 209 & 1,00 & 0,99 \\
+\code{contenuto italia} & 518 & 427 & 1,00 & 0,82 & 518 & 1,00 & 1,00 \\
+\code{contenuto citta} & 535 & 2 & 1,00 & 0,00 & 535 & 1,00 & 1,00 \\
+\code{contenuto king} & 273 & 257 & 1,00 & 0,94 & 273 & 1,00 & 1,00 \\
+\code{contenuto era} & 1030 & 0 & 0,00 & 0,00 & 1027 & 1,00 & 1,00 \\
+\code{contenuto anno} & 540 & 382 & 1,00 & 0,71 & 522 & 1,00 & 0,97 \\
+\code{contenuto NAPOLEONE} & 83 & 83 & 1,00 & 1,00 & 83 & 1,00 & 1,00 \\
+\code{contenuto teorema theorem} & 152 & 152 & 1,00 & 1,00 & 152 & 1,00 & 1,00 \\
+\code{contenuto il the} & 2803 & 0 & 0,00 & 0,00 & 2803 & 1,00 & 1,00 \\
+\code{nome napoleone} & 2 & 2 & 1,00 & 1,00 & 2 & 1,00 & 1,00 \\
+\code{nome roma} & 7 & 7 & 1,00 & 1,00 & 7 & 1,00 & 1,00 \\
+\code{nome battle} & 15 & 15 & 1,00 & 1,00 & 15 & 1,00 & 1,00 \\
+\code{nome \dq{}world war\dq{}} & 10 & 10 & 1,00 & 1,00 & 10 & 1,00 & 1,00 \\
+\code{nome example1} & 0 & 10 & 0,00 & 1,00 & 0 & 1,00 & 1,00 \\
+\code{nome vesuvio} & 1 & 1 & 1,00 & 1,00 & 1 & 1,00 & 1,00 \\
+\midrule
+\textbf{Media} & & & 0,88 & 0,82 & & 1,00 & 1,00 \\
+\bottomrule
+\end{tabularx}
+\caption{Precision (P) e recall (R) sul corpus grande, per ogni query. \emph{Ril.} è il
+numero di file rilevanti per la verità lessicale, \emph{Trov.} il numero di file
+trovati da Lucene. Nell'ultima riga la media macro sulle 26 query.}
+\label{tab:valutazione}
+\end{table}
+
+La media macro passa, dalla prima versione alla definitiva, da precision 0,88 e recall
+0,82 (F$_1$ 0,81) a precision 1,00 e recall 1,00 (F$_1$ 1,00), con arrotondamento a due cifre.
+I casi più chiari sono:
+\begin{itemize}
+  \item \code{contenuto citta}: la prima versione trova solo 2 dei 535 file
+        (recall 0,00) perché non normalizza gli accenti, la definitiva li trova tutti;
+  \item \code{contenuto era}: 0 su 1\,030, perché \emph{era} è una stopword italiana;
+        la definitiva trova 1\,027 file su 1\,030;
+  \item \code{contenuto impero}, \code{uomo}, \code{italia}: la prima versione perde
+        i file in cui la parola segue un articolo con apostrofo (\emph{dell'impero},
+        \emph{l'uomo}, \emph{l'Italia}), con recall rispettivamente 0,40, 0,63 e
+        0,82; \code{napoleon} (recall 0,83) perde i file che contengono solo il
+        possessivo inglese \emph{Napoleon's};
+  \item \code{nome example1}: la prima versione restituisce 10 file non pertinenti,
+        perché \code{WordDelimiterGraphFilter} separa \emph{example1} in
+        \emph{example} e \emph{1} e cerca il numero 1 in molti nomi; nel corpus non
+        esiste nessun file con quel nome, quindi la risposta corretta è zero
+        risultati, che la versione definitiva dà.
+\end{itemize}
+La precision della versione definitiva è 1,00 su tutte le query: ogni file trovato
+contiene davvero la parola.
+
+\subsection{Limiti della valutazione}
+
+La versione definitiva non è perfetta: perde da 1 a 18 file su alcune query. Aprendo
+i file corrispondenti si trovano due cause. La prima sono le \textbf{elisioni non
+presenti nell'elenco degli articoli}: \emph{quest'uomo}, \emph{pover'uomo},
+\emph{quand'era}, \emph{com'era}, \emph{quell'anno}; così \code{uomo} trova 209 file
+su 211, \code{era} 1\,027 su 1\,030 e \code{anno} 522 su 540. La seconda sono gli
+\textbf{indirizzi web} come \code{volcano.und}, che lo \code{StandardTokenizer} non
+spezza. Entrambe sono descritte tra i limiti.
+
+\textbf{Che cosa misura questa valutazione.} La verità lessicale controlla che
+l'indicizzazione sia corretta, cioè che non vengano persi file che contengono
+davvero la parola; non misura se i risultati siano \emph{utili} per chi cerca (un
+articolo che nomina Napoleone una volta sola è comunque rilevante). Inoltre la verità
+usa regole simili a quelle dell'analyzer (minuscolo, niente accenti, separazione sui
+simboli), quindi l'accordo quasi totale dimostra che l'analyzer applica
+correttamente queste regole e non che le regole siano le uniche possibili. Il
+confronto tra le due versioni resta valido perché entrambe sono misurate con lo
+stesso riferimento. Per questo motivo non si riporta la precision@5: con questa
+verità ogni file trovato è rilevante, e valutare l'ordine dei risultati richiederebbe
+una verità tematica (per esempio le categorie di Wikipedia, già presenti nel
+manifest), non realizzata.
+
+% ===========================================================================
+\section{Limiti e possibili miglioramenti}
+\label{sec:limiti}
+% ===========================================================================
+
+\begin{itemize}
+  \item \textbf{Stemming e stopword per lingua:} riconoscere la lingua di ogni file
+        e usare l'analyzer della lingua giusta migliorerebbe il richiamo
+        (\emph{libro}/\emph{libri}) e permetterebbe di reintrodurre le stopword
+        senza gli scontri tra le due lingue. La rilevazione è già fattibile
+        (sezione~\ref{sec:alternative}); servirebbero un campo per lingua e
+        l'analisi della query con entrambi gli analyzer.
+  \item \textbf{Elisioni:} completare l'elenco degli articoli (\emph{quell'},
+        \emph{quest'}, \emph{quand'}, \emph{com'}, \emph{pover'}, \emph{sant'},
+        \ldots) per recuperare i file mancanti nelle query su \code{anno},
+        \code{uomo} ed \code{era}, che la valutazione sul corpus grande ha
+        individuato.
+  \item \textbf{Indirizzi web nel testo:} un tokenizer che spezzi anche sul punto
+        tra lettere (o un filtro dedicato) recupererebbe casi come \code{volcano.und}.
+  \item \textbf{Verità tematica:} per valutare anche l'ordine dei risultati
+        (precision@5, MAP) si potrebbero usare le categorie di Wikipedia già
+        presenti nel manifest come insieme dei documenti rilevanti per un argomento.
+  \item \textbf{Numeri nei nomi:} \code{nome example} non trova \code{example1}.
+        Un filtro che separi lettere e numeri \emph{e} conservi il termine
+        originale (opzione \code{preserveOriginal} del
+        \code{WordDelimiterGraphFilter}) coprirebbe entrambi i casi.
+  \item \textbf{AND come operatore predefinito:} renderebbe più precise le query
+        con più termini, ma rischia di non trovare nulla; andrebbe valutato su un
+        insieme di query con risultati attesi (ad esempio con la precision@5).
+  \item \textbf{Caratteri speciali:} il \code{QueryParser} interpreta ancora la
+        sintassi di Lucene (\code{campo:valore}, \code{+}, \code{-}, \code{*}),
+        per cui \code{nome foo:bar} cerca nel campo \code{foo}. Un parser scritto a
+        mano o l'escape dei caratteri speciali limiterebbero la sintassi a quella
+        richiesta.
+  \item \textbf{Test automatici:} i casi della tabella~\ref{tab:query} potrebbero
+        diventare test JUnit.
+\end{itemize}
+
+% ===========================================================================
+\section{Come riprodurre i risultati}
+% ===========================================================================
+
+\begin{lstlisting}[language=bash]
+./index.sh                 # indicizza data/docs nella cartella index/
+./search.sh                # ricerca interattiva (exit per uscire)
+./run-queries.sh           # esegue queries.txt e salva results/query-results.md
+\end{lstlisting}
+
+\noindent Per rigenerare il corpus grande, misurare i tempi e rifare la valutazione:
+\begin{lstlisting}[language=bash]
+python3 tools/build_corpus.py          # scarica il corpus in data/corpus (ripartibile)
+python3 tools/benchmark_indexing.py    # tempi su 200/500/1000/2000/tutti i file
+# valutazione (Evaluator si lancia con java e il classpath di Maven):
+./mvnw -q dependency:build-classpath -Dmdep.outputFile=cp.txt
+java -cp "target/classes:$(cat cp.txt)" it.homework.lucene.Evaluator \
+     data/corpus results/evaluation.md
+python3 tools/crosscheck_oracle.py     # controllo dell'oracolo con perl e grep
+\end{lstlisting}
+
+\end{document}
