@@ -6,3 +6,8 @@ index/
 data/corpus
 NOTES.md
 TODO.md
+# generated files
+report/*.aux
+report/*.log
+report/*.out
+__pycache__/
