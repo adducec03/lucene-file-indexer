@@ -5,3 +5,4 @@ index/
 .DS_Store
 relazione/
 data/corpus
+data/corpus-manifest.csv
